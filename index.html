@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mobil Hakem — Gizlilik Politikası</title>
+<style>
+  :root{
+    --bg:#f6eedc; --surface:#ffffff; --text:#1f1f1f; --muted:#6f6759;
+    --accent:#2d5b1e; --accent-2:#4e9b32; --border:#e6dfcc; --chip:#eee6d2;
+    --shadow:0 1px 2px rgba(45,63,25,.04),0 8px 30px rgba(45,63,25,.06);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#12160e; --surface:#1b2015; --text:#ece7d7; --muted:#a39c8a;
+      --accent:#8ec778; --accent-2:#6fb64a; --border:#2b3221; --chip:#242b19;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65;margin:0;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:720px;margin:0 auto;padding:56px 22px 80px;}
+  .brandmark{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;
+    justify-content:center;background:var(--accent);color:#fff;font-size:22px;box-shadow:var(--shadow);}
+  .eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);
+    font-weight:700;margin:22px 0 6px;}
+  h1{font-family:Georgia,"Times New Roman",serif;font-weight:600;font-size:40px;line-height:1.1;
+    margin:0 0 10px;letter-spacing:-.01em;}
+  .lede{font-size:17px;color:var(--muted);margin:0 0 4px;max-width:60ch;}
+  .updated{font-size:13px;color:var(--muted);margin-top:14px;
+    display:inline-flex;gap:8px;align-items:center;padding:5px 11px;border:1px solid var(--border);
+    border-radius:999px;background:var(--surface);}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent-2);}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:16px;
+    padding:10px 26px 26px;margin-top:34px;box-shadow:var(--shadow);}
+  section{padding:24px 0 4px;border-top:1px solid var(--border);}
+  section:first-of-type{border-top:0;}
+  h2{font-size:18.5px;font-weight:700;margin:0 0 8px;display:flex;gap:12px;align-items:baseline;}
+  .num{font-family:Georgia,serif;font-size:15px;color:var(--accent-2);font-weight:600;
+    min-width:20px;}
+  p{margin:0 0 12px;}
+  strong{color:var(--text);font-weight:650;}
+  ul{margin:0 0 8px;padding-left:2px;list-style:none;}
+  li{position:relative;padding-left:20px;margin-bottom:9px;}
+  li::before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:2px;
+    background:var(--accent-2);}
+  .contact{background:var(--chip);border-radius:12px;padding:16px 18px;margin-top:6px;}
+  .contact strong{display:block;margin-bottom:4px;}
+  a{color:var(--accent-2);text-decoration:none;
+    border-bottom:1px solid color-mix(in srgb,var(--accent-2) 40%,transparent);}
+  a:hover{border-bottom-color:var(--accent-2);}
+  a:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px;border-radius:3px;}
+  .foot{margin-top:30px;color:var(--muted);font-size:13px;text-align:center;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brandmark" aria-hidden="true">⚖︎</div>
+  <div class="eyebrow">Gizlilik Politikası</div>
+  <h1>Mobil Hakem</h1>
+  <p class="lede">İki kişi arasındaki tartışmayı dinleyip yapay zekâ ile canlı yüzdelerle
+  değerlendiren bir <strong>eğlence</strong> uygulaması. Sonuçlar hukuki, tıbbi veya
+  profesyonel tavsiye değildir.</p>
+  <div class="updated"><span class="dot"></span> Son güncelleme: 17 Temmuz 2026</div>
+
+  <div class="card">
+    <section>
+      <h2><span class="num">1</span> Hesap yok</h2>
+      <p>Uygulama kayıt veya giriş gerektirmez. Adınız, e-postanız veya kimliğiniz istenmez.
+      Cihazınızda yalnızca rastgele üretilmiş, kişisel olmayan bir cihaz kimliği (günlük
+      kullanım limitini takip için) tutulur.</p>
+    </section>
+    <section>
+      <h2><span class="num">2</span> Ses ve metin saklanmaz</h2>
+      <p>Tartışma sırasında mikrofon <strong>yalnızca o an</strong> kullanılır; arka planda
+      dinleme yoktur. Ses, anlık olarak yazıya çevrilmek üzere işlenir. Ses kaydı, transkript,
+      konuşmacı isimleri ve skorlar <strong>yalnızca cihazın geçici belleğinde (RAM)</strong>
+      tutulur ve tartışma bitince tamamen silinir. Hiçbir ses veya metin sunucularımızda ya da
+      bulutta saklanmaz.</p>
+    </section>
+    <section>
+      <h2><span class="num">3</span> İki tarafın rızası</h2>
+      <p>Tartışma başlamadan önce, her iki konuşmacının da dinlenmeyi kabul ettiğini onaylayan
+      bir adım gösterilir (KVKK ve Google Play politikası gereği).</p>
+    </section>
+    <section>
+      <h2><span class="num">4</span> Üçüncü taraf hizmetleri</h2>
+      <p>Uygulamanın çalışması için ses ve metin, yalnızca <strong>anlık işleme</strong> amacıyla
+      aşağıdaki hizmetlere gönderilir; bu hizmetlerde saklanması için tarafımızca talimat verilmez:</p>
+      <ul>
+        <li><strong>Speechmatics</strong> — konuşmayı gerçek zamanlı yazıya çevirme (Avrupa bölgesi).</li>
+        <li><strong>Yapay zekâ hakem (LLM)</strong> — transkriptin gerçek zamanlı değerlendirilmesi.</li>
+        <li><strong>Google AdMob</strong> — ücretsiz sürede reklam gösterimi; reklam kimliği kullanılabilir.</li>
+        <li><strong>Google Play Faturalandırma</strong> — ek süre satın alımları.</li>
+      </ul>
+      <p>Bu işleme yurt dışındaki sunucularda gerçekleşebilir ve rıza ekranında belirtilir.</p>
+    </section>
+    <section>
+      <h2><span class="num">5</span> Reklamlar</h2>
+      <p>Ücretsiz sürede küçük bir banner reklam gösterilir. Satın alınan ek süre boyunca reklam
+      gösterilmez. Reklamlar Google AdMob tarafından sunulur.</p>
+    </section>
+    <section>
+      <h2><span class="num">6</span> Çocuklar</h2>
+      <p>Uygulama 13 yaş ve üzeri kullanıcılar içindir; Aile programına dahil değildir.</p>
+    </section>
+    <section>
+      <h2><span class="num">7</span> Haklarınız (KVKK)</h2>
+      <p>Veri saklanmadığından silme/erişim talepleri için işlenmiş bir kayıt bulunmaz. Yine de
+      soru ve talepleriniz için bize ulaşabilirsiniz.</p>
+    </section>
+    <section>
+      <h2><span class="num">8</span> İletişim</h2>
+      <div class="contact">
+        <strong>Bizzy Mobil Uygulama Çözümleri Ltd. Şti.</strong>
+        İlgili kişi: Tuna ES<br>
+        E-posta: <a href="mailto:destek@bizzytime.app">destek@bizzytime.app</a><br>
+        Telefon: +90 543 848 48 74
+      </div>
+    </section>
+    <section>
+      <h2><span class="num">9</span> Değişiklikler</h2>
+      <p>Bu politika güncellenebilir; güncel sürüm bu sayfada yayınlanır.</p>
+    </section>
+  </div>
+
+  <p class="foot">© 2026 Bizzy Mobil Uygulama Çözümleri Ltd. Şti. — Mobil Hakem</p>
+</div>
+</body>
+</html>
