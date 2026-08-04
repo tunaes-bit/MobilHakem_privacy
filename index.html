@@ -52,6 +52,7 @@
     border-bottom:1px solid color-mix(in srgb,var(--accent-2) 40%,transparent);}
   a:hover{border-bottom-color:var(--accent-2);}
   a:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px;border-radius:3px;}
+  .langlink{font-size:13px;color:var(--muted);margin-top:10px;}
   .foot{margin-top:30px;color:var(--muted);font-size:13px;text-align:center;}
 </style>
 </head>
@@ -63,15 +64,19 @@
   <p class="lede">İki kişi arasındaki tartışmayı dinleyip yapay zekâ ile canlı yüzdelerle
   değerlendiren bir <strong>eğlence</strong> uygulaması. Sonuçlar hukuki, tıbbi veya
   profesyonel tavsiye değildir.</p>
-  <div class="updated"><span class="dot"></span> Son güncelleme: 3 Ağustos 2026</div>
+  <div class="updated"><span class="dot"></span> Son güncelleme: 4 Ağustos 2026</div>
+  <p class="langlink">English version: <a href="./index.en.html">Privacy Policy</a></p>
 
   <div class="card">
     <section>
       <h2><span class="num">1</span> Hesap yok</h2>
       <p>Uygulama kayıt veya giriş gerektirmez. Adınız, e-postanız veya kimliğiniz istenmez.
-      Cihazınızda rastgele üretilmiş, kişisel olmayan bir cihaz kimliği (günlük kullanım
-      limitini takip için) tutulur; kullanım istatistikleri için de benzer şekilde kişisel
-      olmayan bir tanımlayıcı kullanılır (5. madde).</p>
+      Günlük kullanım limitini takip için rastgele üretilmiş, kişisel olmayan bir
+      <strong>cihaz kimliği</strong> kullanılır: cihazınızda saklanır, isteklerle sunucumuza
+      iletilir ve sunucuda yalnızca o günkü tartışma sayısıyla birlikte tutulur (donanım
+      kimliği değildir; kısa süre sonra otomatik silinir). Uygulama verilerini silmek veya
+      uygulamayı kaldırmak bu kimliği sıfırlar. Kullanım istatistikleri için de benzer şekilde
+      kişisel olmayan, uygulamaya özel bir tanımlayıcı kullanılır (5. madde).</p>
     </section>
     <section>
       <h2><span class="num">2</span> Ses ve metin saklanmaz</h2>
@@ -92,7 +97,11 @@
       aşağıdaki hizmetlere gönderilir; bu hizmetlerde saklanması için tarafımızca talimat verilmez:</p>
       <ul>
         <li><strong>Speechmatics</strong> — konuşmayı gerçek zamanlı yazıya çevirme (Avrupa bölgesi).</li>
-        <li><strong>Yapay zekâ hakem (LLM)</strong> — transkriptin gerçek zamanlı değerlendirilmesi.</li>
+        <li><strong>Yapay zekâ hakem (LLM)</strong> — transkriptin gerçek zamanlı
+        değerlendirilmesi (canlı skor: Groq, final analiz: Google Gemini).</li>
+        <li><strong>ElevenLabs</strong> — kazanan anonsunun doğal hakem sesiyle seslendirilmesi.
+        Yalnızca kısa anons metni (kazananın adı dahil) iletilir; ses kaydı, tartışma metni veya
+        skorlar iletilmez. Metin seslendirme sonrası saklanmaz.</li>
         <li><strong>Google AdMob</strong> — ücretsiz sürede reklam gösterimi; reklam kimliği kullanılabilir.</li>
         <li><strong>Google Play Faturalandırma</strong> — ek süre satın alımları.</li>
         <li><strong>Google Analytics for Firebase</strong> — uygulamanın hangi adımında zorlanıldığını anlamak için anonim kullanım istatistikleri.</li>
@@ -112,6 +121,9 @@
       bu istatistiklere <strong>dâhil edilmez</strong>. Bunlar 2. maddede anlatıldığı gibi yalnızca
       cihazın geçici belleğinde tutulur ve tartışma bitince silinir. Adınız, e-postanız veya
       kimliğiniz hiçbir istatistiğe girmez.</p>
+      <p>Ekran kaydı (oturum kaydı) araçları bilinçli olarak <strong>reddedilmiştir</strong>:
+      ekran kaydı, tartışma ekranındaki isimleri ve canlı altyazıyı piksel olarak üçüncü
+      tarafa taşırdı.</p>
     </section>
     <section>
       <h2><span class="num">6</span> Reklamlar</h2>
@@ -124,8 +136,11 @@
     </section>
     <section>
       <h2><span class="num">8</span> Haklarınız (KVKK)</h2>
-      <p>Veri saklanmadığından silme/erişim talepleri için işlenmiş bir kayıt bulunmaz. Yine de
-      soru ve talepleriniz için bize ulaşabilirsiniz.</p>
+      <p>Ses ve metin saklanmadığından bunlara ilişkin kayıt bulunmaz. Sunucuda tutulan tek
+      kayıt, rastgele cihaz kimliğine bağlı günlük kullanım sayacıdır (kısa süre sonra otomatik
+      silinir); ayrıca sunucu erişim kayıtları (IP adresi ve zaman damgası) güvenlik amacıyla
+      kısa süre tutulabilir. Bu kayıtlara ilişkin erişim/silme talepleriniz ve tüm sorularınız
+      için bize ulaşabilirsiniz.</p>
     </section>
     <section>
       <h2><span class="num">9</span> İletişim</h2>
