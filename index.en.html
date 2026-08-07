@@ -63,18 +63,32 @@
   <h1>Who's Right?</h1>
   <p class="lede">An <strong>entertainment</strong> app that listens to an argument between two
   people and scores it live with AI. Results are not legal, medical or professional advice.</p>
-  <div class="updated"><span class="dot"></span> Last updated: 4 August 2026</div>
+  <div class="updated"><span class="dot"></span> Last updated: 7 August 2026</div>
   <p class="langlink">Türkçe sürüm: <a href="./">Gizlilik Politikası</a></p>
 
   <div class="card">
     <section>
-      <h2><span class="num">1</span> No account</h2>
-      <p>The app requires no sign-up and no sign-in. We never ask for your name, email address
-      or any identity document. To enforce the daily usage limit we use a randomly generated
-      <strong>device ID</strong>: it is stored on your device, sent with requests to our server,
-      and held there only alongside that day's debate count. It is not a hardware identifier and
-      it is deleted automatically after a short period. Clearing the app's data or uninstalling
-      the app resets it.</p>
+      <h2><span class="num">1</span> Signing in is optional</h2>
+      <p>The entire app works <strong>without an account</strong>. If you do not sign in we
+      never ask for your name, email address or any identity document. To track your remaining
+      usage we use a randomly generated <strong>device ID</strong>: it is stored on your device,
+      sent with requests to our server, and held there only alongside your remaining time. It is
+      not a hardware identifier and it is deleted automatically once unused. Clearing the app's
+      data or uninstalling the app resets it.</p>
+      <p><strong>If you choose to sign in with Google</strong>, your weekly free time doubles.
+      In that case the only thing we store is the <strong>anonymous account identifier</strong>
+      that corresponds to your Google account (the Firebase <em>uid</em>) — an opaque string
+      that does not identify you and tells us neither your name nor your address.
+      At sign-in Google passes your name, email
+      address and profile picture to the app — Google's own consent screen tells you so.
+      <strong>We do not read them, do not process them and never write them anywhere</strong>;
+      the account identifier is the only thing that persists. The account identifier
+      answers exactly one question for us: which account your remaining time belongs to. When
+      you sign in, the time left on that device is transferred to your account, so it follows
+      you to a new phone.</p>
+      <p>You can <strong>sign out</strong> at any time from within the app, and it returns to
+      working without an account. If you want your account and the time attached to it deleted
+      entirely, you can request that at the address in section 9.</p>
     </section>
     <section>
       <h2><span class="num">2</span> Audio and transcript are never stored</h2>
@@ -107,6 +121,9 @@
         <li><strong>Google Analytics for Firebase</strong> — anonymous usage counters only
         (see section 5).</li>
         <li><strong>Google Play Billing</strong> — extra-time purchases.</li>
+        <li><strong>Firebase Authentication</strong> — only if you choose to sign in with
+        Google. Google performs the sign-in; only the anonymous account identifier (uid)
+        reaches us.</li>
       </ul>
       <p>This processing may take place on servers outside your country, including outside the
       United States, and is disclosed on the consent screen inside the app.</p>
