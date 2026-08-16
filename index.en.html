@@ -63,7 +63,7 @@
   <h1>Who's Right?</h1>
   <p class="lede">An <strong>entertainment</strong> app that listens to an argument between two
   people and scores it live with AI. Results are not legal, medical or professional advice.</p>
-  <div class="updated"><span class="dot"></span> Last updated: 7 August 2026</div>
+  <div class="updated"><span class="dot"></span> Last updated: 16 August 2026</div>
   <p class="langlink">Türkçe sürüm: <a href="./">Gizlilik Politikası</a></p>
 
   <div class="card">
@@ -93,16 +93,43 @@
     <section>
       <h2><span class="num">2</span> Audio and transcript are never stored</h2>
       <p>During a debate the microphone is used <strong>only at that moment</strong>; there is no
-      background listening. Audio is processed in real time so it can be turned into text. The
-      audio, the transcript, the speakers' names and the scores are held
-      <strong>only in the device's temporary memory (RAM)</strong> and are erased completely when
-      the debate ends. No audio and no transcript is stored on our servers or in any cloud.</p>
+      background listening. Audio is processed in real time so it can be turned into text.
+      <strong>The audio and the line-by-line transcript are never stored under any
+      circumstances</strong> — not on the device, not on our servers, not in any cloud. These two
+      sentences have no exceptions; no setting and no consent changes them.</p>
+      <p>Everything shown on screen during a debate (text, names, live scores) exists only in the
+      device's temporary memory (RAM) and is gone when the app closes.</p>
+      <p><strong>Optional exception — Debate History.</strong> For users who have signed in with
+      Google and have <strong>turned this setting on themselves</strong>, the
+      <strong>verdict itself</strong> is saved to their account after the debate ends: the date,
+      the topic, the category, the percentages, the judge's reasoning, the per-speaker analysis,
+      <strong>the speakers' names (if anyone said their name during the debate)</strong>
+      and, if counsel was hired, their submissions. <strong>The audio and the line-by-line
+      transcript are outside this exception and are still never stored.</strong> The setting is
+      <strong>off by default</strong>. Turning it off inside the app deletes all of your records
+      at that moment, and deleting your account deletes them too.</p>
+      <p><strong>Optional exception — Voiceprint.</strong> If you choose to, you can enrol your
+      voice once: the app listens for 20 seconds, you read the lines shown on screen, and one of
+      them asks you to say your name. Our speech provider turns that audio into a
+      <strong>meaningless identifier</strong>; that identifier and the name you said are stored
+      <strong>only on this phone, encrypted</strong>. <strong>They are never sent to our servers,
+      no copy of them ever exists in any cloud, and they are excluded from device backup.</strong>
+      The audio itself is not stored here either. It does two things: it tells you apart from the
+      person you are arguing with, and it marks which side was you in your history. This step is
+      optional; the app works without it. <strong>The other person's voice is never
+      enrolled</strong> — if more than one voice is heard during enrolment, nothing is saved. You
+      can delete it in one tap with <em>&ldquo;Forget my voice&rdquo;</em> on the home screen, and
+      it is deleted automatically when you turn debate history off.</p>
     </section>
     <section>
       <h2><span class="num">3</span> Both parties consent</h2>
       <p>Before a debate can start, the app shows a step confirming that <strong>both</strong>
       speakers agree to be listened to. Recording or transcribing another person without their
       knowledge may be illegal where you live; do not use this app to do that.</p>
+      <p><strong>With Debate History on, that step says so.</strong> The person across from you
+      never sees the history screen — the phone's owner turns the setting on — so when there is
+      something to save, the consent text states it plainly: “The verdict of this debate (not the
+      audio, not the transcript) will be saved to your account.”</p>
     </section>
     <section>
       <h2><span class="num">4</span> Third-party services</h2>
@@ -116,8 +143,6 @@
         voice. Only the short announcement text is sent (which includes the winner's first
         name); no audio, no debate transcript and no scores are sent. The text is not retained
         after it has been spoken.</li>
-        <li><strong>Google AdMob</strong> — advertising during free time; an advertising
-        identifier may be used.</li>
         <li><strong>Google Analytics for Firebase</strong> — anonymous usage counters only
         (see section 5).</li>
         <li><strong>Google Play Billing</strong> — extra-time purchases.</li>
@@ -137,18 +162,24 @@
       opened, whether a connection error occurred; plus device model, operating system
       version, country and an app-specific random identifier.</p>
       <p><strong>What is NOT collected:</strong> audio, transcripts, speaker names and scores
-      never appear in any analytics event. As described in section 2 they exist only in the
-      device's temporary memory and are erased when the debate ends. Your name, email address
-      or identity never enters any statistic.</p>
+      never appear in any analytics event. Your name, email address or identity never enters any
+      statistic. If you turned Debate History on, your verdicts are saved to your account
+      (section 2) — but those records are <strong>yours, and they do not enter these
+      statistics</strong>.</p>
       <p>We have deliberately refused session-recording tools (such as screen replay), because
       a screen recording would carry the names and live captions on the debate screen to a
       third party as pixels.</p>
     </section>
     <section>
       <h2><span class="num">6</span> Advertising</h2>
-      <p>A small banner ad is shown during free time. No ads are shown during purchased extra
-      time. Ads are served by Google AdMob. On Android you can limit ad personalization at any
-      time from <strong>Settings → Google → Ads</strong>.</p>
+      <p><strong>This app shows no ads.</strong> There is no advertising during free time or
+      during purchased time, and the app contains no advertising code.</p>
+      <p><strong>Your advertising identifier is not collected</strong>, and none of your data is
+      shared with third parties for advertising.</p>
+      <p>Advertising was <strong>removed entirely in version 1.19.0</strong>. If you are on an
+      older version, you may continue to see a Google AdMob banner during free time — and your
+      advertising identifier may still be used for it — until you update the app from the Play
+      Store.</p>
     </section>
     <section>
       <h2><span class="num">7</span> Children</h2>
@@ -159,19 +190,24 @@
     <section>
       <h2><span class="num">8</span> Your rights</h2>
       <p>Because audio and transcripts are never stored, there is no record of them to access or
-      delete. The only record held on our server is the daily usage counter tied to the random
-      device ID (automatically deleted after a short period); server access logs (IP address and
-      timestamp) may also be kept briefly for security. You may contact us at any time to ask
-      what is held about your device ID or to have it deleted.</p>
+      delete.</p>
+      <p>What our server does hold: the usage counter tied to the random device ID (automatically
+      deleted after a short period), server access logs (IP address and timestamp, kept briefly
+      for security), and <strong>only if you turned the setting on</strong>, your debate
+      history.</p>
+      <p><strong>You do not need to write to us to delete your history.</strong> Turning the
+      switch off on the Debate History page deletes every record at that moment, and deleting
+      your account does the same. You may still contact us at any time about anything else held
+      about your device ID.</p>
       <p><strong>California residents (CCPA/CPRA).</strong> In the past 12 months we have
-      collected the categories described above: identifiers (a random device ID and an
-      advertising identifier), commercial information (purchase records), internet activity
-      (anonymous usage counters) and audio — the last of which is processed in real time and
-      never retained. <strong>We do not sell your personal information, and we do not sell or
-      share it for cross-context behavioural advertising in exchange for money.</strong>
-      Advertising identifiers are made available to Google AdMob to serve ads, which some laws
-      treat as "sharing"; you can limit this from your Android ad settings as described in
-      section 6. You have the right to know, delete and correct, and to not be discriminated
+      collected the categories described above: identifiers (a random device ID), commercial
+      information (purchase records), internet activity (anonymous usage counters) and audio —
+      the last of which is processed in real time and never retained. <strong>We do not sell
+      your personal information, and we do not sell or share it for cross-context behavioural
+      advertising.</strong> Up to version 1.18.0 an advertising identifier was made available to
+      Google AdMob to serve ads, which some laws treat as "sharing"; advertising was removed in
+      1.19.0 and no advertising identifier is collected by that version or later. You have the
+      right to know, delete and correct, and to not be discriminated
       against for exercising those rights. To exercise them, email the address in section 9 —
       no account is required and we will not ask you to create one.</p>
     </section>
