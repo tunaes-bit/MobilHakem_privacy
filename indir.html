@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mobil Hakem</title>
+<style>
+  :root{
+    --bg:#f6eedc; --surface:#ffffff; --text:#1f1f1f; --muted:#6f6759;
+    --accent:#2d5b1e; --accent-2:#4e9b32; --border:#e6dfcc; --chip:#eee6d2;
+    --shadow:0 1px 2px rgba(45,63,25,.04),0 8px 30px rgba(45,63,25,.06);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#12160e; --surface:#1b2015; --text:#ece7d7; --muted:#a39c8a;
+      --accent:#8ec778; --accent-2:#6fb64a; --border:#2b3221; --chip:#242b19;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65;margin:0;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:560px;margin:0 auto;padding:64px 22px 80px;text-align:center;}
+  .brandmark{width:56px;height:56px;border-radius:15px;display:inline-flex;
+    align-items:center;justify-content:center;background:var(--accent);
+    color:#fff;font-size:28px;margin-bottom:26px;}
+  h1{font-size:30px;line-height:1.25;margin:0 0 14px;letter-spacing:-.01em;}
+  p.lede{color:var(--muted);font-size:17px;margin:0 auto 34px;max-width:44ch;}
+  .card{background:var(--surface);border:1px solid var(--border);
+    border-radius:16px;padding:26px 22px;box-shadow:var(--shadow);}
+  button{font:inherit;font-weight:600;font-size:16px;cursor:pointer;
+    background:var(--accent);color:#fff;border:0;border-radius:11px;
+    padding:14px 24px;width:100%;max-width:320px;}
+  button:hover{background:var(--accent-2)}
+  button[disabled]{background:var(--chip);color:var(--muted);cursor:default}
+  .sayi{margin-top:16px;color:var(--muted);font-size:15px;min-height:1.6em}
+  .sayi b{color:var(--text)}
+  .alt{margin-top:30px;font-size:14px;color:var(--muted)}
+  .alt a{color:var(--accent-2)}
+  noscript{display:block;margin-top:26px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brandmark">⚖</div>
+  <h1 id="baslik">Mobil Hakem</h1>
+  <p class="lede" id="alt"></p>
+
+  <div class="card" id="kart" hidden>
+    <button id="dugme"></button>
+    <div class="sayi" id="sayi"></div>
+  </div>
+
+  <p class="alt" id="dipnot"></p>
+
+  <noscript>
+    <p><a href="https://play.google.com/store/apps/details?id=com.mobilhakem.mobil_hakem">Google Play</a></p>
+  </noscript>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var PLAY = 'https://play.google.com/store/apps/details?id=com.mobilhakem.mobil_hakem';
+  var API  = 'https://mobil-hakem-backend-xrj6jcakzq-ey.a.run.app';
+
+  // ── METİNLER ────────────────────────────────────────────────────────────
+  // Paylaşılan bir bağ yurt dışına da gider; sayfa tarayıcının diline bakar,
+  // bulamazsa Türkçe kalır. Uygulamanın kendi dil kuralıyla aynı yön.
+  var M = {
+    tr: {
+      apple:  ['Çok yakında Apple’da', 'Mobil Hakem şu an yalnız Android’de. iPhone ve iPad sürümü için çalışıyoruz.'],
+      win:    ['Windows’ta henüz yokuz', 'Mobil Hakem şu an yalnız Android’de. Masaüstü sürümü henüz yok.'],
+      diger:  ['Mobil Hakem', 'İki kişi tartışır, uygulama dinler ve canlı yüzdelerle kimin haklı olduğunu söyler.'],
+      dugme:  'Gelmesini bekliyorum',
+      bastim: 'Sesini duyduk 👍',
+      tek:    '<b>1</b> kişi bekliyor',
+      cok:    '<b>{n}</b> kişi bekliyor',
+      dip:    'Android telefonun varsa <a href="' + PLAY + '">Google Play’den indirebilirsin</a>.',
+      yon:    'Google Play’e yönlendiriliyorsun…'
+    },
+    en: {
+      apple:  ['Coming soon to Apple', 'Mobil Hakem is Android-only for now. An iPhone and iPad version is in the works.'],
+      win:    ['Not on Windows yet', 'Mobil Hakem is Android-only for now. There is no desktop version yet.'],
+      diger:  ['Mobil Hakem', 'Two people argue, the app listens, and live percentages say who is making the better case.'],
+      dugme:  'I want it here',
+      bastim: 'Noted — thank you 👍',
+      tek:    '<b>1</b> person waiting',
+      cok:    '<b>{n}</b> people waiting',
+      dip:    'On Android? <a href="' + PLAY + '">Get it on Google Play</a>.',
+      yon:    'Taking you to Google Play…'
+    },
+    de: {
+      apple:  ['Bald auch für Apple', 'Mobil Hakem gibt es vorerst nur für Android. An einer Version für iPhone und iPad wird gearbeitet.'],
+      win:    ['Für Windows noch nicht', 'Mobil Hakem gibt es vorerst nur für Android. Eine Desktop-Version gibt es noch nicht.'],
+      diger:  ['Mobil Hakem', 'Zwei Menschen streiten, die App hört zu und sagt mit Live-Prozenten, wer die besseren Argumente hat.'],
+      dugme:  'Ich warte darauf',
+      bastim: 'Notiert — danke 👍',
+      tek:    '<b>1</b> Person wartet',
+      cok:    '<b>{n}</b> Personen warten',
+      dip:    'Android? <a href="' + PLAY + '">Bei Google Play laden</a>.',
+      yon:    'Weiterleitung zu Google Play…'
+    },
+    zh: {
+      apple:  ['即将登陆 Apple', 'Mobil Hakem 目前仅支持 Android。iPhone 和 iPad 版本正在开发中。'],
+      win:    ['暂时还没有 Windows 版', 'Mobil Hakem 目前仅支持 Android，还没有桌面版本。'],
+      diger:  ['Mobil Hakem', '两个人辩论，应用聆听，并用实时百分比告诉你谁更有道理。'],
+      dugme:  '我在等这个版本',
+      bastim: '已记录，谢谢 👍',
+      tek:    '已有 <b>1</b> 人在等',
+      cok:    '已有 <b>{n}</b> 人在等',
+      dip:    '用 Android？<a href="' + PLAY + '">在 Google Play 下载</a>。',
+      yon:    '正在跳转到 Google Play…'
+    }
+  };
+
+  var dil = (navigator.language || 'tr').slice(0, 2).toLowerCase();
+  var t = M[dil] || M.tr;
+  document.documentElement.lang = M[dil] ? dil : 'tr';
+
+  // ── PLATFORM ────────────────────────────────────────────────────────────
+  // iPad KENDİNİ Mac DİYE TANITIYOR (iPadOS 13+). Dokunma noktası sayısı
+  // olmadan her iPad "masaüstü Mac" sayılır; ikisi de Apple tarafına düştüğü
+  // için sonuç aynı, ama ayrım burada dursun ki yarın ayrışırlarsa hazır olsun.
+  var ua = navigator.userAgent || '';
+  var dokunmali = (navigator.maxTouchPoints || 0) > 1;
+  var apple = /iPhone|iPad|iPod/i.test(ua) ||
+              (/Mac/i.test(ua) && dokunmali) ||
+              /Mac OS X|Macintosh/i.test(ua);
+  var android = /Android/i.test(ua);
+  var windows = /Windows NT/i.test(ua);
+
+  var baslik = document.getElementById('baslik');
+  var altP   = document.getElementById('alt');
+  var kart   = document.getElementById('kart');
+  var dugme  = document.getElementById('dugme');
+  var sayiEl = document.getElementById('sayi');
+  var dipnot = document.getElementById('dipnot');
+
+  // ANDROID DOĞRUDAN GİDER, HİÇBİR ŞEY SORMADAN. Bu sayfanın işi olmayan
+  // platformları karşılamak; olanı bir tıklama daha yormak değil.
+  if (android) {
+    baslik.textContent = 'Mobil Hakem';
+    altP.textContent = t.yon;
+    location.replace(PLAY);
+    return;
+  }
+
+  var platform = apple ? 'ios' : (windows ? 'windows' : null);
+  var metin = apple ? t.apple : (windows ? t.win : t.diger);
+  baslik.textContent = metin[0];
+  altP.textContent = metin[1];
+  dipnot.innerHTML = t.dip;
+
+  if (!platform) return;   // Linux ve bilinmeyenler: yalnız Play bağı kalır.
+
+  kart.hidden = false;
+  dugme.textContent = t.dugme;
+
+  function yaz(n) {
+    if (typeof n !== 'number' || n < 1) { sayiEl.textContent = ''; return; }
+    sayiEl.innerHTML = n === 1 ? t.tek : t.cok.replace('{n}', n);
+  }
+
+  // TARAYICI BAŞINA TEK OY. Gerçek bir koruma değil — sayfa herkese açık ve uç
+  // elle de çağrılabilir (ANAYASA v3.61 bunu böyle yazıyor). Amacı hile değil,
+  // aynı kişinin düğmeye üç kez basıp sayıyı kendi kendine şişirmesini
+  // engellemek.
+  var ANAHTAR = 'mh_ilgi_' + platform;
+  var basildi = false;
+  try { basildi = localStorage.getItem(ANAHTAR) === '1'; } catch (e) {}
+
+  if (basildi) {
+    dugme.textContent = t.bastim;
+    dugme.disabled = true;
+  }
+
+  // Açılışta sayıyı oku. Başarısız olursa SESSİZ: sayı görünmemesi, sayfanın
+  // asıl işini (ne olduğunu söylemek) bozmamalı.
+  fetch(API + '/ilgi')
+    .then(function (r) { return r.json(); })
+    .then(function (j) { yaz(j[platform]); })
+    .catch(function () {});
+
+  dugme.addEventListener('click', function () {
+    if (dugme.disabled) return;
+    dugme.disabled = true;
+    dugme.textContent = t.bastim;
+    try { localStorage.setItem(ANAHTAR, '1'); } catch (e) {}
+    // Gövdesiz, başlıksız POST: tarayıcı "basit istek" sayar ve ön-uçuş yapmaz.
+    fetch(API + '/ilgi/' + platform, { method: 'POST' })
+      .then(function (r) { return r.json(); })
+      .then(function (j) { yaz(j.sayi); })
+      .catch(function () {});
+  });
+})();
+</script>
+</body>
+</html>
