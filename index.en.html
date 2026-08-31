@@ -63,32 +63,43 @@
   <h1>Who's Right?</h1>
   <p class="lede">An <strong>entertainment</strong> app that listens to an argument between two
   people and scores it live with AI. Results are not legal, medical or professional advice.</p>
-  <div class="updated"><span class="dot"></span> Last updated: 16 August 2026</div>
-  <p class="langlink">Türkçe sürüm: <a href="./">Gizlilik Politikası</a></p>
+  <div class="updated"><span class="dot"></span> Last updated: 29 August 2026</div>
+  <p class="langlink"><a href="./">Türkçe</a> · <strong>English</strong> · <a href="./index.de.html">Deutsch</a> · <a href="./index.zh-Hans.html">简体中文</a> · <a href="./index.zh-Hant.html">繁體中文</a></p>
 
   <div class="card">
     <section>
-      <h2><span class="num">1</span> Signing in is optional</h2>
-      <p>The entire app works <strong>without an account</strong>. If you do not sign in we
-      never ask for your name, email address or any identity document. To track your remaining
-      usage we use a randomly generated <strong>device ID</strong>: it is stored on your device,
-      sent with requests to our server, and held there only alongside your remaining time. It is
-      not a hardware identifier and it is deleted automatically once unused. Clearing the app's
-      data or uninstalling the app resets it.</p>
-      <p><strong>If you choose to sign in with Google</strong>, your monthly free time doubles.
-      In that case the only thing we store is the <strong>anonymous account identifier</strong>
-      that corresponds to your Google account (the Firebase <em>uid</em>) — an opaque string
-      that does not identify you and tells us neither your name nor your address.
-      At sign-in Google passes your name, email
-      address and profile picture to the app — Google's own consent screen tells you so.
+      <h2><span class="num">1</span> Signing in with Google is required</h2>
+      <p><strong>You need to sign in with Google to start a debate, to receive free time,
+      to buy time and to hire a counsel.</strong> Seeing the welcome screen, reading this
+      policy and the in-app consent text, and enrolling your own voiceprint if you wish, do
+      not require an account.</p>
+      <p><strong>When you sign in, the only thing we store</strong> is the
+      <strong>anonymous account identifier</strong> that corresponds to your Google account
+      (the Firebase <em>uid</em>) — an opaque string that does not identify you and tells us
+      neither your name nor your address. At sign-in Google passes your name, email address
+      and profile picture to the app — Google's own consent screen tells you so.
       <strong>We do not read them, do not process them and never write them anywhere</strong>;
-      the account identifier is the only thing that persists. The account identifier
-      answers exactly one question for us: which account your remaining time belongs to. When
-      you sign in, the time left on that device is transferred to your account, so it follows
-      you to a new phone.</p>
-      <p>You can <strong>sign out</strong> at any time from within the app, and it returns to
-      working without an account. If you want your account and the time attached to it deleted
-      entirely, you can request that at the address in section 9.</p>
+      the account identifier is the only thing that persists. Your email address is read only
+      to show you, on your own phone's screen, which account is connected; it is never sent to
+      our server. The account identifier answers exactly one question for us: which account
+      your remaining time belongs to.</p>
+      <p><strong>A device ID is also still used</strong>, and it is separate from the account
+      identifier: a randomly generated, non-personal string, stored on your device and sent
+      with requests to our server. It is used to limit abuse, to recognise a reconnection to
+      the same debate, and to move time already accrued on that device to your account. It is
+      not a hardware identifier and it is deleted automatically once unused; clearing the
+      app's data or uninstalling the app resets it. A similar non-personal, app-specific
+      identifier is used for usage statistics (section 5).</p>
+      <p>You can <strong>sign out</strong> at any time from within the app. While signed out
+      you cannot start a new debate; <strong>your time is not deleted</strong> — it stays on
+      your account and comes back when you sign in again.</p>
+      <p><strong>You can delete your account from inside the app</strong>: tap the star badge,
+      then choose <em>Delete account</em> in the window that opens. Deletion cannot be undone
+      and permanently removes everything attached to your account — including your remaining
+      and purchased time and, if enabled, your debate history; afterwards you can no longer
+      start a debate in the app. For details, or to request deletion without installing the
+      app, see <a href="./veri-silme.html">Account and data deletion</a>. You can also request
+      it at the address in section 9.</p>
     </section>
     <section>
       <h2><span class="num">2</span> Audio and transcript are never stored</h2>
@@ -120,6 +131,20 @@
       enrolled</strong> — if more than one voice is heard during enrolment, nothing is saved. You
       can delete it in one tap with <em>&ldquo;Forget my voice&rdquo;</em> on the home screen, and
       it is deleted automatically when you turn debate history off.</p>
+      <p><strong>Optional exception — Live Hearings (Court Before a Jury).</strong> Two
+      people may choose to broadcast their debate live to other users; this happens only
+      with explicit, separate confirmation from both of them at every hearing. Your image
+      and voice are <strong>transmitted to viewers live — transmitting is not
+      storing:</strong> server-side recording is off, past broadcasts cannot be watched,
+      and the moment a broadcast ends nothing of its video or audio remains. The only thing
+      kept is the room's own technical ledger: the topic, duration, viewer count, vote
+      counts and the moment consent was taken. Not the content of the conversation.</p>
+      <p><strong>Optional exception — Viewer chat.</strong> Messages you type while
+      watching a hearing are kept for at most 30 days for moderation review and are tied to
+      your account. This is not the debate's spoken transcript — what is said is still
+      never stored; what is kept is what you typed and published with your own keyboard. A
+      moderation team that cannot read a reported message would be no moderation at all.
+      They are deleted when the period ends, and entirely when you delete your account.</p>
     </section>
     <section>
       <h2><span class="num">3</span> Both parties consent</h2>
@@ -143,11 +168,13 @@
         voice. Only the short announcement text is sent (which includes the winner's first
         name); no audio, no debate transcript and no scores are sent. The text is not retained
         after it has been spoken.</li>
+        <li><strong>Cloudflare</strong> — live hearings only: real-time delivery of
+        video and audio to viewers. The broadcast is transmitted, never recorded.</li>
         <li><strong>Google Analytics for Firebase</strong> — anonymous usage counters only
         (see section 5).</li>
         <li><strong>Google Play Billing</strong> — extra-time purchases.</li>
-        <li><strong>Firebase Authentication</strong> — only if you choose to sign in with
-        Google. Google performs the sign-in; only the anonymous account identifier (uid)
+        <li><strong>Firebase Authentication</strong> — the Google sign-in required to start
+        a debate. Google performs the sign-in; only the anonymous account identifier (uid)
         reaches us.</li>
       </ul>
       <p>This processing may take place on servers outside your country, including outside the
@@ -208,8 +235,9 @@
       Google AdMob to serve ads, which some laws treat as "sharing"; advertising was removed in
       1.19.0 and no advertising identifier is collected by that version or later. You have the
       right to know, delete and correct, and to not be discriminated
-      against for exercising those rights. To exercise them, email the address in section 9 —
-      no account is required and we will not ask you to create one.</p>
+      against for exercising those rights. To exercise them, email the address in section 9.
+      <strong>Making such a request needs no account</strong>: we will not ask you to install
+      the app or to sign in in order to exercise a privacy right.</p>
     </section>
     <section>
       <h2><span class="num">9</span> Contact</h2>
@@ -228,5 +256,6 @@
 
   <p class="foot">© 2026 Bizzy Mobil Uygulama Çözümleri Ltd. Şti. — Who's Right? / Mobil Hakem</p>
 </div>
+  <p class="foot"><a href="./kurallar.en.html">Community Guidelines</a></p>
 </body>
 </html>

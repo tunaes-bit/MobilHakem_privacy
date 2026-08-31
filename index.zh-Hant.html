@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>誰有理？ — 隱私權政策</title>
+<style>
+  :root{
+    --bg:#f6eedc; --surface:#ffffff; --text:#1f1f1f; --muted:#6f6759;
+    --accent:#2d5b1e; --accent-2:#4e9b32; --border:#e6dfcc; --chip:#eee6d2;
+    --shadow:0 1px 2px rgba(45,63,25,.04),0 8px 30px rgba(45,63,25,.06);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#12160e; --surface:#1b2015; --text:#ece7d7; --muted:#a39c8a;
+      --accent:#8ec778; --accent-2:#6fb64a; --border:#2b3221; --chip:#242b19;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65;margin:0;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:720px;margin:0 auto;padding:56px 22px 80px;}
+  .brandmark{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;
+    justify-content:center;background:var(--accent);color:#fff;font-size:22px;box-shadow:var(--shadow);}
+  .eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);
+    font-weight:700;margin:22px 0 6px;}
+  h1{font-family:Georgia,"Times New Roman",serif;font-weight:600;font-size:40px;line-height:1.1;
+    margin:0 0 10px;letter-spacing:-.01em;}
+  .lede{font-size:17px;color:var(--muted);margin:0 0 4px;max-width:60ch;}
+  .updated{font-size:13px;color:var(--muted);margin-top:14px;
+    display:inline-flex;gap:8px;align-items:center;padding:5px 11px;border:1px solid var(--border);
+    border-radius:999px;background:var(--surface);}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent-2);}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:16px;
+    padding:10px 26px 26px;margin-top:34px;box-shadow:var(--shadow);}
+  section{padding:24px 0 4px;border-top:1px solid var(--border);}
+  section:first-of-type{border-top:0;}
+  h2{font-size:18.5px;font-weight:700;margin:0 0 8px;display:flex;gap:12px;align-items:baseline;}
+  .num{font-family:Georgia,serif;font-size:15px;color:var(--accent-2);font-weight:600;
+    min-width:20px;}
+  p{margin:0 0 12px;}
+  strong{color:var(--text);font-weight:650;}
+  ul{margin:0 0 8px;padding-left:2px;list-style:none;}
+  li{position:relative;padding-left:20px;margin-bottom:9px;}
+  li::before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:2px;
+    background:var(--accent-2);}
+  .contact{background:var(--chip);border-radius:12px;padding:16px 18px;margin-top:6px;}
+  .contact strong{display:block;margin-bottom:4px;}
+  a{color:var(--accent-2);text-decoration:none;
+    border-bottom:1px solid color-mix(in srgb,var(--accent-2) 40%,transparent);}
+  a:hover{border-bottom-color:var(--accent-2);}
+  a:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px;border-radius:3px;}
+  .foot{margin-top:30px;color:var(--muted);font-size:13px;text-align:center;}
+  .langlink{font-size:13px;color:var(--muted);margin-top:10px;}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <div class="brandmark" aria-hidden="true">⚖︎</div>
+  <div class="eyebrow">隱私權政策</div>
+  <h1>誰有理？</h1>
+  <p class="lede">一款<strong>娛樂</strong>應用程式：聆聽兩個人的爭論，並以人工智慧即時給出百分比評分。結果不構成法律、醫療或專業建議。</p>
+  <div class="updated"><span class="dot"></span> 最後更新：2026 年 8 月 29 日</div>
+  <p class="langlink"><a href="./">Türkçe</a> · <a href="./index.en.html">English</a> · <a href="./index.de.html">Deutsch</a> · <a href="./index.zh-Hans.html">简体中文</a> · <strong>繁體中文</strong></p>
+
+  <div class="card">
+    <section>
+      <h2><span class="num">1</span> 必須使用 Google 登入</h2>
+      <p><strong>開始辯論、取得免費時間、購買時間以及聘請律師，都需要使用 Google 登入。</strong>
+      查看歡迎頁、閱讀本政策與應用程式內的同意說明，以及（若你願意）建立自己的聲紋，都不需要帳號。</p>
+      <p><strong>登入後我們唯一儲存的</strong>，是與你的 Google 帳號相對應的
+      <strong>匿名帳號識別碼</strong>（Firebase <em>uid</em>）：一串不透明的字元，無法識別你的身分，
+      也不會告訴我們你的姓名或地址。登入時 Google 會將你的姓名、電子郵件與大頭貼傳給應用程式——
+      Google 自己的授權畫面也會這樣告訴你。<strong>我們不讀取、不處理，也絕不將其寫入任何地方</strong>；
+      唯一留存的只有帳號識別碼。你的電子郵件僅在你自己手機的畫面上被讀取，用來顯示目前連結的是哪個帳號，
+      絕不會傳送到我們的伺服器。帳號識別碼對我們只回答一個問題：你剩餘的時間屬於哪個帳號。</p>
+      <p><strong>裝置識別碼仍會使用</strong>，且與帳號識別碼分開：它是隨機產生、非個人的字串，
+      儲存在你的裝置上並隨請求傳送至我們的伺服器，用於限制濫用、辨識同一場辯論的重新連線，
+      以及將裝置上已累積的時間轉移到你的帳號。它不是硬體識別碼，閒置後會自動刪除；
+      清除應用程式資料或解除安裝即可重設。使用統計同樣採用非個人的、應用程式專屬的識別碼（第 5 節）。</p>
+      <p>你可以隨時在應用程式內<strong>登出</strong>。登出後無法開始新的辯論；
+      <strong>你的時間不會被刪除</strong>——它留在你的帳號中，重新登入後就會回來。</p>
+      <p><strong>你可以在應用程式內刪除帳號</strong>：點按星星標章，在開啟的視窗中選擇<em>刪除帳號</em>。
+      刪除無法復原，並會永久移除與你帳號相關的一切——包括剩餘時間、已購買時間，以及（若已開啟）辯論紀錄；
+      之後你將無法在應用程式中開始辯論。詳情，或在不安裝應用程式的情況下申請刪除，請見
+      <a href="./veri-silme.html">帳號與資料刪除</a>。你也可以透過第 9 節的地址提出申請。</p>
+    </section>
+    <section>
+      <h2><span class="num">2</span> 絕不儲存音訊與逐句文字</h2>
+      <p>辯論期間，麥克風<strong>僅在當下</strong>使用；沒有背景聆聽。音訊會即時處理以轉為文字。
+      <strong>錄音與逐句文字紀錄在任何情況下都不會被儲存</strong>——不在裝置上，不在我們的伺服器上，
+      也不在任何雲端。這兩句話沒有例外；任何設定、任何同意都不會改變它們。</p>
+      <p>辯論中出現在畫面上的一切（文字、姓名、即時比分）只存在於裝置的暫時記憶體（RAM）中，
+      應用程式關閉後即消失。</p>
+      <p><strong>可選的例外——辯論紀錄。</strong>對於已使用 Google 登入並<strong>自行開啟</strong>
+      此設定的使用者，辯論結束後產生的<strong>裁決本身</strong>會綁定帳號儲存：日期、辯論主題、類別、
+      百分比、裁判的理由、逐人分析、<strong>發言者的姓名（若有人在辯論中說出名字）</strong>，
+      以及（若有）律師的陳述。<strong>錄音與逐句文字不在此例外之內，依然絕不儲存。</strong>
+      此設定<strong>預設為關閉</strong>。在應用程式內關閉它的那一刻，你的所有紀錄都會被刪除；
+      刪除帳號時同樣會被刪除。</p>
+      <p><strong>可選的例外——聲紋。</strong>若你願意，可以建立一次自己的聲音紀錄：應用程式聆聽 20 秒，
+      你朗讀畫面上顯示的句子，其中一句會請你說出自己的名字。我們的語音服務供應商會將該段音訊轉換成一個
+      <strong>無意義的識別碼</strong>；該識別碼與你說出的名字<strong>僅加密儲存在這支手機上</strong>。
+      <strong>它們絕不會傳送到我們的伺服器，任何雲端都不存在副本，並且被排除在裝置備份之外。</strong>
+      音訊本身在此同樣不會儲存。它有兩個用途：將你與跟你爭論的人區分開，以及在你的紀錄中標記哪一方是你。
+      這一步是選擇性的；沒有它應用程式也能運作。<strong>絕不會建立對方的聲紋</strong>——
+      若建立過程中聽到不只一個聲音，就什麼都不會儲存。你可以在主畫面上透過
+      <em>「忘記我的聲音」</em>一鍵刪除；關閉辯論紀錄時它也會自動刪除。</p>
+      <p><strong>可選的例外——直播庭審（陪審團面前的法庭）。</strong>兩個人可以選擇將自己的辯論
+      向其他使用者直播；這只會在每場庭審中，雙方分別給出明確同意後才會發生。你的影像和聲音會
+      <strong>即時傳送給觀眾——傳送不等於儲存：</strong>伺服器端錄製處於關閉狀態，過去的直播無法回看，
+      直播結束的那一刻，影像和聲音不會留下任何東西。唯一儲存的是房間自身的技術帳冊：
+      主題、時長、觀眾人數、投票數，以及取得同意的時刻。而不是談話的內容。</p>
+      <p><strong>可選的例外——觀眾聊天。</strong>你在觀看庭審時輸入的訊息，會基於審核目的最多保留 30 天，
+      並綁定到你的帳號。這不是辯論的口頭文字紀錄——說出的話依然在任何情況下都不儲存；
+      保留的是你用自己的鍵盤輸入並發布的文字。無法讀取被檢舉訊息的審核，就稱不上審核。
+      期限屆滿後它們會被刪除；刪除帳號時也會被全部刪除。</p>
+    </section>
+    <section>
+      <h2><span class="num">3</span> 雙方均需同意</h2>
+      <p>辯論開始前，應用程式會顯示一個步驟，確認<strong>雙方</strong>發言者都同意被聆聽。
+      在你所在的地區，未經他人知悉而錄音或轉寫他人可能違法；請勿以本應用程式從事此類行為。</p>
+      <p><strong>開啟辯論紀錄後，該步驟會明確說明這一點。</strong>坐在你對面的人從來看不到紀錄頁面——
+      開啟設定的是手機的主人——因此當確實有內容要儲存時，同意文字會直說：
+      「本場辯論的裁決（不含錄音，不含文字紀錄）將儲存到你的帳號中。」</p>
+    </section>
+    <section>
+      <h2><span class="num">4</span> 第三方服務</h2>
+      <p>為使應用程式正常運作，音訊與文字會傳送至下列服務，<strong>且僅用於即時處理</strong>。
+      我們並未要求其中任何一方保留這些內容：</p>
+      <ul>
+        <li><strong>Speechmatics</strong> —— 即時語音轉文字（歐洲區域）。</li>
+        <li><strong>AI 裁判（大型語言模型）</strong> —— 即時評估文字紀錄
+        （即時比分：Groq；最終分析：Google Gemini）。</li>
+        <li><strong>ElevenLabs</strong> —— 以自然的裁判嗓音宣布獲勝者。僅傳送簡短的宣布文字
+        （其中包含獲勝者的名字）；不傳送音訊、不傳送辯論文字紀錄、不傳送分數。文字在唸出後不予保留。</li>
+        <li><strong>Cloudflare</strong> —— 僅用於直播庭審：將影像和聲音即時傳送給觀眾。
+        直播只被傳送，絕不被錄製。</li>
+        <li><strong>Google Analytics for Firebase</strong> —— 僅匿名使用計數（見第 5 節）。</li>
+        <li><strong>Google Play 結帳</strong> —— 額外時間的購買。</li>
+        <li><strong>Firebase Authentication</strong> —— 開始辯論所需的 Google 登入。
+        登入由 Google 執行；只有匿名帳號識別碼（uid）會到達我們這裡。</li>
+      </ul>
+      <p>上述處理可能發生在你所在國家/地區之外的伺服器上，並於應用程式內的同意畫面中揭露。</p>
+    </section>
+    <section>
+      <h2><span class="num">5</span> 使用統計</h2>
+      <p>我們透過 Google Analytics for Firebase 收集匿名使用計數，只為回答一個問題：人們在哪一步放棄了？</p>
+      <p><strong>收集的內容：</strong>到達了哪一階段（權限、聲紋建立、辯論、結果）、這些步驟花了多久、
+      是否開啟過購買畫面、是否發生連線錯誤；以及裝置型號、作業系統版本、國家/地區與一個應用程式專屬的隨機識別碼。</p>
+      <p><strong>不收集的內容：</strong>音訊、文字紀錄、發言者姓名與分數不會出現在任何分析事件中。
+      你的姓名、電子郵件或身分不會進入任何統計。若你開啟了辯論紀錄，你的裁決會儲存到你的帳號中（第 2 節）
+      ——但那些紀錄<strong>屬於你，且不會進入這些統計</strong>。</p>
+      <p>我們刻意拒絕了工作階段錄製類工具（例如畫面重播），因為畫面錄製會把辯論畫面上的姓名與即時字幕
+      以像素的形式帶給第三方。</p>
+    </section>
+    <section>
+      <h2><span class="num">6</span> 廣告</h2>
+      <p><strong>本應用程式不顯示廣告。</strong>無論免費時間或已購買的時間都沒有廣告，
+      應用程式中也不含任何廣告程式碼。</p>
+      <p><strong>不收集你的廣告識別碼</strong>，也不會為廣告目的與第三方分享你的任何資料。</p>
+      <p>廣告已於<strong>1.19.0 版本完全移除</strong>。若你使用的是較舊版本，
+      在免費時間內可能仍會看到 Google AdMob 橫幅廣告——且你的廣告識別碼可能仍被用於此——
+      直到你在 Play 商店更新應用程式為止。</p>
+    </section>
+    <section>
+      <h2><span class="num">7</span> 兒童</h2>
+      <p>本應用程式適用於 13 歲以上使用者，不屬於 Google Play 家庭計畫，也不以兒童為對象。
+      我們不會在知情的情況下收集 13 歲以下兒童的個人資料。</p>
+    </section>
+    <section>
+      <h2><span class="num">8</span> 你的權利</h2>
+      <p>由於音訊與文字紀錄從不儲存，也就不存在可供存取或刪除的相關紀錄。</p>
+      <p>我們的伺服器實際保有的是：與隨機裝置識別碼綁定的使用計數（短期後自動刪除）、
+      伺服器存取紀錄（IP 位址與時間戳記，基於安全考量短期保留），以及
+      <strong>僅在你開啟該設定時</strong>你的辯論紀錄。</p>
+      <p><strong>刪除你的紀錄不需要寫信給我們。</strong>在「辯論紀錄」頁面關閉開關，
+      會在那一刻刪除每一筆紀錄；刪除帳號同樣如此。關於你的裝置識別碼下的其他內容，你隨時可以與我們聯絡。</p>
+      <p>你有權知悉、更正與刪除我們所持有的與你相關的資料，且不會因行使這些權利而受到差別待遇。
+      請透過第 9 節的地址提出。<strong>提出此類請求不需要帳號</strong>：
+      我們不會要求你先安裝應用程式或登入，才能行使隱私權利。</p>
+    </section>
+    <section>
+      <h2><span class="num">9</span> 聯絡方式</h2>
+      <div class="contact">
+        <strong>Bizzy Mobil Uygulama Çözümleri Ltd. Şti.</strong>
+        聯絡人: Tuna ES<br>
+        電子郵件: <a href="mailto:destek@bizzytime.app">destek@bizzytime.app</a><br>
+        電話: +90 543 848 48 74
+      </div>
+    </section>
+    <section>
+      <h2><span class="num">10</span> 變更</h2>
+      <p>本政策可能會更新；現行版本一律發布於本頁面。</p>
+    </section>
+  </div>
+</div>
+  <p class="foot"><a href="./kurallar.zh-Hant.html">社群規範</a></p>
+</body>
+</html>
