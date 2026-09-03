@@ -94,9 +94,10 @@
       Aufgaben: Missbrauch zu begrenzen (aufeinanderfolgende Anfragen vom selben Gerät zu
       erkennen) und die Wiederverbindung zu einer unterbrochenen Debatte zu erkennen. Deine
       Zeit wird deinem Konto gutgeschrieben, nicht ihr. Sie ist keine Hardware-Kennung; das
-      Löschen der App-Daten oder das Deinstallieren setzt sie zurück. Wenn du eine frühere
-      Version ohne Anmeldung genutzt hast und auf diesem Telefon gekaufte Zeit angesammelt
-      wurde, wird sie bei deiner ersten Anmeldung auf dein Konto übertragen. Für
+      Löschen der App-Daten setzt sie zurück (bei einer aus einem Backup wiederhergestellten
+      Installation kann sie zurückkommen). Wenn du eine frühere Version ohne Anmeldung
+      genutzt hast und auf diesem Telefon gekaufte Zeit angesammelt wurde, wird sie bei
+      deiner ersten Anmeldung auf dein Konto übertragen. Für
       Nutzungsstatistiken wird ebenso eine nicht personenbezogene, app-spezifische Kennung
       verwendet (Abschnitt 5).</p>
       <p>Du kannst dich jederzeit in der App <strong>abmelden</strong>. Solange du abgemeldet
@@ -106,14 +107,18 @@
       und wähle im geöffneten Fenster <em>Konto löschen</em>. Die Löschung ist unwiderruflich und
       entfernt dauerhaft alles, was an dein Konto gebunden ist — einschließlich deiner
       verbleibenden und gekauften Zeit und, falls aktiviert, deines Debattenverlaufs; danach
-      kannst du in der App keine Debatte mehr starten. <strong>Das Einzige, was wir nach der
-      Löschung behalten</strong>, ist dies: wie viel der Freizeit du in jenem Monat verbraucht
-      hattest, gespeichert zu einem gesalzenen Einweg-Hash (SHA-256) deiner Google-Kontokennung
-      für höchstens 40 Tage, danach wird es automatisch gelöscht. Der Zweck ist zu verhindern,
-      dass die monatliche Freizeit zurückgesetzt wird, indem das Konto gelöscht und mit
-      demselben Google-Konto neu angelegt wird; dieser Eintrag enthält weder E-Mail-Adresse
-      noch Namen noch Kontokennung, ist nicht umkehrbar und wird zu keinem anderen Zweck
-      verwendet. Einzelheiten und die Möglichkeit, die Löschung ohne Installation der App zu
+      kannst du in der App keine Debatte mehr starten. <strong>Der einzige mit deiner Identität
+      verknüpfte Eintrag, den wir nach der Löschung behalten</strong>, ist dies: wie viel der
+      Freizeit du in jenem Monat verbraucht hattest und wie viele Belohnungen fürs Teilen du in
+      jenem Monat erhalten hattest, gespeichert zu einem gesalzenen Einweg-Hash (SHA-256)
+      deiner Google-Kontokennung für höchstens 40 Tage, danach wird er automatisch gelöscht.
+      Der Zweck ist zu verhindern, dass die monatliche Freizeit zurückgesetzt wird, indem das
+      Konto gelöscht und mit demselben Google-Konto neu angelegt wird; dieser Eintrag enthält
+      weder E-Mail-Adresse noch Namen noch Kontokennung, ist nicht umkehrbar und wird zu keinem
+      anderen Zweck verwendet. Technische Rückstände, die sich nicht mit deiner Identität
+      verknüpfen lassen (der Hash des Kauf-Tokens, Server-Zugriffsprotokolle, aggregierte
+      Statistiken), und ihre Aufbewahrungsfristen stehen auf der Seite zur Datenlöschung.
+      Einzelheiten und die Möglichkeit, die Löschung ohne Installation der App zu
       beantragen: <a href="./veri-silme.html">Konto- und Datenlöschung</a>. Du kannst sie auch
       über die Adresse in Abschnitt 9 beantragen.</p>
     </section>
@@ -245,7 +250,7 @@
       <p>Da Audio und Protokolle nie gespeichert werden, gibt es davon keinen Datensatz, auf den
       zugegriffen oder der gelöscht werden könnte.</p>
       <p>Was unser Server tatsächlich vorhält: den an dein Konto gebundenen Nutzungszähler
-      (bei ungenutzten Konten automatisch gelöscht), die Spur gelöschter Konten (Abschnitt 1,
+      (wird gelöscht, wenn du dein Konto löschst), die Spur gelöschter Konten (Abschnitt 1,
       höchstens 40 Tage), Server-Zugriffsprotokolle (IP-Adresse und Zeitstempel, kurz zu
       Sicherheitszwecken aufbewahrt) und <strong>nur wenn du die Einstellung aktiviert
       hast</strong> deinen Debattenverlauf.</p>

@@ -90,10 +90,11 @@
       with requests to our server. It has two jobs: limiting abuse (recognising repeated
       requests from the same device) and recognising a reconnection to an interrupted debate.
       Your time is written against your account, not against it. It is not a hardware
-      identifier; clearing the app's data or uninstalling the app resets it. If purchased time
-      accumulated on this phone in an earlier version that you used without signing in, it is
-      moved to your account at your first sign-in. A similar non-personal, app-specific
-      identifier is used for usage statistics (section 5).</p>
+      identifier; clearing the app's data resets it (it can come back on an installation
+      restored from a backup). If purchased time accumulated on this phone in an earlier
+      version that you used without signing in, it is moved to your account at your first
+      sign-in. A similar non-personal, app-specific identifier is used for usage
+      statistics (section 5).</p>
       <p>You can <strong>sign out</strong> at any time from within the app. While signed out
       you cannot start a new debate; <strong>your time is not deleted</strong> — it stays on
       your account and comes back when you sign in again.</p>
@@ -101,15 +102,19 @@
       then choose <em>Delete account</em> in the window that opens. Deletion cannot be undone
       and permanently removes everything attached to your account — including your remaining
       and purchased time and, if enabled, your debate history; afterwards you can no longer
-      start a debate in the app. <strong>The only thing we keep after deletion</strong> is
-      this: how much of that month's free time you had used, stored against a salted one-way
-      hash (SHA-256) of your Google account identifier for at most 40 days, after which it is
+      start a debate in the app. <strong>The only record tied to your identity that we keep
+      after deletion</strong> is this: how much of that month's free time you had used and how
+      many share rewards you had received that month, stored against a salted one-way hash
+      (SHA-256) of your Google account identifier for at most 40 days, after which it is
       deleted automatically. Its purpose is to stop the monthly free time from being reset by
       deleting the account and creating it again with the same Google account; that record
       contains no email address, no name and no account identifier, cannot be reversed, and is
-      used for no other purpose. For details, or to request deletion without installing the
-      app, see <a href="./veri-silme.html">Account and data deletion</a>. You can also request
-      it at the address in section 9.</p>
+      used for no other purpose. Technical remnants that cannot be linked to your identity
+      (the hash of the purchase token, server access logs, aggregate statistics) and their
+      retention periods are listed on the data deletion page. For details, or to request
+      deletion without installing the app, see
+      <a href="./veri-silme.html">Account and data deletion</a>. You can also request it at
+      the address in section 9.</p>
     </section>
     <section>
       <h2><span class="num">2</span> Audio and transcript are never stored</h2>
@@ -230,8 +235,8 @@
       <h2><span class="num">8</span> Your rights</h2>
       <p>Because audio and transcripts are never stored, there is no record of them to access or
       delete.</p>
-      <p>What our server does hold: the usage counter tied to your account (deleted
-      automatically for accounts that go unused), the deleted-account trace (section 1, at
+      <p>What our server does hold: the usage counter tied to your account (deleted when
+      you delete your account), the deleted-account trace (section 1, at
       most 40 days), server access logs (IP address and timestamp, kept briefly for security),
       and <strong>only if you turned the setting on</strong>, your debate history.</p>
       <p><strong>You do not need to write to us to delete your history.</strong> Turning the

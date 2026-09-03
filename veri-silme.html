@@ -89,8 +89,8 @@
       <p><strong>Silmeden sonra ne olur:</strong> oturumunuz kapanır ve yeni bir tartışma
       başlatamazsınız. Uygulamayı yeniden kullanmak isterseniz tekrar Google ile giriş
       yapmanız gerekir; bu <strong>yeni</strong> bir hesap olur ve silinen hesabın süresi,
-      satın alımları ve geçmişi geri gelmez. O ay ücretsiz süreden kullandığınız miktar yeni
-      hesapta da kullanılmış sayılır (4. madde).</p>
+      satın alımları ve geçmişi geri gelmez. O ay ücretsiz süreden kullandığınız miktar ve
+      aldığınız paylaşım ödülleri yeni hesapta da kullanılmış sayılır (4. madde).</p>
 
       <h3>E-posta ile (her sürümden)</h3>
       <ol>
@@ -165,18 +165,20 @@
       <h2><span class="num">4</span> Silmeden sonra kalanlar ve saklama süreleri</h2>
       <div class="kept">
         <h3>Silinmiş hesap izi — en fazla 40 gün</h3>
-        <p>Hesabınızı sildiğinizde, o ay ücretsiz süreden kullandığınız miktar, Google hesap
-        kimliğinizin tuzlanmış tek yönlü özetiyle (SHA-256) birlikte en fazla 40 gün tutulur ve
-        sonra kendiliğinden silinir. Tek amacı, hesabı silip aynı Google hesabıyla yeniden açarak
+        <p>Hesabınızı sildiğinizde, o ay ücretsiz süreden kullandığınız miktar ve o ay
+        aldığınız paylaşım ödülü sayısı, Google hesap kimliğinizin tuzlanmış tek yönlü
+        özetiyle (SHA-256) birlikte en fazla 40 gün tutulur ve sonra kendiliğinden silinir.
+        Tek amacı, hesabı silip aynı Google hesabıyla yeniden açarak
         aylık ücretsiz sürenin sıfırlanmasını önlemektir. Kayıt e-posta, ad ya da hesap kimliği
         içermez; özet geri döndürülemez ve tuz yalnızca sunucumuzda durduğu için bu kayıttan kim
         olduğunuz çıkarılamaz. Satın alınmış süre bu kayda girmez.</p>
       </div>
       <div class="kept">
-        <h3>Satın alma jetonunun tek yönlü özeti — süresiz</h3>
+        <h3>Satın alma jetonunun tek yönlü özeti — 90 gün</h3>
         <p>Bir satın almanın ikinci kez kullanılmasını engellemek için satın alma jetonunun
-        geri döndürülemez özetini (SHA-256) tutuyoruz. Bu özet bir kişiye, hesaba veya cihaza
-        bağlanamaz ve dolandırıcılığı önleme dışında hiçbir amaçla kullanılmaz.</p>
+        geri döndürülemez özetini (SHA-256) 90 gün tutuyoruz; süresi dolunca kendiliğinden
+        silinir. Bu özet bir kişiye, hesaba veya cihaza bağlanamaz ve dolandırıcılığı
+        önleme dışında hiçbir amaçla kullanılmaz.</p>
       </div>
       <div class="kept">
         <h3>Sunucu erişim kayıtları — en fazla 30 gün</h3>
@@ -225,8 +227,8 @@
       <p><strong>What happens after deletion:</strong> you are signed out and can no longer
       start a debate. To use the app again you must sign in with Google once more; that is a
       <strong>new</strong> account, and the deleted account's time, purchases and history do
-      not come back. The free time you used in that month still counts as used in the new
-      account (section 4).</p>
+      not come back. The free time you used in that month and the share rewards you received
+      still count as used in the new account (section 4).</p>
 
       <h3>By email (any version)</h3>
       <ol>
@@ -295,18 +297,20 @@
       <h2><span class="num">4</span> What remains, and for how long</h2>
       <div class="kept">
         <h3>Trace of a deleted account — at most 40 days</h3>
-        <p>When you delete your account, the amount of free time you used that month is kept for
-        at most 40 days together with a salted one-way hash (SHA-256) of your Google account id,
-        and is then deleted automatically. Its only purpose is to stop the monthly free time being
+        <p>When you delete your account, the amount of free time you used that month and the
+        number of share rewards you received that month are kept for at most 40 days together
+        with a salted one-way hash (SHA-256) of your Google account id, and are then deleted
+        automatically. Their only purpose is to stop the monthly free time being
         reset by deleting an account and opening it again with the same Google account. The record
         contains no email address, no name and no account id; the hash is irreversible and the
         salt is held only on our server, so who you are cannot be derived from it. Purchased time
         is not part of this record.</p>
       </div>
       <div class="kept">
-        <h3>One-way hash of the purchase token — kept indefinitely</h3>
-        <p>An irreversible SHA-256 hash of the purchase token, kept solely to stop the same
-        purchase being redeemed twice. It cannot be linked back to a person, account or device.</p>
+        <h3>One-way hash of the purchase token — 90 days</h3>
+        <p>We keep an irreversible SHA-256 hash of the purchase token for 90 days to stop the
+        same purchase being redeemed twice; it is deleted automatically when that period ends.
+        It cannot be linked back to a person, account or device.</p>
       </div>
       <div class="kept">
         <h3>Server access logs — 30 days maximum</h3>
@@ -357,7 +361,8 @@
       Debatte mehr starten. Um die App wieder zu nutzen, musst du dich erneut mit Google
       anmelden; das ist dann ein <strong>neues</strong> Konto, und die Zeit, die Käufe und der
       Verlauf des gelöschten Kontos kommen nicht zurück. Die kostenlose Zeit, die du in diesem
-      Monat verbraucht hast, gilt auch im neuen Konto als verbraucht (Abschnitt 4).</p>
+      Monat verbraucht hast, und die Belohnungen fürs Teilen, die du erhalten hast, gelten
+      auch im neuen Konto als verbraucht (Abschnitt 4).</p>
 
       <h3>Per E-Mail (jede Version)</h3>
       <ol>
@@ -431,9 +436,11 @@
       <h2><span class="num">4</span> Was bleibt, und wie lange</h2>
       <div class="kept">
         <h3>Spur eines gelöschten Kontos — höchstens 40 Tage</h3>
-        <p>Wenn du dein Konto löschst, wird die kostenlose Zeit, die du in diesem Monat verbraucht
-        hast, zusammen mit einem gesalzenen Einweg-Hash (SHA-256) deiner Google-Kontokennung
-        höchstens 40 Tage aufbewahrt und danach automatisch gelöscht. Sie dient einzig dazu, zu
+        <p>Wenn du dein Konto löschst, werden die kostenlose Zeit, die du in diesem Monat
+        verbraucht hast, und die Anzahl der Belohnungen fürs Teilen, die du in diesem Monat
+        erhalten hast, zusammen mit einem gesalzenen Einweg-Hash (SHA-256) deiner
+        Google-Kontokennung höchstens 40 Tage aufbewahrt und danach automatisch gelöscht. Sie
+        dienen einzig dazu, zu
         verhindern, dass die monatliche kostenlose Zeit zurückgesetzt wird, indem man das Konto
         löscht und es mit demselben Google-Konto erneut eröffnet. Der Eintrag enthält weder
         E-Mail-Adresse noch Namen noch Kontokennung; der Hash ist nicht umkehrbar, und da das Salz
@@ -441,9 +448,10 @@
         gehört nicht zu diesem Eintrag.</p>
       </div>
       <div class="kept">
-        <h3>Einweg-Hash des Kauf-Tokens — unbefristet</h3>
-        <p>Ein unumkehrbarer SHA-256-Hash des Kauf-Tokens, ausschließlich dazu da, dass derselbe
-        Kauf nicht zweimal eingelöst wird. Er lässt sich nicht auf eine Person, ein Konto oder ein
+        <h3>Einweg-Hash des Kauf-Tokens — 90 Tage</h3>
+        <p>Um zu verhindern, dass derselbe Kauf zweimal eingelöst wird, bewahren wir einen
+        unumkehrbaren SHA-256-Hash des Kauf-Tokens 90 Tage lang auf; nach Ablauf dieser Frist
+        wird er automatisch gelöscht. Er lässt sich nicht auf eine Person, ein Konto oder ein
         Gerät zurückführen.</p>
       </div>
       <div class="kept">
@@ -489,7 +497,7 @@
       <p><strong>删除之后会怎样：</strong>你会退出登录，并且无法再开始辩论。
       若想重新使用这款应用，必须再次用 Google 登录；那将是一个<strong>新的</strong>账号，
       已删除账号的时长、购买记录和历史都不会回来。
-      你在当月已使用的免费时长，在新账号中同样算作已使用（见第 4 节）。</p>
+      你在当月已使用的免费时长和已获得的分享奖励，在新账号中同样算作已使用（见第 4 节）。</p>
 
       <h3>通过电子邮件（任何版本）</h3>
       <ol>
@@ -546,16 +554,16 @@
       <h2><span class="num">4</span> 删除后仍保留的内容与保留期限</h2>
       <div class="kept">
         <h3>已删除账号的痕迹——最多 40 天</h3>
-        <p>当你删除账号时，你在当月已使用的免费时长，会连同你 Google 账号标识的加盐单向摘要
-        （SHA-256）一起最多保留 40 天，之后自动删除。它唯一的用途，是防止有人删除账号后再用同一个
+        <p>当你删除账号时，你在当月已使用的免费时长和你当月获得的分享奖励次数，
+        会连同你 Google 账号标识的加盐单向摘要（SHA-256）一起最多保留 40 天，之后自动删除。它唯一的用途，是防止有人删除账号后再用同一个
         Google 账号重新登录，以此重置每月的免费时长。这条记录不含电子邮箱、姓名或账号标识；
         摘要不可逆，而盐值只存放在我们的服务器上，因此无法从中推断出你是谁。
         已购买的时长不会进入这条记录。</p>
       </div>
       <div class="kept">
-        <h3>购买凭据的单向摘要——长期保留</h3>
-        <p>我们保留购买凭据（purchase token）不可逆的 SHA-256 摘要，
-        唯一目的是防止同一笔购买被重复使用。该摘要无法关联到任何个人、账号或设备。</p>
+        <h3>购买凭据的单向摘要——90 天</h3>
+        <p>为防止同一笔购买被重复使用，我们保留购买凭据（purchase token）不可逆的 SHA-256 摘要
+        90 天；期限一到便会自动删除。该摘要无法关联到任何个人、账号或设备。</p>
       </div>
       <div class="kept">
         <h3>服务器访问日志——最多 30 天</h3>
@@ -599,7 +607,7 @@
       <p><strong>刪除之後會怎樣：</strong>你會被登出，並且無法再開始辯論。
       若想重新使用這款應用程式，必須再次以 Google 登入；那會是一個<strong>新的</strong>帳號，
       已刪除帳號的時間、購買紀錄與歷史都不會回來。
-      你在當月已使用的免費時間，在新帳號中同樣算作已使用（見第 4 節）。</p>
+      你在當月已使用的免費時間和已獲得的分享獎勵，在新帳號中同樣算作已使用（見第 4 節）。</p>
 
       <h3>透過電子郵件（任何版本）</h3>
       <ol>
@@ -656,16 +664,16 @@
       <h2><span class="num">4</span> 刪除後仍保留的內容與保留期限</h2>
       <div class="kept">
         <h3>已刪除帳號的痕跡——最多 40 天</h3>
-        <p>當你刪除帳號時，你在當月已使用的免費時間，會連同你 Google 帳號識別碼的加鹽單向雜湊值
-        （SHA-256）一起最多保留 40 天，之後自動刪除。它唯一的用途，是防止有人刪除帳號後再以同一個
+        <p>當你刪除帳號時，你在當月已使用的免費時間和你當月獲得的分享獎勵次數，
+        會連同你 Google 帳號識別碼的加鹽單向雜湊值（SHA-256）一起最多保留 40 天，之後自動刪除。它唯一的用途，是防止有人刪除帳號後再以同一個
         Google 帳號重新登入，藉此重置每月的免費時間。這筆紀錄不含電子郵件、姓名或帳號識別碼；
         雜湊值不可逆，而鹽值只存放在我們的伺服器上，因此無法從中推斷出你是誰。
         已購買的時間不會進入這筆紀錄。</p>
       </div>
       <div class="kept">
-        <h3>購買憑證的單向雜湊——長期保留</h3>
-        <p>我們保留購買憑證（purchase token）不可逆的 SHA-256 雜湊值，
-        唯一目的是防止同一筆購買被重複兌換。該雜湊值無法回溯到任何個人、帳號或裝置。</p>
+        <h3>購買憑證的單向雜湊——90 天</h3>
+        <p>為防止同一筆購買被重複兌換，我們保留購買憑證（purchase token）不可逆的 SHA-256 雜湊值
+        90 天；期限一到便會自動刪除。該雜湊值無法回溯到任何個人、帳號或裝置。</p>
       </div>
       <div class="kept">
         <h3>伺服器存取紀錄——最多 30 天</h3>
