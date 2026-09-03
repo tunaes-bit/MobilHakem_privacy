@@ -63,36 +63,42 @@
   <div class="eyebrow">Datenschutzerklärung</div>
   <h1>Wer hat recht?</h1>
   <p class="lede">Eine <strong>Unterhaltungs-App</strong>, die einem Streitgespräch zwischen zwei Personen zuhört und es live mit KI bewertet. Die Ergebnisse sind keine rechtliche, medizinische oder professionelle Beratung.</p>
-  <div class="updated"><span class="dot"></span> Zuletzt aktualisiert: 31. August 2026</div>
+  <div class="updated"><span class="dot"></span> Zuletzt aktualisiert: 3. September 2026</div>
   <p class="langlink"><a href="./">Türkçe</a> · <a href="./index.en.html">English</a> · <strong>Deutsch</strong> · <a href="./index.zh-Hans.html">简体中文</a> · <a href="./index.zh-Hant.html">繁體中文</a></p>
 
   <div class="card">
     <section>
-      <h2><span class="num">1</span> Die Anmeldung mit Google ist freiwillig</h2>
-      <p><strong>Die gesamte App funktioniert ohne Konto:</strong> eine Debatte zu starten,
-      Freiminuten zu erhalten, Zeit zu kaufen und einen Anwalt zu beauftragen erfordert
-      keine Anmeldung. Eine Anmeldung ändert zwei Dinge: deine monatliche Freizeit ist
-      größer, und dein Restguthaben hängt an deinem Konto statt am Telefon — es kommt also
-      mit auf ein neues Gerät.</p>
-      <p><strong>Wenn du dich anmeldest, speichern wir ausschließlich</strong> die
-      <strong>anonyme Kontokennung</strong>, die deinem Google-Konto entspricht (die Firebase-
-      <em>uid</em>) — eine undurchsichtige Zeichenfolge, die dich nicht identifiziert und uns
-      weder deinen Namen noch deine Adresse verrät. Bei der Anmeldung übergibt Google deinen
-      Namen, deine E-Mail-Adresse und dein Profilbild an die App — Googles eigener
-      Einwilligungsdialog sagt dir das. <strong>Wir lesen sie nicht, verarbeiten sie nicht und
-      schreiben sie nirgendwo hin</strong>; die Kontokennung ist das Einzige, was bleibt. Deine
-      E-Mail-Adresse wird nur auf dem Bildschirm deines eigenen Telefons gelesen, um dir zu
-      zeigen, welches Konto verbunden ist; an unseren Server wird sie nie gesendet. Die
-      Kontokennung beantwortet für uns genau eine Frage: welchem Konto deine verbleibende Zeit
-      gehört.</p>
-      <p><strong>Eine Geräte-ID wird weiterhin verwendet</strong> und ist von der Kontokennung
+      <h2><span class="num">1</span> Die Anmeldung mit Google ist erforderlich</h2>
+      <p><strong>Um eine Debatte zu starten, die monatliche Freizeit zu erhalten, Zeit zu
+      kaufen und einen Anwalt zu beauftragen, musst du dich mit Google anmelden.</strong>
+      Die App lässt sich auch ohne Anmeldung öffnen; du kannst die Regeln und den
+      Einwilligungsbildschirm lesen, aber sobald du auf <em>Start</em> tippst, wird eine
+      Anmeldung verlangt. Deine Zeit hängt an deinem Konto und nicht am Telefon: sie kommt
+      mit auf ein neues Gerät, und die App zu löschen und neu zu installieren setzt sie nicht
+      zurück.</p>
+      <p><strong>Wenn du dich anmeldest, verwendet unser Server ausschließlich</strong> die
+      <strong>anonyme Kontokennung</strong>, die deinem Google-Konto entspricht
+      (die Firebase-<em>uid</em>) — eine undurchsichtige Zeichenfolge, die dich nicht
+      identifiziert und uns weder deinen Namen noch deine Adresse verrät. Bei der Anmeldung
+      übergibt Google deinen Namen, deine E-Mail-Adresse und die Adresse deines Profilbilds
+      an unseren Authentifizierungsdienst (Firebase Authentication) — Googles eigener
+      Einwilligungsdialog sagt dir das. Diese drei Angaben liegen in deinem Kontodatensatz,
+      werden für keine Funktion verwendet und werden zusammen mit deinem Konto gelöscht; an
+      unseren Debatten-Server werden sie nie gesendet. Deine E-Mail-Adresse wird nur auf dem
+      Bildschirm deines eigenen Telefons gelesen, um dir zu zeigen, welches Konto verbunden
+      ist. Die Kontokennung beantwortet für uns genau eine Frage: welchem Konto deine
+      verbleibende Zeit gehört.</p>
+      <p><strong>Eine Geräte-ID wird ebenfalls verwendet</strong> und ist von der Kontokennung
       getrennt: eine zufällig erzeugte, nicht personenbezogene Zeichenfolge, die auf deinem
-      Gerät gespeichert und mit Anfragen an unseren Server gesendet wird. Sie dient dazu,
-      Missbrauch zu begrenzen, eine Wiederverbindung zur selben Debatte zu erkennen und bereits
-      auf dem Gerät angesammelte Zeit auf dein Konto zu übertragen. Sie ist keine
-      Hardware-Kennung und wird automatisch gelöscht, sobald sie ungenutzt bleibt; das Löschen
-      der App-Daten oder das Deinstallieren setzt sie zurück. Für Nutzungsstatistiken wird
-      ebenso eine nicht personenbezogene, app-spezifische Kennung verwendet (Abschnitt 5).</p>
+      Gerät gespeichert und mit Anfragen an unseren Server gesendet wird. Sie hat zwei
+      Aufgaben: Missbrauch zu begrenzen (aufeinanderfolgende Anfragen vom selben Gerät zu
+      erkennen) und die Wiederverbindung zu einer unterbrochenen Debatte zu erkennen. Deine
+      Zeit wird deinem Konto gutgeschrieben, nicht ihr. Sie ist keine Hardware-Kennung; das
+      Löschen der App-Daten oder das Deinstallieren setzt sie zurück. Wenn du eine frühere
+      Version ohne Anmeldung genutzt hast und auf diesem Telefon gekaufte Zeit angesammelt
+      wurde, wird sie bei deiner ersten Anmeldung auf dein Konto übertragen. Für
+      Nutzungsstatistiken wird ebenso eine nicht personenbezogene, app-spezifische Kennung
+      verwendet (Abschnitt 5).</p>
       <p>Du kannst dich jederzeit in der App <strong>abmelden</strong>. Solange du abgemeldet
       bist, kannst du keine neue Debatte starten; <strong>deine Zeit wird nicht gelöscht</strong>
       — sie bleibt auf deinem Konto und kommt zurück, sobald du dich wieder anmeldest.</p>
@@ -100,10 +106,16 @@
       und wähle im geöffneten Fenster <em>Konto löschen</em>. Die Löschung ist unwiderruflich und
       entfernt dauerhaft alles, was an dein Konto gebunden ist — einschließlich deiner
       verbleibenden und gekauften Zeit und, falls aktiviert, deines Debattenverlaufs; danach
-      kannst du in der App keine Debatte mehr starten. Einzelheiten und die Möglichkeit, die
-      Löschung ohne Installation der App zu beantragen:
-      <a href="./veri-silme.html">Konto- und Datenlöschung</a>. Du kannst sie auch über die
-      Adresse in Abschnitt 9 beantragen.</p>
+      kannst du in der App keine Debatte mehr starten. <strong>Das Einzige, was wir nach der
+      Löschung behalten</strong>, ist dies: wie viel der Freizeit du in jenem Monat verbraucht
+      hattest, gespeichert zu einem gesalzenen Einweg-Hash (SHA-256) deiner Google-Kontokennung
+      für höchstens 40 Tage, danach wird es automatisch gelöscht. Der Zweck ist zu verhindern,
+      dass die monatliche Freizeit zurückgesetzt wird, indem das Konto gelöscht und mit
+      demselben Google-Konto neu angelegt wird; dieser Eintrag enthält weder E-Mail-Adresse
+      noch Namen noch Kontokennung, ist nicht umkehrbar und wird zu keinem anderen Zweck
+      verwendet. Einzelheiten und die Möglichkeit, die Löschung ohne Installation der App zu
+      beantragen: <a href="./veri-silme.html">Konto- und Datenlöschung</a>. Du kannst sie auch
+      über die Adresse in Abschnitt 9 beantragen.</p>
     </section>
     <section>
       <h2><span class="num">2</span> Audio und Wortprotokoll werden nie gespeichert</h2>
@@ -186,9 +198,11 @@
         <li><strong>Google Analytics for Firebase</strong> — ausschließlich anonyme
         Nutzungszähler (siehe Abschnitt 5).</li>
         <li><strong>Google Play Billing</strong> — Käufe von Zusatzzeit.</li>
-        <li><strong>Firebase Authentication</strong> — die für den Start einer Debatte
-        erforderliche Google-Anmeldung. Google führt die Anmeldung durch; uns erreicht nur die
-        anonyme Kontokennung (uid).</li>
+        <li><strong>Firebase Authentication</strong> — die Google-Anmeldung. Google führt die
+        Anmeldung durch; in deinem Kontodatensatz liegen die anonyme Kontokennung (uid) sowie
+        der von Google übermittelte Name, die E-Mail-Adresse und die Adresse des Profilbilds.
+        Unser Debatten-Server sieht davon nur die Kontokennung; wenn du dein Konto löschst,
+        wird der Datensatz vollständig gelöscht.</li>
       </ul>
       <p>Diese Verarbeitung kann auf Servern außerhalb deines Landes stattfinden, auch außerhalb
       der Europäischen Union, und wird im Einwilligungsdialog in der App offengelegt.</p>
@@ -230,13 +244,14 @@
       <h2><span class="num">8</span> Deine Rechte</h2>
       <p>Da Audio und Protokolle nie gespeichert werden, gibt es davon keinen Datensatz, auf den
       zugegriffen oder der gelöscht werden könnte.</p>
-      <p>Was unser Server tatsächlich vorhält: den an die zufällige Geräte-ID gebundenen
-      Nutzungszähler (nach kurzer Zeit automatisch gelöscht), Server-Zugriffsprotokolle
-      (IP-Adresse und Zeitstempel, kurz zu Sicherheitszwecken aufbewahrt) und
-      <strong>nur wenn du die Einstellung aktiviert hast</strong> deinen Debattenverlauf.</p>
+      <p>Was unser Server tatsächlich vorhält: den an dein Konto gebundenen Nutzungszähler
+      (bei ungenutzten Konten automatisch gelöscht), die Spur gelöschter Konten (Abschnitt 1,
+      höchstens 40 Tage), Server-Zugriffsprotokolle (IP-Adresse und Zeitstempel, kurz zu
+      Sicherheitszwecken aufbewahrt) und <strong>nur wenn du die Einstellung aktiviert
+      hast</strong> deinen Debattenverlauf.</p>
       <p><strong>Du musst uns nicht schreiben, um deinen Verlauf zu löschen.</strong> Der Schalter
       auf der Seite „Debattenverlauf“ löscht beim Ausschalten in diesem Moment jeden Eintrag, und
-      das Löschen des Kontos tut dasselbe. Wegen allem anderen, was zu deiner Geräte-ID vorliegt,
+      das Löschen des Kontos tut dasselbe. Wegen allem anderen, was zu deinem Konto vorliegt,
       kannst du uns jederzeit kontaktieren.</p>
       <p><strong>Rechtsgrundlagen und Rechte nach der DSGVO.</strong> Die Verarbeitung von Audio
       und Text erfolgt auf Grundlage deiner <strong>Einwilligung</strong> (Art. 6 Abs. 1 lit. a),

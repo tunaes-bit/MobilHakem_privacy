@@ -63,32 +63,36 @@
   <h1>Who's Right?</h1>
   <p class="lede">An <strong>entertainment</strong> app that listens to an argument between two
   people and scores it live with AI. Results are not legal, medical or professional advice.</p>
-  <div class="updated"><span class="dot"></span> Last updated: 31 August 2026</div>
+  <div class="updated"><span class="dot"></span> Last updated: 3 September 2026</div>
   <p class="langlink"><a href="./">Türkçe</a> · <strong>English</strong> · <a href="./index.de.html">Deutsch</a> · <a href="./index.zh-Hans.html">简体中文</a> · <a href="./index.zh-Hant.html">繁體中文</a></p>
 
   <div class="card">
     <section>
-      <h2><span class="num">1</span> Signing in with Google is optional</h2>
-      <p><strong>The entire app works without an account:</strong> starting a debate,
-      receiving free time, buying time and hiring a counsel need no sign-in. Signing in
-      changes two things: your monthly free time is larger, and your remaining time is held
-      against your account rather than the phone — so it follows you to a new device.</p>
-      <p><strong>When you sign in, the only thing we store</strong> is the
+      <h2><span class="num">1</span> Signing in with Google is required</h2>
+      <p><strong>You need to sign in with Google to start a debate, to receive the monthly
+      free time, to buy time and to hire a counsel.</strong> The app still opens without
+      signing in; you can read the rules and the consent screen, but tapping <em>Start</em>
+      asks you to sign in. Your time is held against your account rather than the phone: it
+      follows you to a new device, and deleting and reinstalling the app does not reset it.</p>
+      <p><strong>The only thing our server uses when you sign in</strong> is the
       <strong>anonymous account identifier</strong> that corresponds to your Google account
       (the Firebase <em>uid</em>) — an opaque string that does not identify you and tells us
       neither your name nor your address. At sign-in Google passes your name, email address
-      and profile picture to the app — Google's own consent screen tells you so.
-      <strong>We do not read them, do not process them and never write them anywhere</strong>;
-      the account identifier is the only thing that persists. Your email address is read only
-      to show you, on your own phone's screen, which account is connected; it is never sent to
-      our server. The account identifier answers exactly one question for us: which account
-      your remaining time belongs to.</p>
-      <p><strong>A device ID is also still used</strong>, and it is separate from the account
+      and the address of your profile picture to our authentication provider (Firebase
+      Authentication) — Google's own consent screen tells you so. Those three items sit in
+      your account record, are used for no function at all, and are deleted together with
+      your account; they are never sent to our debate server. Your email address is read only
+      to show you, on your own phone's screen, which account is connected. The account
+      identifier answers exactly one question for us: which account your remaining time
+      belongs to.</p>
+      <p><strong>A device ID is also used</strong>, and it is separate from the account
       identifier: a randomly generated, non-personal string, stored on your device and sent
-      with requests to our server. It is used to limit abuse, to recognise a reconnection to
-      the same debate, and to move time already accrued on that device to your account. It is
-      not a hardware identifier and it is deleted automatically once unused; clearing the
-      app's data or uninstalling the app resets it. A similar non-personal, app-specific
+      with requests to our server. It has two jobs: limiting abuse (recognising repeated
+      requests from the same device) and recognising a reconnection to an interrupted debate.
+      Your time is written against your account, not against it. It is not a hardware
+      identifier; clearing the app's data or uninstalling the app resets it. If purchased time
+      accumulated on this phone in an earlier version that you used without signing in, it is
+      moved to your account at your first sign-in. A similar non-personal, app-specific
       identifier is used for usage statistics (section 5).</p>
       <p>You can <strong>sign out</strong> at any time from within the app. While signed out
       you cannot start a new debate; <strong>your time is not deleted</strong> — it stays on
@@ -97,7 +101,13 @@
       then choose <em>Delete account</em> in the window that opens. Deletion cannot be undone
       and permanently removes everything attached to your account — including your remaining
       and purchased time and, if enabled, your debate history; afterwards you can no longer
-      start a debate in the app. For details, or to request deletion without installing the
+      start a debate in the app. <strong>The only thing we keep after deletion</strong> is
+      this: how much of that month's free time you had used, stored against a salted one-way
+      hash (SHA-256) of your Google account identifier for at most 40 days, after which it is
+      deleted automatically. Its purpose is to stop the monthly free time from being reset by
+      deleting the account and creating it again with the same Google account; that record
+      contains no email address, no name and no account identifier, cannot be reversed, and is
+      used for no other purpose. For details, or to request deletion without installing the
       app, see <a href="./veri-silme.html">Account and data deletion</a>. You can also request
       it at the address in section 9.</p>
     </section>
@@ -129,7 +139,7 @@
       person you are arguing with, and it marks which side was you in your history. This step is
       optional; the app works without it. <strong>The other person's voice is never
       enrolled</strong> — if more than one voice is heard during enrolment, nothing is saved. You
-      can delete it in one tap with <em>&ldquo;Forget my voice&rdquo;</em> on the home screen, and
+      can delete it in one tap with <em>&ldquo;Forget my voice&rdquo;</em> under the profile icon, top left, and
       it is deleted automatically when you turn debate history off.</p>
       <p><strong>Optional exception — Live Hearings (Court Before a Jury).</strong> Two
       people may choose to broadcast their debate live to other users; this happens only
@@ -173,9 +183,11 @@
         <li><strong>Google Analytics for Firebase</strong> — anonymous usage counters only
         (see section 5).</li>
         <li><strong>Google Play Billing</strong> — extra-time purchases.</li>
-        <li><strong>Firebase Authentication</strong> — the Google sign-in required to start
-        a debate. Google performs the sign-in; only the anonymous account identifier (uid)
-        reaches us.</li>
+        <li><strong>Firebase Authentication</strong> — the Google sign-in. Google performs the
+        sign-in; your account record holds the anonymous account identifier (uid) together with
+        the name, email address and profile-picture address that Google passes on. Our debate
+        server sees only the account identifier among these; when you delete your account the
+        record is deleted in its entirety.</li>
       </ul>
       <p>This processing may take place on servers outside your country, including outside the
       United States, and is disclosed on the consent screen inside the app.</p>
@@ -218,14 +230,14 @@
       <h2><span class="num">8</span> Your rights</h2>
       <p>Because audio and transcripts are never stored, there is no record of them to access or
       delete.</p>
-      <p>What our server does hold: the usage counter tied to the random device ID (automatically
-      deleted after a short period), server access logs (IP address and timestamp, kept briefly
-      for security), and <strong>only if you turned the setting on</strong>, your debate
-      history.</p>
+      <p>What our server does hold: the usage counter tied to your account (deleted
+      automatically for accounts that go unused), the deleted-account trace (section 1, at
+      most 40 days), server access logs (IP address and timestamp, kept briefly for security),
+      and <strong>only if you turned the setting on</strong>, your debate history.</p>
       <p><strong>You do not need to write to us to delete your history.</strong> Turning the
       switch off on the Debate History page deletes every record at that moment, and deleting
       your account does the same. You may still contact us at any time about anything else held
-      about your device ID.</p>
+      about your account.</p>
       <p><strong>California residents (CCPA/CPRA).</strong> In the past 12 months we have
       collected the categories described above: identifiers (a random device ID), commercial
       information (purchase records), internet activity (anonymous usage counters) and audio —

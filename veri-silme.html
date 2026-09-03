@@ -66,10 +66,11 @@
   <h1>Mobil Hakem: Kim Haklı?</h1>
   <p class="lede">Bu sayfa, <strong>Mobil Hakem: Kim Haklı?</strong> uygulamasındaki hesabınızın ve
   ona bağlı verilerin nasıl silineceğini anlatır.</p>
-  <div class="updated"><span class="dot"></span> Son güncelleme: 29 Ağustos 2026</div>
-  <p class="langlink"><a href="#en">English version below</a> · <a href="./">Gizlilik Politikası</a></p>
+  <div class="updated"><span class="dot"></span> Son güncelleme: 3 Eylül 2026</div>
+  <p class="langlink"><a href="#tr">Türkçe</a> · <a href="#en">English</a> · <a href="#de">Deutsch</a> · <a href="#zh-Hans">简体中文</a> · <a href="#zh-Hant">繁體中文</a></p>
+  <p class="langlink"><a href="./">Gizlilik Politikası / Privacy Policy</a></p>
 
-  <div class="card">
+  <div class="card" id="tr" lang="tr">
 
     <section>
       <h2><span class="num">1</span> Silme talebi nasıl yapılır?</h2>
@@ -88,7 +89,8 @@
       <p><strong>Silmeden sonra ne olur:</strong> oturumunuz kapanır ve yeni bir tartışma
       başlatamazsınız. Uygulamayı yeniden kullanmak isterseniz tekrar Google ile giriş
       yapmanız gerekir; bu <strong>yeni</strong> bir hesap olur ve silinen hesabın süresi,
-      satın alımları ve geçmişi geri gelmez.</p>
+      satın alımları ve geçmişi geri gelmez. O ay ücretsiz süreden kullandığınız miktar yeni
+      hesapta da kullanılmış sayılır (4. madde).</p>
 
       <h3>E-posta ile (her sürümden)</h3>
       <ol>
@@ -108,11 +110,11 @@
       <p>Hesabınızı silmek zorunda değilsiniz. Uygulamanın içinden, istediğiniz an,
       tek başına şu iki şeyi silebilirsiniz:</p>
       <ol>
-        <li><strong>Geçmiş tartışmalarınızın tamamı.</strong> Ana ekranda
+        <li><strong>Geçmiş tartışmalarınızın tamamı.</strong> Sol üstteki profil simgesine, sonra
         <em>Tartışma Geçmişi</em>’ne dokunun, sayfanın üstündeki <em>Tartışma kaydı açık</em>
         anahtarını kapatın ve onaylayın. Kayıtlı bütün kararlarınız o anda silinir; aynı işlem
         bu telefondaki ses izinizi de siler. Geri alınamaz.</li>
-        <li><strong>Ses iziniz.</strong> Ana ekranda <em>Sesimi unut</em>’a dokunun. Ses izi
+        <li><strong>Ses iziniz.</strong> Sol üstteki profil simgesine, sonra <em>Sesimi unut</em>’a dokunun. Ses izi
         zaten yalnızca bu telefonda, şifreli olarak durur ve hiçbir zaman sunucularımıza
         gönderilmez; bu düğme onu cihazdan siler.</li>
       </ol>
@@ -127,9 +129,9 @@
       <ul>
         <li><strong>Kimlik kaydı:</strong> Google hesabınıza karşılık gelen kullanıcı kimliği (uid)
           ve kimlik doğrulama sağlayıcımızın (Firebase Authentication) bu hesap için tuttuğu
-          e-posta adresi ile ad bilgisi.</li>
-        <li><strong>Süre kaydı:</strong> bu ay kullandığınız saniye, kalan satın alınmış
-          süreniz, hesabınıza bağlanmış cihaz kimlikleri ve tek seferlik paylaşım ödülü işareti.</li>
+          e-posta adresi, ad bilgisi ve profil fotoğrafı adresi.</li>
+        <li><strong>Süre kaydı:</strong> bu ay kullandığınız saniye, kalan satın alınmış süreniz
+          ve paylaşım ödülü sayacı.</li>
         <li><strong>Tartışma geçmişiniz:</strong> Tartışma Geçmişi ayarını açtıysanız kaydedilmiş
           bütün kararlar — tarih, tartışmanın konusu, kategori, yüzdeler, hâkimin gerekçesi,
           kişi başına analiz ve varsa avukat savunmaları. Ayarı hiç açmadıysanız silinecek bir
@@ -161,6 +163,15 @@
 
     <section>
       <h2><span class="num">4</span> Silmeden sonra kalanlar ve saklama süreleri</h2>
+      <div class="kept">
+        <h3>Silinmiş hesap izi — en fazla 40 gün</h3>
+        <p>Hesabınızı sildiğinizde, o ay ücretsiz süreden kullandığınız miktar, Google hesap
+        kimliğinizin tuzlanmış tek yönlü özetiyle (SHA-256) birlikte en fazla 40 gün tutulur ve
+        sonra kendiliğinden silinir. Tek amacı, hesabı silip aynı Google hesabıyla yeniden açarak
+        aylık ücretsiz sürenin sıfırlanmasını önlemektir. Kayıt e-posta, ad ya da hesap kimliği
+        içermez; özet geri döndürülemez ve tuz yalnızca sunucumuzda durduğu için bu kayıttan kim
+        olduğunuz çıkarılamaz. Satın alınmış süre bu kayda girmez.</p>
+      </div>
       <div class="kept">
         <h3>Satın alma jetonunun tek yönlü özeti — süresiz</h3>
         <p>Bir satın almanın ikinci kez kullanılmasını engellemek için satın alma jetonunun
@@ -194,7 +205,7 @@
 
   </div>
 
-  <div class="card" id="en">
+  <div class="card" id="en" lang="en">
 
     <section>
       <h2><span class="num">1</span> How to request deletion</h2>
@@ -214,7 +225,8 @@
       <p><strong>What happens after deletion:</strong> you are signed out and can no longer
       start a debate. To use the app again you must sign in with Google once more; that is a
       <strong>new</strong> account, and the deleted account's time, purchases and history do
-      not come back.</p>
+      not come back. The free time you used in that month still counts as used in the new
+      account (section 4).</p>
 
       <h3>By email (any version)</h3>
       <ol>
@@ -232,11 +244,11 @@
       <p>You do not have to delete your account. From inside the app, at any time, you can delete
       either of these on their own:</p>
       <ol>
-        <li><strong>All of your past debates.</strong> On the home screen tap
-        <em>Debate History</em>, turn off the <em>Recording debates</em> switch at the top of the
+        <li><strong>All of your past debates.</strong> Tap the profile icon (top left), then
+        <em>Debate History</em>, turn off the <em>Debate history on</em> switch at the top of the
         page and confirm. Every saved verdict is deleted at that moment, and the same action also
         erases the voiceprint stored on this phone. It cannot be undone.</li>
-        <li><strong>Your voiceprint.</strong> On the home screen tap <em>Forget my voice</em>. The
+        <li><strong>Your voiceprint.</strong> Tap the profile icon (top left), then <em>Forget my voice</em>. The
         voiceprint is only ever kept on this phone, encrypted, and is never sent to our servers;
         this button erases it from the device.</li>
       </ol>
@@ -249,10 +261,10 @@
       <h2><span class="num">2</span> Data that is deleted</h2>
       <ul>
         <li><strong>Identity record:</strong> the user id (uid) corresponding to your Google
-          account, plus the email address and name our authentication provider (Firebase
-          Authentication) holds for it.</li>
-        <li><strong>Time record:</strong> seconds used this month, remaining purchased time, device
-          ids linked to the account, and the one-time share-reward flag.</li>
+          account, plus the email address, name and profile photo URL our authentication
+          provider (Firebase Authentication) holds for it.</li>
+        <li><strong>Time record:</strong> seconds used this month, remaining purchased time and the
+          share-reward counter.</li>
         <li><strong>Your debate history:</strong> if you turned Debate History on, every saved
           verdict — the date, the topic, the category, the percentages, the judge's reasoning,
           the per-speaker analysis and, if counsel was hired, their submissions. If you never
@@ -282,6 +294,16 @@
     <section>
       <h2><span class="num">4</span> What remains, and for how long</h2>
       <div class="kept">
+        <h3>Trace of a deleted account — at most 40 days</h3>
+        <p>When you delete your account, the amount of free time you used that month is kept for
+        at most 40 days together with a salted one-way hash (SHA-256) of your Google account id,
+        and is then deleted automatically. Its only purpose is to stop the monthly free time being
+        reset by deleting an account and opening it again with the same Google account. The record
+        contains no email address, no name and no account id; the hash is irreversible and the
+        salt is held only on our server, so who you are cannot be derived from it. Purchased time
+        is not part of this record.</p>
+      </div>
+      <div class="kept">
         <h3>One-way hash of the purchase token — kept indefinitely</h3>
         <p>An irreversible SHA-256 hash of the purchase token, kept solely to stop the same
         purchase being redeemed twice. It cannot be linked back to a person, account or device.</p>
@@ -307,6 +329,364 @@
       <h2><span class="num">5</span> Contact</h2>
       <div class="contact">
         <strong>Mobil Hakem — Support</strong>
+        <a href="mailto:destek@bizzytime.app">destek@bizzytime.app</a>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="card" id="de" lang="de">
+
+    <section>
+      <h2><span class="num">1</span> Wie du die Löschung beantragst</h2>
+      <p><strong>Um eine Debatte zu starten, ist die Anmeldung mit Google erforderlich</strong> —
+      wenn du <strong>Wer hat recht?</strong> genutzt hast, existiert also ein Kontodatensatz.
+      Es gibt zwei Wege, ihn zu löschen:</p>
+
+      <h3>In der App (Version 1.16.0 und neuer)</h3>
+      <ol>
+        <li>Öffne die App und tippe oben rechts auf dem Startbildschirm auf das
+          <strong>Sterne-Abzeichen</strong> (die Schaltfläche, die deine verbleibenden Sterne
+          anzeigt).</li>
+        <li>Tippe im geöffneten Fenster unter deinem verbundenen Google-Konto auf
+          <strong>Konto löschen</strong>.</li>
+        <li>Lies die Warnung und bestätige mit <strong>Löschen</strong>. Die Löschung erfolgt
+          <strong>sofort</strong> und lässt sich nicht rückgängig machen.</li>
+      </ol>
+      <p><strong>Was nach der Löschung passiert:</strong> Du wirst abgemeldet und kannst keine
+      Debatte mehr starten. Um die App wieder zu nutzen, musst du dich erneut mit Google
+      anmelden; das ist dann ein <strong>neues</strong> Konto, und die Zeit, die Käufe und der
+      Verlauf des gelöschten Kontos kommen nicht zurück. Die kostenlose Zeit, die du in diesem
+      Monat verbraucht hast, gilt auch im neuen Konto als verbraucht (Abschnitt 4).</p>
+
+      <h3>Per E-Mail (jede Version)</h3>
+      <ol>
+        <li>Schreib von der Google-Adresse, mit der du dich angemeldet hast, an
+          <a href="mailto:destek@bizzytime.app?subject=Kontol%C3%B6schung">destek@bizzytime.app</a>.</li>
+        <li>Verwende <strong>Kontolöschung</strong> als Betreff. Mehr brauchen wir nicht — wir
+          ordnen die Anfrage der Adresse zu, von der du schreibst.</li>
+        <li>Die Anfrage wird <strong>spätestens innerhalb von 30 Tagen</strong> erledigt, und wir
+          bestätigen sie mit einer Antwort an dieselbe Adresse.</li>
+      </ol>
+      <p><strong>Das Abmelden löscht dein Konto nicht</strong>, und das Deinstallieren der App
+      ebenso wenig. Um es wirklich zu löschen, stelle die obige Anfrage.</p>
+
+      <h3 style="margin-top:26px">Einzelne Daten löschen, ohne das Konto zu löschen</h3>
+      <p>Du musst dein Konto nicht löschen. In der App kannst du jederzeit auch nur eines der
+      beiden Folgenden für sich löschen:</p>
+      <ol>
+        <li><strong>Alle deine früheren Debatten.</strong> Tippe oben links auf das Profilsymbol
+        und dann auf <em>Debattenverlauf</em>, schalte oben auf der Seite den Schalter
+        <em>Debattenverlauf an</em> aus und bestätige. Jedes gespeicherte Urteil wird in diesem
+        Moment gelöscht; derselbe Schritt löscht auch den auf diesem Telefon gespeicherten
+        Stimmabdruck. Das lässt sich nicht rückgängig machen.</li>
+        <li><strong>Deinen Stimmabdruck.</strong> Tippe oben links auf das Profilsymbol und dann
+        auf <em>Stimme vergessen</em>. Der Stimmabdruck liegt ohnehin ausschließlich verschlüsselt
+        auf diesem Telefon und wird nie an unsere Server gesendet; diese Schaltfläche löscht ihn
+        vom Gerät.</li>
+      </ol>
+      <p>Für beides musst du uns nicht schreiben, und dein Konto bleibt bestehen. Du kannst dich
+      aber weiterhin an <a href="mailto:destek@bizzytime.app">destek@bizzytime.app</a> wenden, um
+      die Löschung eines Teils deiner Daten zu beantragen.</p>
+</section>
+
+    <section>
+      <h2><span class="num">2</span> Daten, die gelöscht werden</h2>
+      <ul>
+        <li><strong>Identitätsdatensatz:</strong> die deinem Google-Konto entsprechende
+          Nutzerkennung (uid) sowie die E-Mail-Adresse, der Name und die Adresse des
+          Profilbilds, die unser Authentifizierungsdienst (Firebase Authentication) dazu
+          vorhält.</li>
+        <li><strong>Zeitdatensatz:</strong> die in diesem Monat verbrauchten Sekunden, deine
+          verbleibende gekaufte Zeit und der Zähler für die Teilen-Belohnung.</li>
+        <li><strong>Dein Debattenverlauf:</strong> falls du den Debattenverlauf eingeschaltet
+          hast, jedes gespeicherte Urteil — Datum, Thema, Kategorie, Prozentwerte, die Begründung
+          des Schiedsrichters, die Analyse je Person und, falls ein Anwalt beauftragt wurde,
+          dessen Schriftsätze. Hast du die Einstellung nie eingeschaltet, gibt es dort nichts zu
+          löschen.</li>
+      </ul>
+      <p><strong>Du kannst deinen Verlauf löschen, ohne dein Konto zu löschen:</strong> schalte
+      den Schalter auf der Seite „Debattenverlauf“ aus. Jeder Eintrag ist in diesem Moment weg;
+      dein Konto und deine verbleibende Zeit bleiben.</p>
+      <p>Die Löschung lässt sich nicht rückgängig machen. Verbleibende gekaufte Zeit wird
+      mitgelöscht.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">3</span> Daten, die wir nie speichern</h2>
+      <ul>
+        <li><strong>Audio.</strong> Mikrofondaten werden während der laufenden Debatte live in
+          Text umgewandelt und nirgendwo gespeichert.</li>
+        <li><strong>Das wörtliche Protokoll.</strong> Es bleibt nur für die Dauer der Debatte im
+          flüchtigen Speicher und wird danach verworfen. Keine Einstellung ändert daran etwas.</li>
+        <li><strong>Dein Stimmabdruck.</strong> Hast du der App deine Stimme angelernt, bleibt
+          dieser Abdruck ausschließlich verschlüsselt auf deinem Telefon und wird nie an unsere
+          Server gesendet. Er ist vom Geräte-Backup und von der Übertragung von Telefon zu Telefon
+          <strong>ausgenommen</strong>: Beim Deinstallieren verschwindet er, und auf ein neues
+          Telefon folgt er dir nicht. Du kannst ihn auch mit einem Tipp in der App löschen.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="num">4</span> Was bleibt, und wie lange</h2>
+      <div class="kept">
+        <h3>Spur eines gelöschten Kontos — höchstens 40 Tage</h3>
+        <p>Wenn du dein Konto löschst, wird die kostenlose Zeit, die du in diesem Monat verbraucht
+        hast, zusammen mit einem gesalzenen Einweg-Hash (SHA-256) deiner Google-Kontokennung
+        höchstens 40 Tage aufbewahrt und danach automatisch gelöscht. Sie dient einzig dazu, zu
+        verhindern, dass die monatliche kostenlose Zeit zurückgesetzt wird, indem man das Konto
+        löscht und es mit demselben Google-Konto erneut eröffnet. Der Eintrag enthält weder
+        E-Mail-Adresse noch Namen noch Kontokennung; der Hash ist nicht umkehrbar, und da das Salz
+        nur auf unserem Server liegt, lässt sich daraus nicht ableiten, wer du bist. Gekaufte Zeit
+        gehört nicht zu diesem Eintrag.</p>
+      </div>
+      <div class="kept">
+        <h3>Einweg-Hash des Kauf-Tokens — unbefristet</h3>
+        <p>Ein unumkehrbarer SHA-256-Hash des Kauf-Tokens, ausschließlich dazu da, dass derselbe
+        Kauf nicht zweimal eingelöst wird. Er lässt sich nicht auf eine Person, ein Konto oder ein
+        Gerät zurückführen.</p>
+      </div>
+      <div class="kept">
+        <h3>Server-Zugriffsprotokolle — höchstens 30 Tage</h3>
+        <p>Technische Protokolle mit IP-Adresse und Zeitstempel, aufbewahrt zu Sicherheits- und
+        Fehlersuchzwecken, danach automatisch gelöscht.</p>
+      </div>
+      <div class="kept">
+        <h3>Aggregierte Nutzungszahlen — dir nicht zuordenbar</h3>
+        <p>Zählungen wie „wie viele Debatten gestartet wurden“ gehören zur Gesamtheit, nicht zu
+        deinem Konto, und enthalten nichts, was dich identifiziert.</p>
+      </div>
+      <div class="kept">
+        <h3>Google-Play-Kaufbelege — bei Google</h3>
+        <p>Zahlungen wickelt Google Play ab, und die Abrechnungsdaten bewahrt Google auf, nicht
+        wir. Wir können sie nicht löschen; wende dich dafür bitte an Google.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">5</span> Kontakt</h2>
+      <div class="contact">
+        <strong>Wer hat recht? — Support</strong>
+        <a href="mailto:destek@bizzytime.app">destek@bizzytime.app</a>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="card" id="zh-Hans" lang="zh-Hans">
+
+    <section>
+      <h2><span class="num">1</span> 如何申请删除</h2>
+      <p>在<strong>谁有理？</strong>中，<strong>开始辩论必须使用 Google 登录</strong>，
+      所以只要你用过这款应用，就有一条账号记录。删除它有两种方式：</p>
+
+      <h3>在应用内（1.16.0 及以后版本）</h3>
+      <ol>
+        <li>打开应用，点按主屏幕右上角的<strong>星星徽章</strong>（显示你剩余星星数量的按钮）。</li>
+        <li>在打开的面板中，点按已连接的 Google 账号下方的<strong>删除账号</strong>。</li>
+        <li>阅读警告并以<strong>删除</strong>确认。删除<strong>立即</strong>生效，且无法撤销。</li>
+      </ol>
+      <p><strong>删除之后会怎样：</strong>你会退出登录，并且无法再开始辩论。
+      若想重新使用这款应用，必须再次用 Google 登录；那将是一个<strong>新的</strong>账号，
+      已删除账号的时长、购买记录和历史都不会回来。
+      你在当月已使用的免费时长，在新账号中同样算作已使用（见第 4 节）。</p>
+
+      <h3>通过电子邮件（任何版本）</h3>
+      <ol>
+        <li>用你登录时使用的 Google 邮箱，写信至
+          <a href="mailto:destek@bizzytime.app?subject=%E5%88%A0%E9%99%A4%E8%B4%A6%E5%8F%B7">destek@bizzytime.app</a>。</li>
+        <li>主题写<strong>删除账号</strong>。不需要提供其他信息——我们通过你发信的地址来匹配这条请求。</li>
+        <li>请求<strong>最迟在 30 天内</strong>完成，我们会回复同一个地址作为确认。</li>
+      </ol>
+      <p><strong>退出登录不会删除你的账号</strong>，卸载应用同样不会。
+      要真正删除，请按上面的方式提出请求。</p>
+
+      <h3 style="margin-top:26px">不删除账号，只删除部分数据</h3>
+      <p>你不必删除账号。在应用内，你随时可以单独删除下面两项中的任意一项：</p>
+      <ol>
+        <li><strong>你的全部历史辩论。</strong>点按左上角的个人资料图标，再点按<em>辩论记录</em>，
+        关闭页面顶部的<em>辩论记录已开启</em>开关并确认。所有已保存的裁决会在那一刻被删除，
+        同一操作也会抹掉保存在这部手机上的声纹。此操作无法撤销。</li>
+        <li><strong>你的声纹。</strong>点按左上角的个人资料图标，再点按<em>忘记我的声音</em>。
+        声纹本来就只加密保存在这部手机上，绝不会发送到我们的服务器；这个按钮会把它从设备上抹掉。</li>
+      </ol>
+      <p>这两件事都不需要写信给我们，你的账号也会保持有效。你仍然可以写信到
+      <a href="mailto:destek@bizzytime.app">destek@bizzytime.app</a>，申请删除你的部分数据。</p>
+</section>
+
+    <section>
+      <h2><span class="num">2</span> 会被删除的数据</h2>
+      <ul>
+        <li><strong>身份记录：</strong>与你的 Google 账号相对应的用户标识（uid），
+          以及我们的身份验证服务商（Firebase Authentication）为该账号保存的电子邮箱、姓名和头像地址。</li>
+        <li><strong>时长记录：</strong>本月已使用的秒数、剩余的已购买时长，
+          以及分享奖励的计数。</li>
+        <li><strong>你的辩论记录：</strong>如果你开启过辩论记录，则包括每一条已保存的裁决——
+          日期、辩论主题、类别、百分比、裁判的理由、逐人分析，以及（若聘请了律师）律师的陈述。
+          如果你从未开启该设置，那里本来就没有可删除的内容。</li>
+      </ul>
+      <p><strong>不删除账号也可以删除记录：</strong>在辩论记录页面关闭开关即可。
+      你的全部记录会在那一刻消失；账号和剩余时长都会保留。</p>
+      <p>删除无法撤销。剩余的已购买时长会一并删除。</p>
+    </section>
+
+    <section>
+      <h2><span class="num">3</span> 我们从不保存的数据</h2>
+      <ul>
+        <li><strong>录音。</strong>麦克风数据只在辩论进行时实时转成文字，不会保存在任何地方。</li>
+        <li><strong>逐句文字记录。</strong>仅在辩论期间保存在临时内存中，辩论结束后即丢弃。
+          任何设置都不会改变这一点。</li>
+        <li><strong>你的声纹。</strong>如果你录入过自己的声音，该声纹只加密保存在你的手机上，
+          绝不会发送到我们的服务器。它被<strong>排除</strong>在设备备份和手机到手机的转移之外：
+          卸载即消失，也不会跟着你到新手机。你也可以在应用内一键删除它。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="num">4</span> 删除后仍保留的内容与保留期限</h2>
+      <div class="kept">
+        <h3>已删除账号的痕迹——最多 40 天</h3>
+        <p>当你删除账号时，你在当月已使用的免费时长，会连同你 Google 账号标识的加盐单向摘要
+        （SHA-256）一起最多保留 40 天，之后自动删除。它唯一的用途，是防止有人删除账号后再用同一个
+        Google 账号重新登录，以此重置每月的免费时长。这条记录不含电子邮箱、姓名或账号标识；
+        摘要不可逆，而盐值只存放在我们的服务器上，因此无法从中推断出你是谁。
+        已购买的时长不会进入这条记录。</p>
+      </div>
+      <div class="kept">
+        <h3>购买凭据的单向摘要——长期保留</h3>
+        <p>我们保留购买凭据（purchase token）不可逆的 SHA-256 摘要，
+        唯一目的是防止同一笔购买被重复使用。该摘要无法关联到任何个人、账号或设备。</p>
+      </div>
+      <div class="kept">
+        <h3>服务器访问日志——最多 30 天</h3>
+        <p>包含 IP 地址与时间戳的技术日志，出于安全与排错目的保留，之后自动删除。</p>
+      </div>
+      <div class="kept">
+        <h3>汇总使用统计——无法关联到你</h3>
+        <p>诸如“开始了多少场辩论”这类计数属于汇总数据，不属于你的账号，
+        其中不包含任何可识别你的信息。</p>
+      </div>
+      <div class="kept">
+        <h3>Google Play 购买记录——由 Google 保存</h3>
+        <p>付款由 Google Play 处理，账单记录由 Google 保存，不在我们这里，我们也无法删除。
+        相关记录请联系 Google。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">5</span> 联系方式</h2>
+      <div class="contact">
+        <strong>谁有理？—— 支持</strong>
+        <a href="mailto:destek@bizzytime.app">destek@bizzytime.app</a>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="card" id="zh-Hant" lang="zh-Hant">
+
+    <section>
+      <h2><span class="num">1</span> 如何申請刪除</h2>
+      <p>在<strong>誰有理？</strong>中，<strong>開始辯論必須使用 Google 登入</strong>，
+      所以只要你用過這款應用程式，就有一筆帳號紀錄。刪除它有兩種方式：</p>
+
+      <h3>在應用程式內（1.16.0 及以後版本）</h3>
+      <ol>
+        <li>開啟應用程式，點按主畫面右上角的<strong>星星標章</strong>（顯示你剩餘星星數量的按鈕）。</li>
+        <li>在開啟的面板中，點按已連結的 Google 帳號下方的<strong>刪除帳號</strong>。</li>
+        <li>閱讀警告並以<strong>刪除</strong>確認。刪除<strong>立即</strong>生效，且無法復原。</li>
+      </ol>
+      <p><strong>刪除之後會怎樣：</strong>你會被登出，並且無法再開始辯論。
+      若想重新使用這款應用程式，必須再次以 Google 登入；那會是一個<strong>新的</strong>帳號，
+      已刪除帳號的時間、購買紀錄與歷史都不會回來。
+      你在當月已使用的免費時間，在新帳號中同樣算作已使用（見第 4 節）。</p>
+
+      <h3>透過電子郵件（任何版本）</h3>
+      <ol>
+        <li>請以你登入時使用的 Google 電子郵件地址，來信至
+          <a href="mailto:destek@bizzytime.app?subject=%E5%88%AA%E9%99%A4%E5%B8%B3%E8%99%9F">destek@bizzytime.app</a>。</li>
+        <li>主旨請寫<strong>刪除帳號</strong>。不需要提供其他資訊——我們以你來信的地址來比對這筆請求。</li>
+        <li>請求<strong>最遲於 30 天內</strong>完成，我們會回覆同一個地址作為確認。</li>
+      </ol>
+      <p><strong>登出不會刪除你的帳號</strong>，解除安裝應用程式同樣不會。
+      要真正刪除，請依上面的方式提出請求。</p>
+
+      <h3 style="margin-top:26px">不刪除帳號，只刪除部分資料</h3>
+      <p>你不必刪除帳號。在應用程式內，你隨時可以單獨刪除下列兩項中的任一項：</p>
+      <ol>
+        <li><strong>你的全部歷史辯論。</strong>點按左上角的個人資料圖示，再點按<em>辯論紀錄</em>，
+        關閉頁面頂端的<em>辯論紀錄已開啟</em>開關並確認。所有已儲存的裁決會在那一刻被刪除，
+        同一個動作也會清除儲存在這支手機上的聲紋。此操作無法復原。</li>
+        <li><strong>你的聲紋。</strong>點按左上角的個人資料圖示，再點按<em>忘記我的聲音</em>。
+        聲紋本來就只加密儲存在這支手機上，絕不會傳送到我們的伺服器；這個按鈕會將它從裝置上清除。</li>
+      </ol>
+      <p>這兩件事都不需要寫信給我們，你的帳號也會保持有效。你仍可寫信到
+      <a href="mailto:destek@bizzytime.app">destek@bizzytime.app</a>，申請刪除你的部分資料。</p>
+</section>
+
+    <section>
+      <h2><span class="num">2</span> 會被刪除的資料</h2>
+      <ul>
+        <li><strong>身分紀錄：</strong>與你的 Google 帳號相對應的使用者識別碼（uid），
+          以及我們的身分驗證服務供應商（Firebase Authentication）為該帳號保存的電子郵件、姓名與大頭貼網址。</li>
+        <li><strong>時間紀錄：</strong>本月已使用的秒數、剩餘的已購買時間，
+          以及分享獎勵的計數。</li>
+        <li><strong>你的辯論紀錄：</strong>如果你開啟過辯論紀錄，則包含每一筆已儲存的裁決——
+          日期、辯論主題、類別、百分比、裁判的理由、逐人分析，以及（若聘請了律師）律師的陳述。
+          如果你從未開啟該設定，那裡本來就沒有可刪除的內容。</li>
+      </ul>
+      <p><strong>不刪除帳號也可以刪除紀錄：</strong>在辯論紀錄頁面關閉開關即可。
+      你的全部紀錄會在那一刻消失；帳號與剩餘時間都會保留。</p>
+      <p>刪除無法復原。剩餘的已購買時間會一併刪除。</p>
+    </section>
+
+    <section>
+      <h2><span class="num">3</span> 我們從不儲存的資料</h2>
+      <ul>
+        <li><strong>錄音。</strong>麥克風資料只在辯論進行時即時轉成文字，不會儲存在任何地方。</li>
+        <li><strong>逐句文字紀錄。</strong>僅在辯論期間保存在暫存記憶體中，辯論結束後即丟棄。
+          任何設定都不會改變這一點。</li>
+        <li><strong>你的聲紋。</strong>如果你曾錄入自己的聲音，該聲紋只加密儲存在你的手機上，
+          絕不會傳送到我們的伺服器。它被<strong>排除</strong>在裝置備份與手機對手機的轉移之外：
+          解除安裝即消失，也不會跟著你到新手機。你也可以在應用程式內一鍵刪除它。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="num">4</span> 刪除後仍保留的內容與保留期限</h2>
+      <div class="kept">
+        <h3>已刪除帳號的痕跡——最多 40 天</h3>
+        <p>當你刪除帳號時，你在當月已使用的免費時間，會連同你 Google 帳號識別碼的加鹽單向雜湊值
+        （SHA-256）一起最多保留 40 天，之後自動刪除。它唯一的用途，是防止有人刪除帳號後再以同一個
+        Google 帳號重新登入，藉此重置每月的免費時間。這筆紀錄不含電子郵件、姓名或帳號識別碼；
+        雜湊值不可逆，而鹽值只存放在我們的伺服器上，因此無法從中推斷出你是誰。
+        已購買的時間不會進入這筆紀錄。</p>
+      </div>
+      <div class="kept">
+        <h3>購買憑證的單向雜湊——長期保留</h3>
+        <p>我們保留購買憑證（purchase token）不可逆的 SHA-256 雜湊值，
+        唯一目的是防止同一筆購買被重複兌換。該雜湊值無法回溯到任何個人、帳號或裝置。</p>
+      </div>
+      <div class="kept">
+        <h3>伺服器存取紀錄——最多 30 天</h3>
+        <p>包含 IP 位址與時間戳記的技術紀錄，基於安全與除錯目的保留，之後自動刪除。</p>
+      </div>
+      <div class="kept">
+        <h3>彙總使用統計——無法連結到你</h3>
+        <p>諸如「開始了多少場辯論」這類計數屬於彙總資料，不屬於你的帳號，
+        其中不包含任何可識別你的資訊。</p>
+      </div>
+      <div class="kept">
+        <h3>Google Play 購買紀錄——由 Google 保存</h3>
+        <p>付款由 Google Play 處理，帳單紀錄由 Google 保存，不在我們這裡，我們也無法刪除。
+        相關紀錄請聯絡 Google。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">5</span> 聯絡方式</h2>
+      <div class="contact">
+        <strong>誰有理？—— 支援</strong>
         <a href="mailto:destek@bizzytime.app">destek@bizzytime.app</a>
       </div>
     </section>
