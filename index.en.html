@@ -63,7 +63,7 @@
   <h1>Who's Right?</h1>
   <p class="lede">An <strong>entertainment</strong> app that listens to an argument between two
   people and scores it live with AI. Results are not legal, medical or professional advice.</p>
-  <div class="updated"><span class="dot"></span> Last updated: 15 September 2026</div>
+  <div class="updated"><span class="dot"></span> Last updated: 27 September 2026</div>
   <p class="langlink"><a href="./">Türkçe</a> · <strong>English</strong> · <a href="./index.de.html">Deutsch</a> · <a href="./index.zh-Hans.html">简体中文</a> · <a href="./index.zh-Hant.html">繁體中文</a></p>
 
   <div class="card">
@@ -196,6 +196,8 @@
         the name, email address and profile-picture address that Google passes on. Our debate
         server sees only the account identifier among these; when you delete your account the
         record is deleted in its entirety.</li>
+        <li><strong>Google AdMob</strong> — ads, only for accounts in the advertising
+        experiment (section 6). Nothing from your conversation is passed on.</li>
       </ul>
       <p>This processing may take place on servers outside your country, including outside the
       United States, and is disclosed on the consent screen inside the app.</p>
@@ -218,14 +220,32 @@
     </section>
     <section>
       <h2><span class="num">6</span> Advertising</h2>
-      <p><strong>This app shows no ads.</strong> There is no advertising during free time or
-      during purchased time, and the app contains no advertising code.</p>
-      <p><strong>Your advertising identifier is not collected</strong>, and none of your data is
-      shared with third parties for advertising.</p>
-      <p>Advertising was <strong>removed entirely in version 1.19.0</strong>. If you are on an
-      older version, you may continue to see a Google AdMob banner during free time — and your
-      advertising identifier may still be used for it — until you update the app from the Play
-      Store.</p>
+      <p><strong>Advertising is coming back as an experiment.</strong> In the current version some
+      accounts see ads and some do not. Which group you are in is computed from your account and
+      is not stored. The experiment measures what advertising adds to the product; depending on
+      the result, ads stay or are removed again. On a phone that is not in the advertising group,
+      the advertising software never runs.</p>
+      <p><strong>Where:</strong> a full-screen ad before a debate starts and when you leave the
+      verdict screen, a silent banner at the top of the debate screen, and a rewarded ad you can
+      choose to watch to earn stars. <strong>No full-screen or rewarded ad is shown while the
+      microphone is on</strong>; the banner has no sound. Buying a star pack does not remove ads.</p>
+      <p><strong>Ads are never chosen from your conversation.</strong> Nothing from your debate is
+      added to an ad request: the topic, the category, names, the transcript and the audio never
+      reach the ad provider.</p>
+      <p><strong>Ads are served by Google AdMob.</strong> To show and measure ads and to prevent
+      abuse, AdMob collects your device's advertising identifier, your IP address and the
+      approximate location derived from it, your interactions with ads and diagnostic
+      information, and shares them with Google. Details: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
+      <p><strong>Personalisation and consent:</strong> in the European Economic Area, the United
+      Kingdom and Switzerland, Google's consent form is shown before the first ad and you can
+      change your choice later. In all other countries, including the United States, ads are
+      requested as non-personalised. You can reset or delete your advertising identifier in your
+      phone's settings.</p>
+      <p><strong>Stars from a rewarded ad:</strong> our server writes the star after Google's
+      signed confirmation. Google receives a single-use, meaningless token instead of your
+      account identifier. So that the same view is never rewarded twice, the token is kept for at
+      most 3 days and the record of the view for at most 40 days, then deleted automatically.
+      Neither is written to server access logs.</p>
     </section>
     <section>
       <h2><span class="num">7</span> Children</h2>
@@ -240,20 +260,22 @@
       <p>What our server does hold: the usage counter tied to your account (deleted when
       you delete your account), the deleted-account trace (section 1, at
       most 40 days), server access logs (IP address and timestamp, kept briefly for security),
-      and your debate history (section 2).</p>
+      rewarded-ad records (section 6, at most 40 days) and your debate history (section 2).</p>
       <p><strong>You do not need to write to us to delete your history.</strong> On the Debate
       History page inside the app you can <strong>delete any single debate you choose</strong>,
       and the verdict you delete is removed from our servers too; <strong>deleting your account
       deletes every record at once</strong>. You may still contact us at any time about anything
       else held about your account.</p>
       <p><strong>California residents (CCPA/CPRA).</strong> In the past 12 months we have
-      collected the categories described above: identifiers (a random device ID), commercial
+      collected the categories described above: identifiers (a random device ID and, for accounts in the advertising group, the
+      advertising identifier), commercial
       information (purchase records), internet activity (anonymous usage counters) and audio —
       the last of which is processed in real time and never retained. <strong>We do not sell
       your personal information, and we do not sell or share it for cross-context behavioural
-      advertising.</strong> Up to version 1.18.0 an advertising identifier was made available to
-      Google AdMob to serve ads, which some laws treat as "sharing"; advertising was removed in
-      1.19.0 and no advertising identifier is collected by that version or later. You have the
+      advertising.</strong> Advertising returned as an experiment in September 2026 (section 6): for accounts in the
+      advertising group, Google AdMob receives the advertising identifier, IP address and ad
+      interactions to deliver and measure ads. In the United States these ads are requested as
+      non-personalised, so your data is not used for cross-context behavioural advertising. You have the
       right to know, delete and correct, and to not be discriminated
       against for exercising those rights. To exercise them, email the address in section 9.
       <strong>Making such a request needs no account</strong>: we will not ask you to install
