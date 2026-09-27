@@ -113,7 +113,7 @@
       kalıntılar (satın alma jetonunun özeti, sunucu erişim kayıtları, toplu
       istatistikler) ve süreleri veri silme sayfasında yazılıdır. Ayrıntılar ve
       uygulamayı kurmadan silme talebi için:
-      <a href="./veri-silme.html">Hesap ve veri silme</a>. 9. maddedeki adresten de
+      <a href="./veri-silme.html">Hesap ve veri silme</a>. 10. maddedeki adresten de
       talep edebilirsiniz.</p>
     </section>
     <section>
@@ -191,6 +191,8 @@
         yalnız hesap kimliğini görür; hesabınızı sildiğinizde kayıt bütünüyle silinir.</li>
         <li><strong>Google AdMob</strong> — yalnız reklam deneyindeki hesaplarda reklam gösterimi
         (6. madde). Konuşmanızdan hiçbir şey iletilmez.</li>
+        <li><strong>Firebase Cloud Messaging</strong> — duyuru bildirimlerinin telefonunuza
+        iletilmesi (7. madde). Bildirim kimliğini Google oluşturur; biz saklamayız.</li>
       </ul>
       <p>Bu işleme yurt dışındaki sunucularda gerçekleşebilir ve rıza ekranında belirtilir.</p>
     </section>
@@ -238,11 +240,27 @@
       kayıtlarına yazılmaz.</p>
     </section>
     <section>
-      <h2><span class="num">7</span> Çocuklar</h2>
+      <h2><span class="num">7</span> Bildirimler</h2>
+      <p><strong>Telefonun kendi bildirimleri:</strong> tartışma arka planda duraklatıldığında ya da
+      karar uygulama arka plandayken açıklandığında uygulama telefonunuzda bir bildirim gösterir.
+      Bunlar hiçbir yere veri göndermez; kazananın adı ve skor bildirime yazılmaz.</p>
+      <p><strong>Duyurular:</strong> ayda en fazla bir kez, hediye ya da yenilik gibi bir haberi
+      bildirimle duyurabiliriz. Bunun için uygulama, telefonunuzun dilindeki duyuru listesine
+      <strong>Firebase Cloud Messaging</strong> (Google) üzerinden abone olur. Abonelik uygulama
+      açıldığında ya da güncellendiğinde yapılır; Google bunun için cihaza özel bir bildirim
+      kimliği oluşturur. <strong>Bu kimliği biz saklamayız ve hesabınıza bağlamayız:</strong>
+      duyuru dile göre herkese aynı gider; adınız, tartışmalarınız ve hesabınız duyuruda
+      kullanılmaz.</p>
+      <p><strong>Kapatmak için:</strong> telefonunuzun ayarlarında uygulamanın bildirim
+      ayarlarından “Duyurular” kanalını kapatabilirsiniz; tartışma bildirimleri bundan
+      etkilenmez.</p>
+    </section>
+    <section>
+      <h2><span class="num">8</span> Çocuklar</h2>
       <p>Uygulama 13 yaş ve üzeri kullanıcılar içindir; Aile programına dahil değildir.</p>
     </section>
     <section>
-      <h2><span class="num">8</span> Haklarınız (KVKK)</h2>
+      <h2><span class="num">9</span> Haklarınız (KVKK)</h2>
       <p>Ses kaydı ve konuşma metni saklanmadığından bunlara ilişkin bir kayıt bulunmaz.</p>
       <p>Sunucuda tutulanlar: hesabınıza bağlı süre sayacı (hesabınızı sildiğinizde
       silinir), silinmiş hesap izi (1. madde, en fazla 40 gün), sunucu
@@ -256,7 +274,7 @@
       ulaşabilirsiniz.</p>
     </section>
     <section>
-      <h2><span class="num">9</span> İletişim</h2>
+      <h2><span class="num">10</span> İletişim</h2>
       <div class="contact">
         <strong>Bizzy Mobil Uygulama Çözümleri Ltd. Şti.</strong>
         İlgili kişi: Tuna ES<br>
@@ -265,7 +283,7 @@
       </div>
     </section>
     <section>
-      <h2><span class="num">10</span> Değişiklikler</h2>
+      <h2><span class="num">11</span> Değişiklikler</h2>
       <p>Bu politika güncellenebilir; güncel sürüm bu sayfada yayınlanır.</p>
     </section>
   </div>

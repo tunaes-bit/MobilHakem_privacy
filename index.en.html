@@ -114,7 +114,7 @@
       retention periods are listed on the data deletion page. For details, or to request
       deletion without installing the app, see
       <a href="./veri-silme.html">Account and data deletion</a>. You can also request it at
-      the address in section 9.</p>
+      the address in section 10.</p>
     </section>
     <section>
       <h2><span class="num">2</span> Audio and transcript are never stored</h2>
@@ -198,6 +198,8 @@
         record is deleted in its entirety.</li>
         <li><strong>Google AdMob</strong> — ads, only for accounts in the advertising
         experiment (section 6). Nothing from your conversation is passed on.</li>
+        <li><strong>Firebase Cloud Messaging</strong> — delivering announcement notifications to
+        your phone (section 7). Google creates the notification ID; we do not store it.</li>
       </ul>
       <p>This processing may take place on servers outside your country, including outside the
       United States, and is disclosed on the consent screen inside the app.</p>
@@ -248,13 +250,30 @@
       Neither is written to server access logs.</p>
     </section>
     <section>
-      <h2><span class="num">7</span> Children</h2>
+      <h2><span class="num">7</span> Notifications</h2>
+      <p><strong>On-device notifications:</strong> when a debate is paused in the background, or a
+      verdict arrives while the app is in the background, the app shows a notification on your
+      phone. These send nothing anywhere; the winner's name and the score are never written into
+      them.</p>
+      <p><strong>Announcements:</strong> at most once a month we may announce news such as a gift or
+      a new feature by notification. For this, the app subscribes to the announcement list for
+      your phone's language through <strong>Firebase Cloud Messaging</strong> (Google). The
+      subscription happens when the app is opened or updated, and Google creates a device-specific
+      notification ID for it. <strong>We do not store this ID or link it to your account:</strong>
+      each announcement goes to everyone in that language; your name, your debates and your
+      account are not used.</p>
+      <p><strong>To turn them off:</strong> in your phone's settings, open the app's notification
+      settings and switch off the “Announcements” channel; debate notifications are not
+      affected.</p>
+    </section>
+    <section>
+      <h2><span class="num">8</span> Children</h2>
       <p>This app is for users aged 13 and over. It is not part of the Google Play Families
       programme and it is not directed to children. We do not knowingly collect personal
       information from children under 13.</p>
     </section>
     <section>
-      <h2><span class="num">8</span> Your rights</h2>
+      <h2><span class="num">9</span> Your rights</h2>
       <p>Because audio and transcripts are never stored, there is no record of them to access or
       delete.</p>
       <p>What our server does hold: the usage counter tied to your account (deleted when
@@ -277,12 +296,12 @@
       interactions to deliver and measure ads. In the United States these ads are requested as
       non-personalised, so your data is not used for cross-context behavioural advertising. You have the
       right to know, delete and correct, and to not be discriminated
-      against for exercising those rights. To exercise them, email the address in section 9.
+      against for exercising those rights. To exercise them, email the address in section 10.
       <strong>Making such a request needs no account</strong>: we will not ask you to install
       the app or to sign in in order to exercise a privacy right.</p>
     </section>
     <section>
-      <h2><span class="num">9</span> Contact</h2>
+      <h2><span class="num">10</span> Contact</h2>
       <div class="contact">
         <strong>Bizzy Mobil Uygulama Çözümleri Ltd. Şti.</strong>
         Contact: Tuna ES<br>
@@ -291,7 +310,7 @@
       </div>
     </section>
     <section>
-      <h2><span class="num">10</span> Changes</h2>
+      <h2><span class="num">11</span> Changes</h2>
       <p>This policy may be updated; the current version is always published on this page.</p>
     </section>
   </div>
