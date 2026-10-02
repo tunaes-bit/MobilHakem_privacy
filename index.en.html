@@ -63,17 +63,25 @@
   <h1>Who's Right?</h1>
   <p class="lede">An <strong>entertainment</strong> app that listens to an argument between two
   people and scores it live with AI. Results are not legal, medical or professional advice.</p>
-  <div class="updated"><span class="dot"></span> Last updated: 27 September 2026</div>
+  <div class="updated"><span class="dot"></span> Last updated: 3 October 2026</div>
   <p class="langlink"><a href="./">Türkçe</a> · <strong>English</strong> · <a href="./index.de.html">Deutsch</a> · <a href="./index.zh-Hans.html">简体中文</a> · <a href="./index.zh-Hant.html">繁體中文</a></p>
 
   <div class="card">
     <section>
-      <h2><span class="num">1</span> Signing in with Google is required</h2>
-      <p><strong>You need to sign in with Google to start a debate, to receive the monthly
-      free time, to buy time and to hire a counsel.</strong> The app still opens without
+      <h2><span class="num">1</span> Signing in is required: Google on Android, Apple on iPhone</h2>
+      <p><strong>You need to sign in to start a debate, to receive the welcome gift, to buy
+      stars and to hire a counsel: with Google on Android, with Apple on iPhone.</strong> The app still opens without
       signing in; you can read the rules and the consent screen, but tapping <em>Start</em>
       asks you to sign in. Your time is held against your account rather than the phone: it
       follows you to a new device, and deleting and reinstalling the app does not reset it.</p>
+      <p><strong>On iPhone you sign in with Apple, and Apple is not asked for your name or your
+      email address.</strong> Apple passes our authentication provider (Firebase Authentication)
+      only an anonymous identifier specific to this app; your account record on iPhone holds no
+      name, email address or photo. There is no Google sign-in on iPhone. An account opened with
+      Google on Android and one opened with Apple on iPhone are <strong>two separate
+      accounts</strong>: stars, debate history and purchases do not move between them. When you
+      delete your account on iPhone, the permission you gave to Sign in with Apple is revoked with
+      Apple as well.</p>
       <p><strong>The only thing our server uses when you sign in</strong> is the
       <strong>anonymous account identifier</strong> that corresponds to your Google account
       (the Firebase <em>uid</em>) — an opaque string that does not identify you and tells us
@@ -103,11 +111,12 @@
       and permanently removes everything attached to your account — including your remaining
       and purchased time and your entire debate history; afterwards you can no longer
       start a debate in the app. <strong>The only record tied to your identity that we keep
-      after deletion</strong> is this: how much of that month's free time you had used and how
-      many share rewards you had received that month, stored against a salted one-way hash
-      (SHA-256) of your Google account identifier for at most 40 days, after which it is
-      deleted automatically. Its purpose is to stop the monthly free time from being reset by
-      deleting the account and creating it again with the same Google account; that record
+      after deletion</strong> is this: how much of your free allowance you had used, how many
+      share rewards you had received and the fact that you had received the welcome gift, stored
+      against a salted one-way hash (SHA-256) of your Google or Apple account identifier for at
+      most 40 days, after which it is deleted automatically. Its purpose is to stop the free
+      allowance and the welcome gift from being claimed again by deleting the account and
+      creating it again with the same account; that record
       contains no email address, no name and no account identifier, cannot be reversed, and is
       used for no other purpose. Technical remnants that cannot be linked to your identity
       (the hash of the purchase token, server access logs, aggregate statistics) and their
@@ -180,8 +189,10 @@
       <strong>real-time processing only</strong>. We do not instruct any of them to retain it:</p>
       <ul>
         <li><strong>Speechmatics</strong> — real-time speech-to-text (European region).</li>
-        <li><strong>AI judge (LLM)</strong> — real-time evaluation of the transcript
-        (live scoring: Groq; final analysis: Google Gemini).</li>
+        <li><strong>AI judge (third-party AI models)</strong> — real-time evaluation of the
+        transcript, the final verdict and the counsel's submissions: Google Gemini; when Gemini
+        cannot be reached, Cerebras, Groq or Mistral. Each of these providers commits in its
+        contract not to use the content it receives to train AI models.</li>
         <li><strong>ElevenLabs</strong> — speaking the winner announcement in a natural judge
         voice. Only the short announcement text is sent (which includes the winner's first
         name); no audio, no debate transcript and no scores are sent. The text is not retained
@@ -190,15 +201,19 @@
         video and audio to viewers. The broadcast is transmitted, never recorded.</li>
         <li><strong>Google Analytics for Firebase</strong> — anonymous usage counters only
         (see section 5).</li>
-        <li><strong>Google Play Billing</strong> — extra-time purchases.</li>
-        <li><strong>Firebase Authentication</strong> — the Google sign-in. Google performs the
-        sign-in; your account record holds the anonymous account identifier (uid) together with
-        the name, email address and profile-picture address that Google passes on. Our debate
+        <li><strong>Google Play Billing</strong> — star-pack purchases on Android.</li>
+        <li><strong>App Store (Apple)</strong> — star-pack purchases on iPhone. Apple's signed record
+        of the purchase is verified on our server; so that the same purchase never writes stars
+        twice, a one-way hash of the transaction number is kept for at most 400 days.</li>
+        <li><strong>Firebase Authentication</strong> — Google sign-in on Android, Sign in with Apple on
+        iPhone. With Google, your account record holds the anonymous account identifier (uid)
+        together with the name, email address and profile-picture address that Google passes on;
+        with Apple it holds only anonymous identifiers. Our debate
         server sees only the account identifier among these; when you delete your account the
         record is deleted in its entirety.</li>
-        <li><strong>Google AdMob</strong> — ads, only for accounts in the advertising
+        <li><strong>Google AdMob</strong> — ads, only on Android and only for accounts in the advertising
         experiment (section 6). Nothing from your conversation is passed on.</li>
-        <li><strong>Firebase Cloud Messaging</strong> — delivering announcement notifications to
+        <li><strong>Firebase Cloud Messaging</strong> — Android only: delivering announcement notifications to
         your phone (section 7). Google creates the notification ID; we do not store it.</li>
       </ul>
       <p>This processing may take place on servers outside your country, including outside the
@@ -222,13 +237,14 @@
     </section>
     <section>
       <h2><span class="num">6</span> Advertising</h2>
+      <p><strong>There are no ads on iPhone</strong>; the advertising software never runs there. The rest of this section applies to Android.</p>
       <p><strong>Advertising is coming back as an experiment.</strong> In the current version some
       accounts see ads and some do not. Which group you are in is computed from your account and
       is not stored. The experiment measures what advertising adds to the product; depending on
       the result, ads stay or are removed again. On a phone that is not in the advertising group,
       the advertising software never runs.</p>
-      <p><strong>Where:</strong> a full-screen ad before a debate starts and when you leave the
-      verdict screen, a silent banner at the top of the debate screen, and a rewarded ad you can
+      <p><strong>Where:</strong> a full-screen ad before a debate starts and when you open the
+      verdict details, a silent banner at the top of the debate screen, and a rewarded ad you can
       choose to watch to earn stars. <strong>No full-screen or rewarded ad is shown while the
       microphone is on</strong>; the banner has no sound. Buying a star pack does not remove ads.</p>
       <p><strong>Ads are never chosen from your conversation.</strong> Nothing from your debate is
@@ -251,6 +267,7 @@
     </section>
     <section>
       <h2><span class="num">7</span> Notifications</h2>
+      <p><strong>There are no notifications on iPhone</strong>: the app does not ask for notification permission there and does not subscribe to the announcement list. The rest of this section applies to Android.</p>
       <p><strong>On-device notifications:</strong> when a debate is paused in the background, or a
       verdict arrives while the app is in the background, the app shows a notification on your
       phone. These send nothing anywhere; the winner's name and the score are never written into

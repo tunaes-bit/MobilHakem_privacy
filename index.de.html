@@ -63,19 +63,29 @@
   <div class="eyebrow">Datenschutzerklärung</div>
   <h1>Wer hat recht?</h1>
   <p class="lede">Eine <strong>Unterhaltungs-App</strong>, die einem Streitgespräch zwischen zwei Personen zuhört und es live mit KI bewertet. Die Ergebnisse sind keine rechtliche, medizinische oder professionelle Beratung.</p>
-  <div class="updated"><span class="dot"></span> Zuletzt aktualisiert: 27. September 2026</div>
+  <div class="updated"><span class="dot"></span> Zuletzt aktualisiert: 3. Oktober 2026</div>
   <p class="langlink"><a href="./">Türkçe</a> · <a href="./index.en.html">English</a> · <strong>Deutsch</strong> · <a href="./index.zh-Hans.html">简体中文</a> · <a href="./index.zh-Hant.html">繁體中文</a></p>
 
   <div class="card">
     <section>
-      <h2><span class="num">1</span> Die Anmeldung mit Google ist erforderlich</h2>
-      <p><strong>Um eine Debatte zu starten, die monatliche Freizeit zu erhalten, Zeit zu
-      kaufen und einen Anwalt zu beauftragen, musst du dich mit Google anmelden.</strong>
+      <h2><span class="num">1</span> Eine Anmeldung ist erforderlich: Google auf Android, Apple auf dem iPhone</h2>
+      <p><strong>Um eine Debatte zu starten, das Willkommensgeschenk zu erhalten, Sterne zu
+      kaufen und einen Anwalt zu beauftragen, musst du dich anmelden: auf Android mit Google,
+      auf dem iPhone mit Apple.</strong>
       Die App lässt sich auch ohne Anmeldung öffnen; du kannst die Regeln und den
       Einwilligungsbildschirm lesen, aber sobald du auf <em>Start</em> tippst, wird eine
       Anmeldung verlangt. Deine Zeit hängt an deinem Konto und nicht am Telefon: sie kommt
       mit auf ein neues Gerät, und die App zu löschen und neu zu installieren setzt sie nicht
       zurück.</p>
+      <p><strong>Auf dem iPhone meldest du dich mit Apple an, und Apple wird weder nach deinem
+      Namen noch nach deiner E-Mail-Adresse gefragt.</strong> Apple übermittelt unserem
+      Authentifizierungsanbieter (Firebase Authentication) nur eine anonyme, für diese App
+      eigene Kennung; dein Kontodatensatz auf dem iPhone enthält weder Namen noch E-Mail-Adresse
+      noch Foto. Auf dem iPhone gibt es keine Google-Anmeldung. Ein mit Google auf Android und ein
+      mit Apple auf dem iPhone eröffnetes Konto sind <strong>zwei getrennte Konten</strong>:
+      Sterne, Debattenverlauf und Käufe gehen nicht von einem aufs andere über. Löschst du dein
+      Konto auf dem iPhone, wird auch die Erlaubnis, die du „Mit Apple anmelden“ gegeben hast,
+      bei Apple widerrufen.</p>
       <p><strong>Wenn du dich anmeldest, verwendet unser Server ausschließlich</strong> die
       <strong>anonyme Kontokennung</strong>, die deinem Google-Konto entspricht
       (die Firebase-<em>uid</em>) — eine undurchsichtige Zeichenfolge, die dich nicht
@@ -108,12 +118,13 @@
       entfernt dauerhaft alles, was an dein Konto gebunden ist — einschließlich deiner
       verbleibenden und gekauften Zeit und deines gesamten Debattenverlaufs; danach
       kannst du in der App keine Debatte mehr starten. <strong>Der einzige mit deiner Identität
-      verknüpfte Eintrag, den wir nach der Löschung behalten</strong>, ist dies: wie viel der
-      Freizeit du in jenem Monat verbraucht hattest und wie viele Belohnungen fürs Teilen du in
-      jenem Monat erhalten hattest, gespeichert zu einem gesalzenen Einweg-Hash (SHA-256)
-      deiner Google-Kontokennung für höchstens 40 Tage, danach wird er automatisch gelöscht.
-      Der Zweck ist zu verhindern, dass die monatliche Freizeit zurückgesetzt wird, indem das
-      Konto gelöscht und mit demselben Google-Konto neu angelegt wird; dieser Eintrag enthält
+      verknüpfte Eintrag, den wir nach der Löschung behalten</strong>, ist dies: wie viel deines
+      Freikontingents du verbraucht hattest, wie viele Belohnungen fürs Teilen du erhalten hattest
+      und dass du das Willkommensgeschenk bereits erhalten hattest, gespeichert zu einem
+      gesalzenen Einweg-Hash (SHA-256) deiner Google- oder Apple-Kontokennung für höchstens
+      40 Tage, danach wird er automatisch gelöscht. Der Zweck ist zu verhindern, dass
+      Freikontingent und Willkommensgeschenk erneut bezogen werden, indem das Konto gelöscht und
+      mit demselben Konto neu angelegt wird; dieser Eintrag enthält
       weder E-Mail-Adresse noch Namen noch Kontokennung, ist nicht umkehrbar und wird zu keinem
       anderen Zweck verwendet. Technische Rückstände, die sich nicht mit deiner Identität
       verknüpfen lassen (der Hash des Kauf-Tokens, Server-Zugriffsprotokolle, aggregierte
@@ -196,8 +207,10 @@
       keinen von ihnen mit einer Speicherung:</p>
       <ul>
         <li><strong>Speechmatics</strong> — Spracherkennung in Echtzeit (europäische Region).</li>
-        <li><strong>KI-Schiedsrichter (LLM)</strong> — Bewertung des Protokolls in Echtzeit
-        (Live-Punkte: Groq; Endanalyse: Google Gemini).</li>
+        <li><strong>KI-Schiedsrichter (KI-Modelle von Drittanbietern)</strong> — Bewertung des
+        Protokolls in Echtzeit, Endurteil und Schriftsätze der Anwälte: Google Gemini; ist Gemini
+        nicht erreichbar, Cerebras, Groq oder Mistral. Jeder dieser Anbieter verpflichtet sich
+        vertraglich, die übermittelten Inhalte nicht zum Training von KI-Modellen zu verwenden.</li>
         <li><strong>ElevenLabs</strong> — Ansage der Gewinnerin oder des Gewinners mit einer
         natürlichen Schiedsrichterstimme. Gesendet wird nur der kurze Ansagetext (der den
         Vornamen enthält); kein Audio, kein Debattenprotokoll und keine Punktzahlen. Der Text
@@ -207,15 +220,19 @@
         aufgezeichnet.</li>
         <li><strong>Google Analytics for Firebase</strong> — ausschließlich anonyme
         Nutzungszähler (siehe Abschnitt 5).</li>
-        <li><strong>Google Play Billing</strong> — Käufe von Zusatzzeit.</li>
-        <li><strong>Firebase Authentication</strong> — die Google-Anmeldung. Google führt die
-        Anmeldung durch; in deinem Kontodatensatz liegen die anonyme Kontokennung (uid) sowie
-        der von Google übermittelte Name, die E-Mail-Adresse und die Adresse des Profilbilds.
+        <li><strong>Google Play Billing</strong> — Käufe von Sternpaketen auf Android.</li>
+        <li><strong>App Store (Apple)</strong> — Käufe von Sternpaketen auf dem iPhone. Apples
+        signierter Kaufbeleg wird auf unserem Server geprüft; damit derselbe Kauf nie zweimal Sterne
+        gutschreibt, wird ein Einweg-Hash der Transaktionsnummer höchstens 400 Tage aufbewahrt.</li>
+        <li><strong>Firebase Authentication</strong> — die Google-Anmeldung auf Android, „Mit Apple
+        anmelden“ auf dem iPhone. Bei Google liegen in deinem Kontodatensatz die anonyme
+        Kontokennung (uid) sowie der von Google übermittelte Name, die E-Mail-Adresse und die
+        Adresse des Profilbilds; bei Apple nur anonyme Kennungen.
         Unser Debatten-Server sieht davon nur die Kontokennung; wenn du dein Konto löschst,
         wird der Datensatz vollständig gelöscht.</li>
-        <li><strong>Google AdMob</strong> — Werbung, nur für Konten im Werbeexperiment
+        <li><strong>Google AdMob</strong> — Werbung, nur auf Android und nur für Konten im Werbeexperiment
         (Abschnitt 6). Aus deinem Gespräch wird nichts übermittelt.</li>
-        <li><strong>Firebase Cloud Messaging</strong> — Zustellung von Ankündigungen auf dein
+        <li><strong>Firebase Cloud Messaging</strong> — nur auf Android: Zustellung von Ankündigungen auf dein
         Telefon (Abschnitt 7). Die Benachrichtigungs-ID erstellt Google; wir speichern sie nicht.</li>
       </ul>
       <p>Diese Verarbeitung kann auf Servern außerhalb deines Landes stattfinden, auch außerhalb
@@ -240,13 +257,14 @@
     </section>
     <section>
       <h2><span class="num">6</span> Werbung</h2>
+      <p><strong>Auf dem iPhone gibt es keine Werbung</strong>; die Werbesoftware läuft dort gar nicht. Der Rest dieses Abschnitts gilt für Android.</p>
       <p><strong>Werbung kommt als Experiment zurück.</strong> In der aktuellen Version sieht ein
       Teil der Konten Werbung, ein Teil nicht. In welcher Gruppe du bist, wird aus deinem Konto
       berechnet und nicht gespeichert. Das Experiment misst, was Werbung dem Produkt bringt; je
       nach Ergebnis bleibt sie oder wird wieder entfernt. Auf einem Telefon, das nicht in der
       Werbegruppe ist, läuft die Werbesoftware gar nicht.</p>
-      <p><strong>Wo:</strong> eine Vollbildanzeige vor Beginn einer Debatte und beim Verlassen des
-      Urteilsbildschirms, ein stummes Banner oben auf dem Debattenbildschirm und eine
+      <p><strong>Wo:</strong> eine Vollbildanzeige vor Beginn einer Debatte und beim Öffnen der
+      Urteilsdetails, ein stummes Banner oben auf dem Debattenbildschirm und eine
       Prämienanzeige, die du freiwillig ansehen kannst, um Sterne zu verdienen. <strong>Solange
       das Mikrofon an ist, erscheint keine Vollbild- oder Prämienanzeige</strong>; das Banner hat
       keinen Ton. Der Kauf eines Sternpakets entfernt die Werbung nicht.</p>
@@ -270,6 +288,7 @@
     </section>
     <section>
       <h2><span class="num">7</span> Benachrichtigungen</h2>
+      <p><strong>Auf dem iPhone gibt es keine Benachrichtigungen</strong>: Die App fragt dort nicht nach der Erlaubnis und abonniert keine Ankündigungsliste. Der Rest dieses Abschnitts gilt für Android.</p>
       <p><strong>Benachrichtigungen auf dem Gerät:</strong> Wird eine Debatte im Hintergrund
       pausiert oder kommt ein Urteil, während die App im Hintergrund ist, zeigt die App eine
       Benachrichtigung auf deinem Telefon. Dabei werden keine Daten gesendet; Name des Gewinners

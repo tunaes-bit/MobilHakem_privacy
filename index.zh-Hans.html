@@ -63,15 +63,20 @@
   <div class="eyebrow">隐私政策</div>
   <h1>谁有理？</h1>
   <p class="lede">一款<strong>娱乐</strong>应用：聆听两个人的争论，并用人工智能实时给出百分比评分。结果不构成法律、医疗或专业建议。</p>
-  <div class="updated"><span class="dot"></span> 最后更新：2026 年 9 月 27 日</div>
+  <div class="updated"><span class="dot"></span> 最后更新：2026 年 10 月 3 日</div>
   <p class="langlink"><a href="./">Türkçe</a> · <a href="./index.en.html">English</a> · <a href="./index.de.html">Deutsch</a> · <strong>简体中文</strong> · <a href="./index.zh-Hant.html">繁體中文</a></p>
 
   <div class="card">
     <section>
-      <h2><span class="num">1</span> 需要使用 Google 登录</h2>
-      <p><strong>开始辩论、领取每月的免费时长、购买时长以及聘请律师，都需要使用 Google 登录。</strong>
+      <h2><span class="num">1</span> 需要登录：Android 使用 Google，iPhone 使用 Apple</h2>
+      <p><strong>开始辩论、领取欢迎礼物、购买星星以及聘请律师，都需要登录：Android 上使用 Google，iPhone 上使用 Apple。</strong>
       不登录也可以打开应用；你可以阅读规则和同意界面，但点按<em>开始</em>时会要求登录。
       你的时长记在你的账号上，而不是这台手机上：换手机时它会跟着你，卸载后重装也不会把它清零。</p>
+      <p><strong>在 iPhone 上使用 Apple 登录，并且不会向 Apple 索取你的姓名和电子邮箱。</strong>
+      Apple 只向我们的身份验证服务商（Firebase Authentication）传递一个本应用专属的匿名标识；
+      你在 iPhone 上的账号记录中没有姓名、电子邮箱或照片。iPhone 上没有 Google 登录。
+      在 Android 上用 Google 开设的账号与在 iPhone 上用 Apple 开设的账号是<strong>两个独立的账号</strong>：
+      星星、辩论历史和购买记录不会在两者之间转移。在 iPhone 上删除账号时，你授予“通过 Apple 登录”的许可也会在 Apple 处一并撤销。</p>
       <p><strong>你登录后，我们的服务器唯一使用的</strong>是与你的 Google 账号相对应的
       <strong>匿名账号标识</strong>（Firebase <em>uid</em>）：一串不透明的字符，它无法识别你的身份，
       也不会告诉我们你的姓名或住址。登录时 Google 会把你的姓名、电子邮箱和头像地址传给我们的
@@ -90,9 +95,9 @@
       <p><strong>你可以在应用内删除账号</strong>：点按星星徽章，在打开的窗口中选择<em>删除账号</em>。
       删除不可撤销，并会永久移除与你账号相关的一切——包括剩余时长、已购买时长，以及你的全部辩论历史；
       此后你将无法在应用中开始辩论。<strong>删除之后我们唯一保留的、与你的身份相关联的记录</strong>是：
-      你当月已使用了多少免费时长，以及你当月获得了多少次分享奖励，
-      它以你的 Google 账号标识的加盐单向散列（SHA-256）为索引保存，最长 40 天，随后自动删除。
-      其目的是防止有人通过删除账号、再用同一个 Google 账号重新注册来重置每月免费时长；
+      你已使用了多少免费额度、获得了多少次分享奖励，以及你已领取过欢迎礼物这一事实，
+      它以你的 Google 或 Apple 账号标识的加盐单向散列（SHA-256）为索引保存，最长 40 天，随后自动删除。
+      其目的是防止有人通过删除账号、再用同一账号重新注册来再次领取免费额度和欢迎礼物；
       这条记录不包含电子邮箱、姓名或账号标识，无法还原，也不会用于任何其他目的。
       无法关联到你身份的技术残留（购买凭据的摘要、服务器访问日志、汇总统计）及其保留期限，
       写在数据删除页面上。详情，
@@ -145,20 +150,23 @@
       我们没有要求其中任何一方留存这些内容：</p>
       <ul>
         <li><strong>Speechmatics</strong> —— 实时语音转文字（欧洲区域）。</li>
-        <li><strong>AI 裁判（大语言模型）</strong> —— 实时评估文字记录
-        （实时比分：Groq；最终分析：Google Gemini）。</li>
+        <li><strong>AI 裁判（第三方人工智能模型）</strong> —— 实时评估文字记录、作出最终裁决以及撰写律师辩护：
+        Google Gemini；无法连接 Gemini 时使用 Cerebras、Groq 或 Mistral。上述每一家服务商都在合同中承诺，
+        不会将收到的内容用于训练人工智能模型。</li>
         <li><strong>ElevenLabs</strong> —— 用自然的裁判嗓音播报获胜者。仅发送简短的播报文本
         （其中包含获胜者的名字）；不发送音频、不发送辩论文字记录、不发送分数。文本在播报后不被留存。</li>
         <li><strong>Cloudflare</strong> —— 仅用于直播庭审：把画面和声音实时传送给观众。
         直播只被传送，绝不被录制。</li>
         <li><strong>Google Analytics for Firebase</strong> —— 仅匿名使用计数（见第 5 节）。</li>
-        <li><strong>Google Play 结算</strong> —— 额外时长的购买。</li>
-        <li><strong>Firebase Authentication</strong> —— Google 登录。登录由 Google 完成；
-        你的账号记录中保存着匿名账号标识（uid），以及 Google 传来的姓名、电子邮箱和头像地址。
+        <li><strong>Google Play 结算</strong> —— Android 上的星星包购买。</li>
+        <li><strong>App Store（Apple）</strong> —— iPhone 上的星星包购买。Apple 签名的购买记录在我们的服务器上验证；
+        为防止同一笔购买两次记入星星，交易编号的单向摘要最多保存 400 天。</li>
+        <li><strong>Firebase Authentication</strong> —— Android 上的 Google 登录和 iPhone 上的“通过 Apple 登录”。
+        使用 Google 时，你的账号记录中保存着匿名账号标识（uid），以及 Google 传来的姓名、电子邮箱和头像地址；使用 Apple 时只保存匿名标识。
         我们的辩论服务器在其中只看到账号标识；删除账号时，这条记录会被整体删除。</li>
-        <li><strong>Google AdMob</strong> —— 仅在参与广告实验的账号中展示广告（第 6 节）。
+        <li><strong>Google AdMob</strong> —— 仅在 Android 上、且仅在参与广告实验的账号中展示广告（第 6 节）。
         你的对话内容不会被传送。</li>
-        <li><strong>Firebase Cloud Messaging</strong> —— 将公告通知送达你的手机（第 7 节）。
+        <li><strong>Firebase Cloud Messaging</strong> —— 仅在 Android 上：将公告通知送达你的手机（第 7 节）。
         通知标识由 Google 生成，我们不保存。</li>
       </ul>
       <p>上述处理可能发生在你所在国家/地区之外的服务器上，并在应用内的同意界面中予以说明。</p>
@@ -176,10 +184,11 @@
     </section>
     <section>
       <h2><span class="num">6</span> 广告</h2>
+      <p><strong>iPhone 上没有广告</strong>；广告软件在 iPhone 上完全不会运行。本节其余内容适用于 Android。</p>
       <p><strong>广告以实验的形式回归。</strong>当前版本中，一部分账号会看到广告，另一部分不会。
       你属于哪一组由你的账号计算得出，并且不会被保存。实验的目的是衡量广告能为产品带来什么；
       根据结果，广告会保留或再次移除。不在广告组的手机上，广告软件完全不会运行。</p>
-      <p><strong>出现位置：</strong>辩论开始前和离开裁决界面时的全屏广告、辩论界面顶部的无声横幅，
+      <p><strong>出现位置：</strong>辩论开始前和打开裁决详情时的全屏广告、辩论界面顶部的无声横幅，
       以及你可以自愿观看以赚取星星的激励广告。<strong>麦克风开启时不会展示全屏广告或激励广告</strong>；
       横幅没有声音。购买星星包不会移除广告。</p>
       <p><strong>广告绝不会根据你的对话选择。</strong>广告请求中不会加入任何辩论内容：
@@ -196,6 +205,7 @@
     </section>
     <section>
       <h2><span class="num">7</span> 通知</h2>
+      <p><strong>iPhone 上没有通知</strong>：应用在 iPhone 上不会请求通知权限，也不会订阅公告列表。本节其余内容适用于 Android。</p>
       <p><strong>设备本地通知：</strong>辩论在后台暂停，或应用在后台时裁决已出，应用会在你的手机上显示一条通知。
       这些通知不会向任何地方发送数据；胜者姓名和比分从不写入通知。</p>
       <p><strong>公告：</strong>我们每月最多一次通过通知发布礼物或新功能等消息。为此，应用会通过

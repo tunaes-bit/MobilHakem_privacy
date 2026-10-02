@@ -63,15 +63,20 @@
   <div class="eyebrow">隱私權政策</div>
   <h1>誰有理？</h1>
   <p class="lede">一款<strong>娛樂</strong>應用程式：聆聽兩個人的爭論，並以人工智慧即時給出百分比評分。結果不構成法律、醫療或專業建議。</p>
-  <div class="updated"><span class="dot"></span> 最後更新：2026 年 9 月 27 日</div>
+  <div class="updated"><span class="dot"></span> 最後更新：2026 年 10 月 3 日</div>
   <p class="langlink"><a href="./">Türkçe</a> · <a href="./index.en.html">English</a> · <a href="./index.de.html">Deutsch</a> · <a href="./index.zh-Hans.html">简体中文</a> · <strong>繁體中文</strong></p>
 
   <div class="card">
     <section>
-      <h2><span class="num">1</span> 需要使用 Google 登入</h2>
-      <p><strong>開始辯論、領取每月的免費時間、購買時間以及聘請律師，都需要使用 Google 登入。</strong>
+      <h2><span class="num">1</span> 需要登入：Android 使用 Google，iPhone 使用 Apple</h2>
+      <p><strong>開始辯論、領取歡迎禮物、購買星星以及聘請律師，都需要登入：Android 上使用 Google，iPhone 上使用 Apple。</strong>
       不登入也可以開啟應用程式；你可以閱讀規則與同意畫面，但點按<em>開始</em>時就會要求登入。
       你的時間記在你的帳號上，而不是這台手機上：換手機時它會跟著你，解除安裝後重新安裝也不會把它歸零。</p>
+      <p><strong>在 iPhone 上使用 Apple 登入，且不會向 Apple 索取你的姓名與電子郵件。</strong>
+      Apple 只會向我們的身分驗證服務商（Firebase Authentication）傳送一個本應用程式專屬的匿名識別碼；
+      你在 iPhone 上的帳號紀錄中沒有姓名、電子郵件或照片。iPhone 上沒有 Google 登入。
+      在 Android 上以 Google 開設的帳號，與在 iPhone 上以 Apple 開設的帳號是<strong>兩個獨立的帳號</strong>：
+      星星、辯論紀錄與購買不會在兩者之間轉移。在 iPhone 上刪除帳號時，你授予「使用 Apple 登入」的許可也會在 Apple 一併撤銷。</p>
       <p><strong>你登入後，我們的伺服器唯一使用的</strong>，是與你的 Google 帳號相對應的
       <strong>匿名帳號識別碼</strong>（Firebase <em>uid</em>）：一串不透明的字元，無法識別你的身分，
       也不會告訴我們你的姓名或地址。登入時 Google 會將你的姓名、電子郵件與大頭貼網址傳給我們的
@@ -90,9 +95,9 @@
       <p><strong>你可以在應用程式內刪除帳號</strong>：點按星星標章，在開啟的視窗中選擇<em>刪除帳號</em>。
       刪除無法復原，並會永久移除與你帳號相關的一切——包括剩餘時間、已購買時間，以及你的全部辯論紀錄；
       之後你將無法在應用程式中開始辯論。<strong>刪除之後我們唯一保留、且與你的身分相關聯的紀錄</strong>是：
-      你當月已使用了多少免費時間，以及你當月獲得了多少次分享獎勵，
-      它以你的 Google 帳號識別碼的加鹽單向雜湊（SHA-256）為索引保存，最長 40 天，之後自動刪除。
-      其目的是防止有人藉由刪除帳號、再以同一個 Google 帳號重新註冊來重設每月免費時間；
+      你已使用了多少免費額度、獲得了多少次分享獎勵，以及你已領取過歡迎禮物這項事實，
+      它以你的 Google 或 Apple 帳號識別碼的加鹽單向雜湊（SHA-256）為索引保存，最長 40 天，之後自動刪除。
+      其目的是防止有人藉由刪除帳號、再以同一帳號重新註冊來再次領取免費額度與歡迎禮物；
       這筆紀錄不含電子郵件、姓名或帳號識別碼，無法還原，也不會用於任何其他目的。
       無法連結到你身分的技術殘留（購買憑證的雜湊、伺服器存取紀錄、彙總統計）及其保留期限，
       寫在資料刪除頁面上。詳情，
@@ -145,20 +150,23 @@
       我們並未要求其中任何一方保留這些內容：</p>
       <ul>
         <li><strong>Speechmatics</strong> —— 即時語音轉文字（歐洲區域）。</li>
-        <li><strong>AI 裁判（大型語言模型）</strong> —— 即時評估文字紀錄
-        （即時比分：Groq；最終分析：Google Gemini）。</li>
+        <li><strong>AI 裁判（第三方人工智慧模型）</strong> —— 即時評估文字紀錄、作出最終裁決以及撰寫律師辯護：
+        Google Gemini；無法連線 Gemini 時使用 Cerebras、Groq 或 Mistral。上述每一家服務商都在合約中承諾，
+        不會將收到的內容用於訓練人工智慧模型。</li>
         <li><strong>ElevenLabs</strong> —— 以自然的裁判嗓音宣布獲勝者。僅傳送簡短的宣布文字
         （其中包含獲勝者的名字）；不傳送音訊、不傳送辯論文字紀錄、不傳送分數。文字在唸出後不予保留。</li>
         <li><strong>Cloudflare</strong> —— 僅用於直播庭審：將影像和聲音即時傳送給觀眾。
         直播只被傳送，絕不被錄製。</li>
         <li><strong>Google Analytics for Firebase</strong> —— 僅匿名使用計數（見第 5 節）。</li>
-        <li><strong>Google Play 結帳</strong> —— 額外時間的購買。</li>
-        <li><strong>Firebase Authentication</strong> —— Google 登入。登入由 Google 執行；
-        你的帳號紀錄中保存著匿名帳號識別碼（uid），以及 Google 傳來的姓名、電子郵件與大頭貼網址。
+        <li><strong>Google Play 結帳</strong> —— Android 上的星星包購買。</li>
+        <li><strong>App Store（Apple）</strong> —— iPhone 上的星星包購買。Apple 簽署的購買紀錄會在我們的伺服器上驗證；
+        為防止同一筆購買兩次記入星星，交易編號的單向雜湊最多保存 400 天。</li>
+        <li><strong>Firebase Authentication</strong> —— Android 上的 Google 登入與 iPhone 上的「使用 Apple 登入」。
+        使用 Google 時，你的帳號紀錄中保存著匿名帳號識別碼（uid），以及 Google 傳來的姓名、電子郵件與大頭貼網址；使用 Apple 時只保存匿名識別碼。
         我們的辯論伺服器在其中只看到帳號識別碼；刪除帳號時，這筆紀錄會被整體刪除。</li>
-        <li><strong>Google AdMob</strong> —— 僅在參與廣告實驗的帳號中顯示廣告（第 6 節）。
+        <li><strong>Google AdMob</strong> —— 僅在 Android 上、且僅在參與廣告實驗的帳號中顯示廣告（第 6 節）。
         你的對話內容不會被傳送。</li>
-        <li><strong>Firebase Cloud Messaging</strong> —— 將公告通知送達你的手機（第 7 節）。
+        <li><strong>Firebase Cloud Messaging</strong> —— 僅在 Android 上：將公告通知送達你的手機（第 7 節）。
         通知識別碼由 Google 產生，我們不儲存。</li>
       </ul>
       <p>上述處理可能發生在你所在國家/地區之外的伺服器上，並於應用程式內的同意畫面中揭露。</p>
@@ -176,10 +184,11 @@
     </section>
     <section>
       <h2><span class="num">6</span> 廣告</h2>
+      <p><strong>iPhone 上沒有廣告</strong>；廣告軟體在 iPhone 上完全不會執行。本節其餘內容適用於 Android。</p>
       <p><strong>廣告以實驗的形式回歸。</strong>目前版本中，一部分帳號會看到廣告，另一部分不會。
       你屬於哪一組由你的帳號計算得出，且不會被儲存。實驗的目的是衡量廣告能為產品帶來什麼；
       依結果而定，廣告會保留或再次移除。不在廣告組的手機上，廣告軟體完全不會執行。</p>
-      <p><strong>出現位置：</strong>辯論開始前與離開裁決畫面時的全螢幕廣告、辯論畫面頂部的無聲橫幅，
+      <p><strong>出現位置：</strong>辯論開始前與開啟裁決詳情時的全螢幕廣告、辯論畫面頂部的無聲橫幅，
       以及你可以自願觀看以賺取星星的獎勵廣告。<strong>麥克風開啟時不會顯示全螢幕廣告或獎勵廣告</strong>；
       橫幅沒有聲音。購買星星包不會移除廣告。</p>
       <p><strong>廣告絕不會依據你的對話挑選。</strong>廣告請求中不會加入任何辯論內容：
@@ -196,6 +205,7 @@
     </section>
     <section>
       <h2><span class="num">7</span> 通知</h2>
+      <p><strong>iPhone 上沒有通知</strong>：應用程式在 iPhone 上不會請求通知權限，也不會訂閱公告清單。本節其餘內容適用於 Android。</p>
       <p><strong>裝置本機通知：</strong>辯論在背景暫停，或應用程式在背景時裁決已出，應用程式會在你的手機上顯示一則通知。
       這些通知不會向任何地方傳送資料；勝者姓名和比分從不寫入通知。</p>
       <p><strong>公告：</strong>我們每月最多一次透過通知發布禮物或新功能等消息。為此，應用程式會透過

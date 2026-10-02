@@ -64,18 +64,25 @@
   <p class="lede">İki kişi arasındaki tartışmayı dinleyip yapay zekâ ile canlı yüzdelerle
   değerlendiren bir <strong>eğlence</strong> uygulaması. Sonuçlar hukuki, tıbbi veya
   profesyonel tavsiye değildir.</p>
-  <div class="updated"><span class="dot"></span> Son güncelleme: 27 Eylül 2026</div>
+  <div class="updated"><span class="dot"></span> Son güncelleme: 3 Ekim 2026</div>
   <p class="langlink"><strong>Türkçe</strong> · <a href="./index.en.html">English</a> · <a href="./index.de.html">Deutsch</a> · <a href="./index.zh-Hans.html">简体中文</a> · <a href="./index.zh-Hant.html">繁體中文</a></p>
 
   <div class="card">
     <section>
-      <h2><span class="num">1</span> Google ile giriş gerekir</h2>
-      <p><strong>Tartışma başlatmak, aylık ücretsiz süreyi almak, süre satın almak ve
-      avukat tutmak için Google ile giriş yapmanız gerekir.</strong> Uygulama giriş
+      <h2><span class="num">1</span> Giriş gerekir: Android'de Google, iPhone'da Apple</h2>
+      <p><strong>Tartışma başlatmak, hoş geldin hediyesini almak, yıldız satın almak ve
+      avukat tutmak için giriş yapmanız gerekir: Android'de Google ile, iPhone'da Apple ile.</strong> Uygulama giriş
       yapmadan da açılır; kuralları ve onay ekranını okuyabilirsiniz, ama
       <em>Başla</em>'ya dokunduğunuzda giriş istenir. Süreniz telefona değil hesabınıza
       bağlıdır: telefon değiştirdiğinizde sizinle gelir, uygulamayı silip yeniden kurmak
       onu sıfırlamaz.</p>
+      <p><strong>iPhone'da giriş Apple ile yapılır ve Apple'dan adınız ve e-posta adresiniz
+      istenmez.</strong> Apple, kimlik doğrulama sağlayıcımıza (Firebase Authentication) yalnız
+      bu uygulamaya özel, anonim bir hesap tanımlayıcısı iletir; iPhone'daki hesap kaydınızda ad,
+      e-posta adresi ya da fotoğraf bulunmaz. iPhone'da Google ile giriş yoktur. Android'de Google
+      ile ve iPhone'da Apple ile açılan hesaplar <strong>iki ayrı hesaptır</strong>: yıldızlar,
+      tartışma geçmişi ve satın almalar birinden ötekine geçmez. iPhone'da hesabınızı
+      sildiğinizde Apple ile girişe verdiğiniz izin de Apple nezdinde geri alınır.</p>
       <p><strong>Giriş yaptığınızda sunucumuzun kullandığı tek şey</strong>, Google
       hesabınıza karşılık gelen <strong>anonim hesap kimliğidir</strong> (Firebase
       <em>uid</em>): sizi tanımlamayan, bize adınızı ya da adresinizi söylemeyen opak bir
@@ -104,11 +111,11 @@
       geri alınamaz ve hesabınıza bağlı her şeyi — kalan ve satın alınmış süreniz ile
       tartışma geçmişinizin tamamı dahil — kalıcı olarak kaldırır; ardından uygulamada
       tartışma başlatamazsınız. <strong>Silmeden sonra kimliğinizle ilişkili tuttuğumuz
-      tek kayıt</strong> şudur: o ay ücretsiz süreden ne kadar kullandığınız ve o ay
-      aldığınız paylaşım ödülü sayısı, Google hesap kimliğinizin tuzlanmış tek yönlü
+      tek kayıt</strong> şudur: ücretsiz haklardan ne kadar kullandığınız, aldığınız paylaşım
+      ödülü sayısı ve hoş geldin hediyesini almış olduğunuz; Google ya da Apple hesap kimliğinizin tuzlanmış tek yönlü
       özetiyle (SHA-256) en fazla 40 gün saklanır ve sonra kendiliğinden silinir. Amacı,
-      hesabı silip aynı Google hesabıyla yeniden açarak aylık ücretsiz sürenin
-      sıfırlanmasını önlemektir; bu kayıt e-posta, ad ya da hesap kimliği içermez, geri
+      hesabı silip aynı hesapla yeniden açarak ücretsiz hakların ve hoş geldin hediyesinin
+      yeniden alınmasını önlemektir; bu kayıt e-posta, ad ya da hesap kimliği içermez, geri
       döndürülemez ve başka hiçbir amaçla kullanılmaz. Kimliğinize bağlanamayan teknik
       kalıntılar (satın alma jetonunun özeti, sunucu erişim kayıtları, toplu
       istatistikler) ve süreleri veri silme sayfasında yazılıdır. Ayrıntılar ve
@@ -164,7 +171,7 @@
     <section>
       <h2><span class="num">3</span> İki tarafın rızası</h2>
       <p>Tartışma başlamadan önce, her iki konuşmacının da dinlenmeyi kabul ettiğini onaylayan
-      bir adım gösterilir (KVKK ve Google Play politikası gereği).</p>
+      bir adım gösterilir (KVKK ile Google Play ve App Store politikaları gereği).</p>
       <p><strong>Bu adım kararın saklanacağını da söyler.</strong> Karşınızdaki kişi geçmiş
       ekranını görmez — karar, telefonda giriş yapmış hesaba yazılır — o yüzden rıza metni her
       tartışmada bunu açıkça belirtir: “Bu tartışmanın kararı — söylenen adlar dâhil — hesabında
@@ -176,22 +183,28 @@
       aşağıdaki hizmetlere gönderilir; bu hizmetlerde saklanması için tarafımızca talimat verilmez:</p>
       <ul>
         <li><strong>Speechmatics</strong> — konuşmayı gerçek zamanlı yazıya çevirme (Avrupa bölgesi).</li>
-        <li><strong>Yapay zekâ hakem (LLM)</strong> — transkriptin gerçek zamanlı
-        değerlendirilmesi (canlı skor: Groq, final analiz: Google Gemini).</li>
+        <li><strong>Yapay zekâ hakem (üçüncü taraf yapay zekâ modelleri)</strong> — transkriptin
+        gerçek zamanlı değerlendirilmesi, final kararı ve avukat savunmaları: Google Gemini;
+        Gemini'ye ulaşılamadığında Cerebras, Groq ya da Mistral. Bu sağlayıcıların her biri,
+        gönderilen içeriği yapay zekâ modellerini eğitmek için kullanmayacağını sözleşmesinde
+        taahhüt eder.</li>
         <li><strong>ElevenLabs</strong> — kazanan anonsunun doğal hakem sesiyle seslendirilmesi.
         Yalnızca kısa anons metni (kazananın adı dahil) iletilir; ses kaydı, tartışma metni veya
         skorlar iletilmez. Metin seslendirme sonrası saklanmaz.</li>
         <li><strong>Cloudflare</strong> — yalnız canlı duruşmalarda: görüntü ve sesin
         izleyicilere anlık taşınması. Yayın iletilir, kaydedilmez.</li>
-        <li><strong>Google Play Faturalandırma</strong> — ek süre satın alımları.</li>
+        <li><strong>Google Play Faturalandırma</strong> — Android'de yıldız paketi satın alımları.</li>
+        <li><strong>App Store (Apple)</strong> — iPhone'da yıldız paketi satın alımları. Satın almanın
+        Apple'ca imzalanmış kaydı sunucumuzda doğrulanır; aynı satın almanın iki kez yıldız
+        yazmaması için işlem numarasının tek yönlü özeti en fazla 400 gün saklanır.</li>
         <li><strong>Google Analytics for Firebase</strong> — uygulamanın hangi adımında zorlanıldığını anlamak için anonim kullanım istatistikleri.</li>
-        <li><strong>Firebase Authentication</strong> — Google girişi. Girişi Google
-        yürütür; hesap kaydınızda anonim hesap kimliği (uid) ile Google'ın ilettiği ad,
-        e-posta adresi ve profil fotoğrafı adresi durur. Tartışma sunucumuz bunlardan
+        <li><strong>Firebase Authentication</strong> — Android'de Google girişi, iPhone'da Apple ile
+        giriş. Google girişinde hesap kaydınızda anonim hesap kimliği (uid) ile Google'ın ilettiği ad,
+        e-posta adresi ve profil fotoğrafı adresi durur; Apple ile girişte yalnız anonim kimlikler durur. Tartışma sunucumuz bunlardan
         yalnız hesap kimliğini görür; hesabınızı sildiğinizde kayıt bütünüyle silinir.</li>
-        <li><strong>Google AdMob</strong> — yalnız reklam deneyindeki hesaplarda reklam gösterimi
+        <li><strong>Google AdMob</strong> — yalnız Android'de ve yalnız reklam deneyindeki hesaplarda reklam gösterimi
         (6. madde). Konuşmanızdan hiçbir şey iletilmez.</li>
-        <li><strong>Firebase Cloud Messaging</strong> — duyuru bildirimlerinin telefonunuza
+        <li><strong>Firebase Cloud Messaging</strong> — yalnız Android'de: duyuru bildirimlerinin telefonunuza
         iletilmesi (7. madde). Bildirim kimliğini Google oluşturur; biz saklamayız.</li>
       </ul>
       <p>Bu işleme yurt dışındaki sunucularda gerçekleşebilir ve rıza ekranında belirtilir.</p>
@@ -215,11 +228,12 @@
     </section>
     <section>
       <h2><span class="num">6</span> Reklamlar</h2>
+      <p><strong>iPhone'da reklam yoktur</strong>; reklam yazılımı iPhone'da hiç çalışmaz. Bu maddenin geri kalanı Android içindir.</p>
       <p><strong>Reklamlar bir deney olarak geri geliyor.</strong> Güncel sürümde hesapların bir
       kısmı reklam görür, bir kısmı görmez. Hangi grupta olduğunuz hesabınızdan hesaplanır ve
       saklanmaz. Deney, reklamın ürüne ne kattığını ölçmek içindir; sonucuna göre reklamlar kalır
       ya da yeniden kaldırılır. Reklam grubunda olmayan telefonda reklam yazılımı hiç çalışmaz.</p>
-      <p><strong>Nerede:</strong> tartışma başlamadan önce ve karar ekranından çıkarken tam sayfa
+      <p><strong>Nerede:</strong> tartışma başlamadan önce ve karar ayrıntısına geçerken tam sayfa
       reklam, tartışma ekranının üstünde sessiz bir bant, ve kendi isteğinizle izleyip yıldız
       kazanabileceğiniz ödüllü reklam. <strong>Mikrofon açıkken tam sayfa ve ödüllü reklam
       gösterilmez</strong>; bandın sesi yoktur. Yıldız paketi satın almak reklamları kaldırmaz.</p>
@@ -241,6 +255,7 @@
     </section>
     <section>
       <h2><span class="num">7</span> Bildirimler</h2>
+      <p><strong>iPhone'da bildirim yoktur</strong>: uygulama iPhone'da bildirim izni istemez ve duyuru listesine abone olmaz. Bu maddenin geri kalanı Android içindir.</p>
       <p><strong>Telefonun kendi bildirimleri:</strong> tartışma arka planda duraklatıldığında ya da
       karar uygulama arka plandayken açıklandığında uygulama telefonunuzda bir bildirim gösterir.
       Bunlar hiçbir yere veri göndermez; kazananın adı ve skor bildirime yazılmaz.</p>
