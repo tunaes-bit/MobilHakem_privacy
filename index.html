@@ -64,7 +64,7 @@
   <p class="lede">İki kişi arasındaki tartışmayı dinleyip yapay zekâ ile canlı yüzdelerle
   değerlendiren bir <strong>eğlence</strong> uygulaması. Sonuçlar hukuki, tıbbi veya
   profesyonel tavsiye değildir.</p>
-  <div class="updated"><span class="dot"></span> Son güncelleme: 3 Ekim 2026</div>
+  <div class="updated"><span class="dot"></span> Son güncelleme: 16 Ekim 2026</div>
   <p class="langlink"><strong>Türkçe</strong> · <a href="./index.en.html">English</a> · <a href="./index.de.html">Deutsch</a> · <a href="./index.zh-Hans.html">简体中文</a> · <a href="./index.zh-Hant.html">繁體中文</a></p>
 
   <div class="card">
@@ -101,13 +101,14 @@
       verilerini silmek onu sıfırlar (yedekten geri yüklenen bir kurulumda geri
       gelebilir). Daha önce giriş yapmadan kullandığınız bir sürümde bu telefonda satın
       alınmış süre biriktiyse, ilk girişinizde hesabınıza taşınır. Kullanım
-      istatistikleri için de benzer şekilde kişisel olmayan, uygulamaya özel bir
-      tanımlayıcı kullanılır (5. madde).</p>
+      istatistikleri ise uygulamaya özel rastgele bir tanımlayıcıyla, Android'de buna ek olarak
+      telefonunuzun reklam kimliğiyle toplanır (5. madde).</p>
       <p>Uygulama içinden istediğiniz zaman <strong>çıkış yapabilirsiniz</strong>.
       Çıkış yaptığınızda yeni bir tartışma başlatamazsınız; <strong>süreniz
       silinmez</strong>, hesabınızda durur ve yeniden giriş yaptığınızda geri gelir.</p>
-      <p><strong>Hesabınızı uygulamanın içinden silebilirsiniz</strong>: yıldız
-      rozetine dokunun, açılan pencerede <em>Hesabı sil</em>'i seçin. Silme
+      <p><strong>Hesabınızı uygulamanın içinden silebilirsiniz</strong>: sol üstteki menü
+      simgesine dokunun, açılan çekmecenin en altındaki <em>Hesabım</em>'a girin ve sayfanın en
+      altındaki <em>Hesabı sil</em>'i seçin. Silme
       geri alınamaz ve hesabınıza bağlı her şeyi — kalan ve satın alınmış süreniz ile
       tartışma geçmişinizin tamamı dahil — kalıcı olarak kaldırır; ardından uygulamada
       tartışma başlatamazsınız. <strong>Silmeden sonra kimliğinizle ilişkili tuttuğumuz
@@ -152,7 +153,7 @@
       tartışmada sizi karşınızdakinden ayırmak, ve geçmişinizde hangi tarafın siz olduğunuzu
       işaretlemek. Bu adım isteğe bağlıdır; tanıtmasanız da uygulama çalışır.
       <strong>Karşınızdakinin sesi asla tanıtılmaz</strong> — kayıt sırasında birden fazla ses
-      duyulursa hiçbir şey saklanmaz. Sol üstteki profil simgesinin açtığı <em>&laquo;Sesimi unut&raquo;</em> ile tek
+      duyulursa hiçbir şey saklanmaz. <em>Hesabım</em> sayfasındaki <em>&laquo;Sesimi unut&raquo;</em> ile tek
       dokunuşta silersiniz; uygulamayı telefondan kaldırdığınızda da cihazdan gider.</p>
       <p><strong>İsteğe bağlı istisna — Canlı Duruşma (Jüri Önünde Mahkeme).</strong> İki
       kişi isterse tartışmasını diğer kullanıcılara canlı yayınlayabilir; bu, her duruşmada
@@ -197,30 +198,47 @@
         <li><strong>App Store (Apple)</strong> — iPhone'da yıldız paketi satın alımları. Satın almanın
         Apple'ca imzalanmış kaydı sunucumuzda doğrulanır; aynı satın almanın iki kez yıldız
         yazmaması için işlem numarasının tek yönlü özeti en fazla 400 gün saklanır.</li>
-        <li><strong>Google Analytics for Firebase</strong> — uygulamanın hangi adımında zorlanıldığını anlamak için anonim kullanım istatistikleri.</li>
+        <li><strong>Google Analytics for Firebase</strong> — uygulamanın hangi adımında zorlanıldığını anlamak için kullanım
+        istatistikleri; Android'de ayrıca reklam kimliğiyle ölçüm ve kurulum atfı (5. madde).</li>
         <li><strong>Firebase Authentication</strong> — Android'de Google girişi, iPhone'da Apple ile
         giriş. Google girişinde hesap kaydınızda anonim hesap kimliği (uid) ile Google'ın ilettiği ad,
         e-posta adresi ve profil fotoğrafı adresi durur; Apple ile girişte yalnız anonim kimlikler durur. Tartışma sunucumuz bunlardan
         yalnız hesap kimliğini görür; hesabınızı sildiğinizde kayıt bütünüyle silinir.</li>
         <li><strong>Google AdMob</strong> — yalnız Android'de ve yalnız reklam deneyindeki hesaplarda reklam gösterimi
-        (6. madde). Konuşmanızdan hiçbir şey iletilmez.</li>
+        (6. ve 12. madde). Veriler telefonunuzdan doğrudan Google'a gider ve reklamın seçilmesi için
+        Google'ın reklam ortaklarıyla (reklam alanını satın alan reklam alıcılarıyla) paylaşılabilir.
+        Konuşmanızdan hiçbir şey iletilmez.</li>
         <li><strong>Firebase Cloud Messaging</strong> — yalnız Android'de: duyuru bildirimlerinin telefonunuza
         iletilmesi (7. madde). Bildirim kimliğini Google oluşturur; biz saklamayız.</li>
       </ul>
-      <p>Bu işleme yurt dışındaki sunucularda gerçekleşebilir ve rıza ekranında belirtilir.</p>
+      <p>Bu işleme yurt dışındaki sunucularda gerçekleşebilir. Konuşmanın yurt dışı sunuculardaki
+      üçüncü taraf hizmetlerde işlendiği, her tartışmanın başındaki rıza ekranında da yazar. Google
+      AdMob'a ve Google Analytics'e giden veriler ise Google'ın yurt dışındaki sunucularına aktarılır;
+      rıza ekranı bunları anmaz, bu politikanın 5., 6. ve 12. maddeleri anlatır.</p>
     </section>
     <section>
       <h2><span class="num">5</span> Kullanım istatistikleri</h2>
-      <p>Uygulamayı geliştirebilmek için <strong>anonim kullanım istatistikleri</strong> toplanır
+      <p>Uygulamayı geliştirebilmek için <strong>kullanım istatistikleri</strong> toplanır
       (Google Analytics for Firebase). Amaç tek bir soruyu yanıtlamaktır: kullanıcılar hangi
       adımda zorlanıyor?</p>
       <p><strong>Toplananlar:</strong> hangi adıma ulaşıldığı (izin, ses tanıtma, tartışma, sonuç),
       bu adımların kaç saniye sürdüğü, satın alma ekranının açılıp açılmadığı, bağlantı hatası
-      oluşup oluşmadığı; ayrıca cihaz modeli, işletim sistemi sürümü, ülke ve uygulamaya özel
-      rastgele bir tanımlayıcı.</p>
-      <p><strong>Toplanmayanlar:</strong> ses kaydı, konuşma metni, konuşmacı isimleri ve skorlar
-      bu istatistiklere <strong>dâhil edilmez</strong>. Adınız, e-postanız veya kimliğiniz hiçbir
-      istatistiğe girmez. Kararlarınız hesabınızda saklanır (2. madde) — ama o kayıtlar
+      oluşup oluşmadığı; reklam deneyinde hangi grupta olduğunuz, gösterilen reklamların sayısı ve
+      Google'ın her gösterim için bildirdiği gelir (yalnız tutar ve para birimi), Türkiye'deki reklam
+      kartına verdiğiniz cevap (12. madde); ayrıca cihaz modeli, işletim sistemi sürümü, ülke ve
+      uygulamaya özel rastgele bir tanımlayıcı.</p>
+      <p><strong>Bu istatistikler anonim değildir.</strong> Android'de Google Analytics telefonunuzun
+      <strong>reklam kimliğini</strong> de toplar: uygulamanın kullanımını ölçmek ve uygulamanın hangi
+      Google Ads reklamımız üzerinden kurulduğunu görmek (kurulum atfı) için. Android'de uygulamanın
+      1.51.2'den sonraki sürümleri Analytics'in reklam kişiselleştirme sinyallerini kapatır; bu
+      sürümlerde bu veriler size gösterilecek reklamları kişiselleştirmek için kullanılmaz. iPhone'da
+      reklam kimliği toplanmaz. Reklam kimliğinizi telefonunuzun
+      ayarlarından sıfırlayabilir ya da silebilirsiniz. Veriler Google'ın yurt dışındaki
+      sunucularında işlenir.</p>
+      <p><strong>Toplanmayanlar:</strong> ses kaydı, konuşma metni, konuşmacı isimleri, tartışmanın
+      konusu ve skorlar bu istatistiklere <strong>dâhil edilmez</strong>; konuşmanızdan hiçbir şey
+      Google Analytics'e gitmez. Adınız, e-postanız veya hesap kimliğiniz hiçbir istatistiğe girmez.
+      Kararlarınız hesabınızda saklanır (2. madde) — ama o kayıtlar
       <strong>size aittir ve bu istatistiklere karışmaz</strong>.</p>
       <p>Ekran kaydı (oturum kaydı) araçları bilinçli olarak <strong>reddedilmiştir</strong>:
       ekran kaydı, tartışma ekranındaki isimleri ve canlı altyazıyı piksel olarak üçüncü
@@ -241,12 +259,28 @@
       şey eklenmez: konu, kategori, isimler, konuşma metni ve ses reklam sağlayıcısına gitmez.</p>
       <p><strong>Reklamları Google AdMob sunar.</strong> AdMob reklam göstermek, ölçmek ve kötüye
       kullanımı önlemek için cihazınızın reklam kimliğini, IP adresinizi ve ondan çıkarılan yaklaşık
-      konumu, reklamlarla etkileşimlerinizi ve tanılama bilgilerini toplar ve Google ile paylaşır.
+      konumu, reklamlarla etkileşimlerinizi ve tanılama bilgilerini toplar. Bu veriler telefonunuzdan
+      doğrudan Google'a gider, Google'ın yurt dışındaki sunucularında işlenir ve reklamın seçilmesi
+      için Google'ın reklam ortaklarıyla (reklam alıcılarıyla) paylaşılabilir; sunucularımıza gelmez.
       Ayrıntı: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
-      <p><strong>Kişiselleştirme ve onay:</strong> Avrupa Ekonomik Alanı, Birleşik Krallık ve
-      İsviçre'de ilk reklamdan önce Google'ın onay formu sorulur; seçiminizi sonra
-      değiştirebilirsiniz. Türkiye dahil diğer ülkelerde reklamlar kişiselleştirilmeden istenir.
-      Reklam kimliğinizi telefonunuzun ayarlarından sıfırlayabilir ya da silebilirsiniz.</p>
+      <p><strong>Kişiselleştirme ve onay</strong> — reklamların ilgi alanınıza göre seçilip
+      seçilmeyeceği ülkeye göre değişir:</p>
+      <ul>
+        <li><strong>Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre:</strong> ilk reklamdan önce
+        Google'ın onay formu sorulur; seçiminizi sonra Hesabım'daki <em>Reklam gizlilik
+        seçenekleri</em> satırından değiştirebilirsiniz.</li>
+        <li><strong>Türkiye:</strong> reklamlar ilgi alanınıza göre <strong>yalnızca açık izninizle</strong>
+        seçilir. İzni Google'ın formu değil, uygulamanın kendi kartı sorar. İzin vermezseniz ya da
+        size sorulmadıysa reklamlar yine gösterilir, yalnız size göre seçilmez. Kararınızı
+        Hesabım'daki <em>Kişiselleştirilmiş reklamlar</em> satırından istediğiniz zaman
+        değiştirebilirsiniz. Burada «Türkiye», Google Play hesabınızın mağaza ülkesidir; uygulama
+        konumunuzu ya da telefonunuzun dilini kullanmaz. Aydınlatma metni:
+        <a href="#reklam-rizasi">12. madde</a>.</li>
+        <li><strong>Diğer ülkeler:</strong> reklamlar kişiselleştirilmeden istenir.</li>
+      </ul>
+      <p><strong>Tartışma ekranının üstündeki bant her ülkede kişiselleştirilmeden istenir</strong> —
+      onay ya da izin vermiş olsanız bile. Reklam kimliğinizi telefonunuzun ayarlarından
+      sıfırlayabilir ya da silebilirsiniz.</p>
       <p><strong>Ödüllü reklamın yıldızı:</strong> yıldızı sunucumuz, Google'ın imzalı
       doğrulamasından sonra yazar. Google'a hesap kimliğiniz değil, tek kullanımlık ve anlamsız bir
       işaret gider. Aynı izlemenin iki kez yıldız etmemesi için bu işaret en fazla 3 gün, izlemenin
@@ -287,6 +321,10 @@
       Bu, KVKK Md.11 kapsamındaki silme hakkınızın uygulama içinden, beklemeden
       kullanılabilmesi demektir. Diğer tüm erişim/silme talepleriniz ve sorularınız için bize
       ulaşabilirsiniz.</p>
+      <p>Türkiye'de kişiselleştirilmiş reklam iznine ilişkin aydınlatma metni, izni geri alma yolu
+      ve KVKK md.11 kapsamındaki haklarınız <a href="#reklam-rizasi">12. maddede</a> yazılıdır.
+      Bu iznin kaydı yalnız telefonunuzda tutulur, sunucumuzda bulunmaz; yalnız kararın kendisi
+      bir kullanım istatistiği olarak Google Analytics'e gider (5. ve 12. madde).</p>
     </section>
     <section>
       <h2><span class="num">10</span> İletişim</h2>
@@ -300,6 +338,71 @@
     <section>
       <h2><span class="num">11</span> Değişiklikler</h2>
       <p>Bu politika güncellenebilir; güncel sürüm bu sayfada yayınlanır.</p>
+    </section>
+    <section id="reklam-rizasi">
+      <h2><span class="num">12</span> Türkiye'de kişiselleştirilmiş reklam — KVKK aydınlatma metni</h2>
+      <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun (KVKK) 10. maddesi uyarınca,
+      reklamların ilgi alanınıza göre seçilmesine verebileceğiniz açık rıza için hazırlanmıştır.
+      Rızanızı uygulamada ayrı bir kartla isteriz; bu metni okumanız rıza vermeniz anlamına
+      gelmez.</p>
+      <p><strong>Kimleri kapsar:</strong> Android'de, reklam deneyindeki ve Google Play mağaza ülkesi
+      Türkiye olan hesaplar. Uygulama bunun için konumunuzu ya da telefonunuzun dilini kullanmaz.
+      iPhone'da reklam yoktur.</p>
+      <p><strong>Veri sorumlusu:</strong> Bizzy Mobil Uygulama Çözümleri Ltd. Şti. (iletişim
+      bilgileri 10. maddede).</p>
+      <p><strong>İşlenen kişisel veriler:</strong> telefonunuzun reklam kimliği ve uygulama grubu
+      kimliği; cihaz ve uygulama bilgileri (cihaz modeli, işletim sistemi ve uygulamanın açılış
+      süresi, takılma oranı gibi teşhis verileri); IP adresiniz ve ondan çıkarılan yaklaşık konum;
+      reklamlarla etkileşimleriniz (uygulama açılışları, dokunmalar, video izlemeleri).</p>
+      <p><strong>Toplama yöntemi:</strong> uygulamadaki Google Mobile Ads yazılımı (Google AdMob)
+      bu verileri elektronik ortamda, otomatik yollarla toplar ve telefonunuzdan doğrudan Google'a
+      gönderir; sunucularımıza gelmez. <strong>Tartışmanızdan hiçbir şey — konu, kategori, isimler,
+      konuşma metni, ses — bu verilere eklenmez</strong>; reklamlar konuşmanızdan asla seçilmez.</p>
+      <p><strong>İşleme amacı:</strong> size gösterilecek reklamların Google tarafından ilgi
+      alanlarınıza göre seçilmesi (kişiselleştirilmiş reklam).</p>
+      <p><strong>Hukuki sebep:</strong> açık rızanız (KVKK md.5/1). Rıza, uygulamayı kullanmanın
+      şartı değildir: izin vermezseniz uygulama aynen çalışır ve reklamlar yine gösterilir, yalnız
+      ilgi alanınıza göre seçilmez. Bu durumda da Google, reklamı göstermek, ölçmek ve kötüye
+      kullanımı önlemek için yukarıdaki verilerin bir kısmını işler (6. madde).</p>
+      <p><strong>Aktarıldığı alıcı grupları:</strong> Google ve Google'ın reklam ortakları (reklam
+      alanını satın alan reklam alıcıları).</p>
+      <p><strong>Yurt dışına aktarım:</strong> bu veriler Google'ın Türkiye dışındaki sunucularına
+      aktarılır ve orada işlenir (KVKK md.9).</p>
+      <p><strong>Saklama:</strong> verdiğiniz kararın kaydı — karar (izin verildi ya da verilmedi),
+      kararın zamanı ve gördüğünüz metnin sürümü — <strong>yalnız telefonunuzda</strong> saklanır;
+      sunucularımıza gönderilmez ve hesabınıza bağlanmaz. Çıkış yaptığınızda ve hesabınızı
+      sildiğinizde telefondan silinir; telefonunuzun kendi yedeği onu aynı Google hesabıyla
+      kurduğunuz yeni bir telefona taşıyabilir. <strong>Kararın kendisi</strong> (izin verildi, verilmedi
+      ya da henüz sorulmadı) ayrıca, kaç kişinin izin verdiğini ölçmek için bir kullanım istatistiği
+      olarak Google Analytics'e gider (5. madde). Bu kopya Google'da durur; hesabınıza değil,
+      uygulamaya özel rastgele tanımlayıcıya ve telefonunuzun reklam kimliğine bağlıdır. Google
+      Analytics'e daha önce gönderilmiş istatistikler çıkış yapmakla ya da hesabı silmekle silinmez,
+      Google Analytics'in saklama süresi dolunca silinir. Kartı cevaplamadan kapatırsanız karar yoktur,
+      reklamlar kişiselleştirilmeden kalır ve kart en erken 7 gün sonra yeniden çıkabilir;
+      «İzin verme» bir karardır ve kartın metni değişmedikçe yeniden sorulmaz. Google'ın topladığı
+      veriler Google'ın kendi saklama kurallarına tabidir:
+      <a href="https://policies.google.com/technologies/retention">policies.google.com/technologies/retention</a>.</p>
+      <p><strong>Rızanızı geri almak:</strong> Hesabım'daki <em>Kişiselleştirilmiş reklamlar</em>
+      satırına dokunarak kararınızı istediğiniz an değiştirebilirsiniz; geri almak, izin vermek
+      kadar kolaydır. O andan sonra telefonda bekleyen reklam atılır ve sonraki reklamlar
+      kişiselleştirilmeden istenir. Reklam kimliğinizi telefonunuzun ayarlarından sıfırlayabilir ya
+      da silebilirsiniz.</p>
+      <p><strong>Haklarınız (KVKK md.11):</strong> kişisel verilerinizin işlenip işlenmediğini
+      öğrenme; işlenmişse buna ilişkin bilgi talep etme; işlenme amacını ve amacına uygun kullanılıp
+      kullanılmadığını öğrenme; yurt içinde ya da yurt dışında aktarıldığı üçüncü kişileri bilme;
+      eksik ya da yanlış işlenmişse düzeltilmesini isteme; KVKK md.7'deki şartlar çerçevesinde
+      silinmesini ya da yok edilmesini isteme; bu düzeltme ve silme işlemlerinin verilerin
+      aktarıldığı üçüncü kişilere bildirilmesini isteme; münhasıran otomatik sistemlerle analiz
+      edilmesi sonucunda aleyhinize bir sonuç çıkmasına itiraz etme; kanuna aykırı işleme sebebiyle
+      zarara uğramanız hâlinde zararın giderilmesini talep etme.</p>
+      <p><strong>Başvuru:</strong> bu haklar için 10. maddedeki e-posta adresine yazabilirsiniz;
+      başvurunuz en geç 30 gün içinde ücretsiz sonuçlandırılır (KVKK md.13). Kararınızın kaydı yalnız
+      telefonunuzda durduğu ve Google Analytics'teki istatistik hesabınıza bağlı olmadığı için
+      kararınızı hesabınızdan bulamayız ve sizin yerinize değiştiremeyiz; en kısa yol Hesabım'daki
+      satırdır. Google'ın işlediği veriler için Google'a da başvurabilirsiniz:
+      <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. Başvurunuz
+      reddedilir ya da süresinde cevaplanmazsa Kişisel Verileri Koruma Kurulu'na şikâyette
+      bulunabilirsiniz (KVKK md.14).</p>
     </section>
   </div>
 

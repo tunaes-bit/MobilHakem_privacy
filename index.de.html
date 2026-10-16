@@ -63,7 +63,7 @@
   <div class="eyebrow">Datenschutzerklärung</div>
   <h1>Wer hat recht?</h1>
   <p class="lede">Eine <strong>Unterhaltungs-App</strong>, die einem Streitgespräch zwischen zwei Personen zuhört und es live mit KI bewertet. Die Ergebnisse sind keine rechtliche, medizinische oder professionelle Beratung.</p>
-  <div class="updated"><span class="dot"></span> Zuletzt aktualisiert: 3. Oktober 2026</div>
+  <div class="updated"><span class="dot"></span> Zuletzt aktualisiert: 16. Oktober 2026</div>
   <p class="langlink"><a href="./">Türkçe</a> · <a href="./index.en.html">English</a> · <strong>Deutsch</strong> · <a href="./index.zh-Hans.html">简体中文</a> · <a href="./index.zh-Hant.html">繁體中文</a></p>
 
   <div class="card">
@@ -107,14 +107,15 @@
       Löschen der App-Daten setzt sie zurück (bei einer aus einem Backup wiederhergestellten
       Installation kann sie zurückkommen). Wenn du eine frühere Version ohne Anmeldung
       genutzt hast und auf diesem Telefon gekaufte Zeit angesammelt wurde, wird sie bei
-      deiner ersten Anmeldung auf dein Konto übertragen. Für
-      Nutzungsstatistiken wird ebenso eine nicht personenbezogene, app-spezifische Kennung
-      verwendet (Abschnitt 5).</p>
+      deiner ersten Anmeldung auf dein Konto übertragen. Nutzungsstatistiken werden mit
+      einer zufälligen, app-spezifischen Kennung und auf Android mit der Werbe-ID deines
+      Telefons erhoben (Abschnitt 5).</p>
       <p>Du kannst dich jederzeit in der App <strong>abmelden</strong>. Solange du abgemeldet
       bist, kannst du keine neue Debatte starten; <strong>deine Zeit wird nicht gelöscht</strong>
       — sie bleibt auf deinem Konto und kommt zurück, sobald du dich wieder anmeldest.</p>
-      <p><strong>Du kannst dein Konto in der App löschen</strong>: tippe auf das Sterne-Abzeichen
-      und wähle im geöffneten Fenster <em>Konto löschen</em>. Die Löschung ist unwiderruflich und
+      <p><strong>Du kannst dein Konto in der App löschen</strong>: tippe oben links auf das
+      Menüsymbol, öffne ganz unten im seitlichen Menü <em>Mein Konto</em> und wähle dort ganz unten
+      <em>Konto löschen</em>. Die Löschung ist unwiderruflich und
       entfernt dauerhaft alles, was an dein Konto gebunden ist — einschließlich deiner
       verbleibenden und gekauften Zeit und deines gesamten Debattenverlaufs; danach
       kannst du in der App keine Debatte mehr starten. <strong>Der einzige mit deiner Identität
@@ -168,7 +169,7 @@
       Schritt ist freiwillig; die App funktioniert auch ohne ihn. <strong>Die Stimme der anderen
       Person wird nie angelernt</strong> — wird beim Anlernen mehr als eine Stimme gehört, wird
       nichts gespeichert. Du kannst ihn jederzeit mit einem Tipp über
-      <em>&bdquo;Meine Stimme vergessen&ldquo;</em> auf dem Startbildschirm löschen, und beim
+      <em>&bdquo;Stimme vergessen&ldquo;</em> auf der Seite <em>Mein Konto</em> löschen, und beim
       Deinstallieren der App verschwindet er vom Telefon.</p>
       <p><strong>Optionale Ausnahme — Live-Verhandlungen (Gericht vor der Jury).</strong> Zwei
       Personen können sich entscheiden, ihre Debatte live an andere Nutzerinnen und Nutzer zu
@@ -218,8 +219,8 @@
         <li><strong>Cloudflare</strong> — nur bei Live-Verhandlungen: Zustellung von Bild und
         Ton an die Zuschauenden in Echtzeit. Die Übertragung wird zugestellt, nie
         aufgezeichnet.</li>
-        <li><strong>Google Analytics for Firebase</strong> — ausschließlich anonyme
-        Nutzungszähler (siehe Abschnitt 5).</li>
+        <li><strong>Google Analytics for Firebase</strong> — Nutzungszähler und auf Android
+        Messung und Installationszuordnung mit der Werbe-ID (siehe Abschnitt 5).</li>
         <li><strong>Google Play Billing</strong> — Käufe von Sternpaketen auf Android.</li>
         <li><strong>App Store (Apple)</strong> — Käufe von Sternpaketen auf dem iPhone. Apples
         signierter Kaufbeleg wird auf unserem Server geprüft; damit derselbe Kauf nie zweimal Sterne
@@ -231,24 +232,39 @@
         Unser Debatten-Server sieht davon nur die Kontokennung; wenn du dein Konto löschst,
         wird der Datensatz vollständig gelöscht.</li>
         <li><strong>Google AdMob</strong> — Werbung, nur auf Android und nur für Konten im Werbeexperiment
-        (Abschnitt 6). Aus deinem Gespräch wird nichts übermittelt.</li>
+        (Abschnitte 6 und 12). Die Daten gehen von deinem Telefon direkt an Google und können, damit
+        eine Anzeige ausgewählt werden kann, mit Werbepartnern von Google (den Käufern, die auf die
+        Werbefläche bieten) geteilt werden. Aus deinem Gespräch wird nichts übermittelt.</li>
         <li><strong>Firebase Cloud Messaging</strong> — nur auf Android: Zustellung von Ankündigungen auf dein
         Telefon (Abschnitt 7). Die Benachrichtigungs-ID erstellt Google; wir speichern sie nicht.</li>
       </ul>
       <p>Diese Verarbeitung kann auf Servern außerhalb deines Landes stattfinden, auch außerhalb
-      der Europäischen Union, und wird im Einwilligungsdialog in der App offengelegt.</p>
+      der Europäischen Union. Der Einwilligungsschritt zu Beginn jeder Debatte sagt, dass Sprache
+      und Text von Drittanbietern verarbeitet werden; Werbung und Statistik erfasst er nicht. Daten,
+      die an Google AdMob und Google Analytics gehen, werden auf Servern von Google verarbeitet, die
+      in einem anderen Land stehen können (Abschnitte 5, 6 und 12).</p>
     </section>
     <section>
       <h2><span class="num">5</span> Nutzungsstatistiken</h2>
-      <p>Über Google Analytics for Firebase erheben wir anonyme Nutzungszähler, um eine einzige
+      <p>Über Google Analytics for Firebase erheben wir Nutzungszähler, um eine einzige
       Frage zu beantworten: an welchem Schritt geben Menschen auf?</p>
       <p><strong>Was erhoben wird:</strong> welche Stufe erreicht wurde (Berechtigung,
       Stimmanlernen, Debatte, Ergebnis), wie lange diese Schritte dauerten, ob ein Kaufbildschirm
-      geöffnet wurde, ob ein Verbindungsfehler auftrat; dazu Gerätemodell, Betriebssystemversion,
-      Land und eine app-spezifische Zufallskennung.</p>
-      <p><strong>Was NICHT erhoben wird:</strong> Audio, Protokolle, Namen der Sprechenden und
-      Punktzahlen tauchen in keinem Analyseereignis auf. Dein Name, deine E-Mail-Adresse oder
-      deine Identität gelangen in keine Statistik. Deine Urteile werden in deinem Konto
+      geöffnet wurde, ob ein Verbindungsfehler auftrat; in welcher Gruppe des Werbeexperiments du
+      bist, wie viele Anzeigen gezeigt wurden und der Erlös, den Google für jede davon meldet (nur
+      Betrag und Währung), sowie deine Antwort auf die Werbekarte in der Türkei (Abschnitt 12); dazu
+      Gerätemodell, Betriebssystemversion, Land und eine app-spezifische Zufallskennung.</p>
+      <p><strong>Diese Statistiken sind nicht anonym.</strong> Auf Android erhebt Google Analytics
+      auch die <strong>Werbe-ID</strong> deines Telefons: um zu messen, wie die App genutzt wird, und
+      um zu sehen, über welche unserer Google-Ads-Kampagnen eine Installation kam
+      (Installationszuordnung). Auf Android schalten die App-Versionen nach 1.51.2 die Signale für
+      personalisierte Werbung in Analytics ab; in diesen Versionen werden diese Daten nicht genutzt,
+      um dir angezeigte Werbung zu personalisieren. Auf dem iPhone wird keine Werbe-ID erhoben. Deine Werbe-ID kannst du in den Einstellungen deines
+      Telefons zurücksetzen oder löschen. Die Daten werden auf Servern von Google verarbeitet.</p>
+      <p><strong>Was NICHT erhoben wird:</strong> Audio, Protokolle, Namen der Sprechenden, das
+      Thema der Debatte und Punktzahlen tauchen in keinem Analyseereignis auf; aus deinem Gespräch
+      gelangt nichts zu Google Analytics. Dein Name, deine E-Mail-Adresse oder deine Kontokennung
+      gelangen in keine Statistik. Deine Urteile werden in deinem Konto
       gespeichert (Abschnitt 2) — diese Einträge gehören
       aber <strong>dir und fließen nicht in diese Statistiken ein</strong>.</p>
       <p>Wir haben bewusst auf Sitzungsaufzeichnung (etwa Bildschirm-Wiedergabe) verzichtet, denn
@@ -274,12 +290,29 @@
       <p><strong>Die Werbung liefert Google AdMob.</strong> Um Anzeigen auszuliefern, zu messen und
       Missbrauch zu verhindern, erhebt AdMob die Werbekennung deines Geräts, deine IP-Adresse und
       den daraus abgeleiteten ungefähren Standort, deine Interaktionen mit Anzeigen und
-      Diagnosedaten und gibt sie an Google weiter. Einzelheiten: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
-      <p><strong>Personalisierung und Einwilligung:</strong> Im Europäischen Wirtschaftsraum, im
-      Vereinigten Königreich und in der Schweiz wird vor der ersten Anzeige das
-      Einwilligungsformular von Google angezeigt; du kannst deine Wahl später ändern. In allen
-      anderen Ländern werden Anzeigen nicht personalisiert angefragt. Deine Werbekennung kannst
-      du in den Einstellungen deines Telefons zurücksetzen oder löschen.</p>
+      Diagnosedaten. Diese Daten gehen von deinem Telefon direkt an Google, werden auf Servern von
+      Google verarbeitet und können, damit eine Anzeige ausgewählt werden kann, mit Werbepartnern von
+      Google (Anzeigenkäufern) geteilt werden; unsere Server erreichen sie nie. Einzelheiten: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
+      <p><strong>Personalisierung und Einwilligung</strong> — ob Anzeigen nach deinen Interessen
+      ausgewählt werden, hängt vom Land ab:</p>
+      <ul>
+        <li><strong>Europäischer Wirtschaftsraum, Vereinigtes Königreich und Schweiz:</strong> Vor der
+        ersten Anzeige wird das Einwilligungsformular von Google angezeigt; deine Wahl kannst du später
+        auf der Seite <em>Mein Konto</em> unter <em>Datenschutzoptionen für Werbung</em> ändern.</li>
+        <li><strong>Türkei:</strong> Anzeigen werden <strong>nur mit deiner ausdrücklichen
+        Einwilligung</strong> nach deinen Interessen ausgewählt. Gefragt wird mit einer eigenen Karte
+        der App, nicht mit dem Formular von Google. Lehnst du ab oder wurdest du nicht gefragt, wird
+        weiterhin Werbung gezeigt, nur nicht auf dich zugeschnitten. Deine Entscheidung kannst du
+        jederzeit auf der Seite <em>Mein Konto</em> unter <em>Personalisierte Werbung</em> ändern.
+        „Türkei“ heißt hier das Land deines Google-Play-Kontos; dein Standort und die Sprache deines
+        Telefons spielen dafür keine Rolle. Ausführlich: <a href="#reklam-rizasi">Abschnitt
+        12</a>.</li>
+        <li><strong>Alle anderen Länder:</strong> Anzeigen werden nicht personalisiert
+        angefragt.</li>
+      </ul>
+      <p><strong>Das Banner oben auf dem Debattenbildschirm wird in jedem Land nicht personalisiert
+      angefragt</strong> — auch wenn du eingewilligt hast. Deine Werbekennung kannst du in den
+      Einstellungen deines Telefons zurücksetzen oder löschen.</p>
       <p><strong>Sterne aus einer Prämienanzeige:</strong> Unser Server schreibt den Stern erst
       nach Googles signierter Bestätigung gut. Google erhält statt deiner Kontokennung ein
       einmaliges, bedeutungsloses Token. Damit dieselbe Anzeige nie zweimal belohnt wird, bleibt
@@ -331,7 +364,12 @@
       unseres <strong>berechtigten Interesses</strong> (lit. f). Personalisierte Werbung im EWR,
       im Vereinigten Königreich und in der Schweiz erfolgt nur mit deiner
       <strong>Einwilligung</strong> über das Formular von Google (lit. a); nicht personalisierte
-      Werbung stützt sich auf unser berechtigtes Interesse an der Finanzierung der App (lit. f). Dir stehen die Rechte auf
+      Werbung stützt sich auf unser berechtigtes Interesse an der Finanzierung der App (lit. f).
+      Personalisierte Werbung in der Türkei richtet sich nach dem türkischen Datenschutzgesetz
+      (KVKK) und erfolgt nur mit deiner ausdrücklichen Einwilligung (<a href="#reklam-rizasi">Abschnitt
+      12</a>); der Nachweis dieser Einwilligung liegt nur auf deinem Telefon, unser Server speichert
+      ihn nicht, nur die Entscheidung selbst geht als Nutzungsstatistik an Google Analytics
+      (Abschnitte 5 und 12). Dir stehen die Rechte auf
       Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch zu;
       eine erteilte Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen.
       Außerdem hast du das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.
@@ -351,6 +389,78 @@
     <section>
       <h2><span class="num">11</span> Änderungen</h2>
       <p>Diese Erklärung kann aktualisiert werden; die jeweils geltende Fassung wird immer auf dieser Seite veröffentlicht.</p>
+    </section>
+    <section id="reklam-rizasi">
+      <h2><span class="num">12</span> Personalisierte Werbung in der Türkei</h2>
+      <p>Dies ist die Information, die das türkische Datenschutzgesetz Nr. 6698 (KVKK, Art. 10)
+      für die Einwilligung verlangt, die du dafür geben kannst, dass Anzeigen nach deinen Interessen
+      ausgewählt werden. Die Einwilligung wird getrennt davon mit einer Karte in der App erfragt;
+      diese Information zu lesen ist keine Einwilligung.</p>
+      <p><strong>Für wen sie gilt:</strong> für Konten auf Android, die im Werbeexperiment sind und
+      deren Google-Play-Land die Türkei ist. Dein Standort und die Sprache deines Telefons spielen
+      dafür keine Rolle. Auf dem iPhone gibt es keine Werbung.</p>
+      <p><strong>Verantwortlicher:</strong> Bizzy Mobil Uygulama Çözümleri Ltd. Şti.
+      (Kontaktdaten in Abschnitt 10).</p>
+      <p><strong>Verarbeitete Daten:</strong> die Werbe-ID und die App-Set-ID deines Telefons;
+      Geräte- und App-Informationen (Gerätemodell, Betriebssystem und Diagnosedaten wie Startzeit
+      und Hängerate der App); deine IP-Adresse und der daraus abgeleitete ungefähre Standort; deine
+      Interaktionen mit Anzeigen (App-Starts, Tippen, Videoaufrufe).</p>
+      <p><strong>Wie sie erhoben werden:</strong> Die Google-Mobile-Ads-Software in der App (Google
+      AdMob) erhebt diese Daten automatisch und sendet sie von deinem Telefon direkt an Google;
+      unsere Server erreichen sie nie. <strong>Aus deinen Debatten kommt nichts hinzu — weder
+      Thema noch Kategorie, Namen, Protokoll oder Audio</strong>; Anzeigen werden nie nach deinem
+      Gespräch ausgewählt.</p>
+      <p><strong>Zweck:</strong> dass Google die Anzeigen, die du siehst, nach deinen Interessen
+      auswählt (personalisierte Werbung).</p>
+      <p><strong>Rechtsgrundlage:</strong> deine ausdrückliche Einwilligung (KVKK Art. 5 Abs. 1).
+      Die Einwilligung ist keine Bedingung für die Nutzung der App: Lehnst du ab, funktioniert die
+      App genauso und es wird weiterhin Werbung gezeigt, nur nicht nach deinen Interessen
+      ausgewählt. Auch dann verarbeitet Google einen Teil der oben genannten Daten, um Anzeigen
+      auszuliefern, zu messen und Missbrauch zu verhindern (Abschnitt 6).</p>
+      <p><strong>Empfänger:</strong> Google und Werbepartner von Google (Anzeigenkäufer, die auf die
+      Werbefläche bieten).</p>
+      <p><strong>Übermittlung ins Ausland:</strong> Die Daten werden an Server von Google außerhalb
+      der Türkei übermittelt und dort verarbeitet (KVKK Art. 9).</p>
+      <p><strong>Speicherung:</strong> Der Nachweis deiner Entscheidung — die Entscheidung (erlaubt
+      oder nicht erlaubt), ihr Zeitpunkt und die Fassung des Textes, den du gesehen hast — liegt
+      <strong>nur auf deinem Telefon</strong>; er wird nie an unsere Server gesendet und nicht mit
+      deinem Konto verknüpft. Beim Abmelden und beim Löschen des Kontos wird er vom Telefon
+      gelöscht; das eigene Backup deines Telefons kann ihn auf ein neues Telefon mit demselben
+      Google-Konto mitnehmen. <strong>Die Entscheidung selbst</strong> (erlaubt, nicht erlaubt oder
+      noch nicht gefragt) geht außerdem als Nutzungsstatistik an Google Analytics, damit wir messen
+      können, wie viele es erlauben (Abschnitt 5). Diese Kopie liegt bei Google und ist nicht
+      mit deinem Konto verknüpft, sondern mit der app-spezifischen Zufallskennung und der Werbe-ID
+      deines Telefons. Bereits an Google Analytics gesendete Statistiken werden durch Abmelden oder
+      Löschen des Kontos nicht gelöscht, sondern erst, wenn die Aufbewahrungsfrist von Google
+      Analytics abläuft. Schließt du die Karte ohne Antwort, gibt es keine Entscheidung, die
+      Werbung bleibt nicht personalisiert, und die Karte kann frühestens nach 7 Tagen wiederkommen;
+      eine Ablehnung ist eine Entscheidung, und du wirst nicht erneut gefragt, solange sich der Text
+      der Karte nicht ändert. Für die Daten, die Google erhebt, gelten Googles eigene Regeln:
+      <a href="https://policies.google.com/technologies/retention">policies.google.com/technologies/retention</a>.</p>
+      <p><strong>Einwilligung widerrufen:</strong> Auf der Seite <em>Mein Konto</em> änderst du
+      deine Entscheidung jederzeit mit einem Tipp auf <em>Personalisierte Werbung</em> — der
+      Widerruf ist so einfach wie die Einwilligung. Ab diesem Moment wird eine bereits auf dem Telefon
+      wartende Anzeige verworfen, und weitere Anzeigen werden nicht personalisiert angefragt. Deine
+      Werbe-ID kannst du außerdem in den Einstellungen deines Telefons zurücksetzen oder
+      löschen.</p>
+      <p><strong>Deine Rechte (KVKK Art. 11):</strong> zu erfahren, ob deine personenbezogenen Daten
+      verarbeitet werden, und falls ja, Auskunft darüber zu verlangen; den Zweck der Verarbeitung zu
+      erfahren und ob die Daten diesem Zweck entsprechend verwendet werden; die Dritten im In- oder
+      Ausland zu kennen, an die sie übermittelt werden; die Berichtigung unvollständiger oder
+      unrichtiger Daten zu verlangen; ihre Löschung oder Vernichtung nach Maßgabe von KVKK Art. 7 zu
+      verlangen und dass diese Dritten über Berichtigung und Löschung informiert werden; einem
+      Ergebnis zu deinem Nachteil zu widersprechen, das ausschließlich durch automatisierte Analyse
+      entsteht; und Ersatz eines Schadens zu verlangen, der durch rechtswidrige Verarbeitung
+      entstanden ist.</p>
+      <p><strong>So stellst du einen Antrag:</strong> Schreib an die E-Mail-Adresse in Abschnitt 10;
+      dein Antrag wird kostenlos und spätestens innerhalb von 30 Tagen beantwortet (KVKK Art. 13).
+      Weil der Nachweis deiner Entscheidung nur auf deinem Telefon liegt und die Statistik in Google
+      Analytics nicht mit deinem Konto verknüpft ist, können wir deine Entscheidung weder über dein
+      Konto finden noch für dich ändern — am schnellsten geht es über die Zeile auf der Seite <em>Mein Konto</em>. Wegen der
+      Daten, die Google verarbeitet, kannst du dich auch an Google wenden:
+      <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. Wird dein
+      Antrag abgelehnt oder nicht rechtzeitig beantwortet, kannst du dich bei der türkischen
+      Datenschutzbehörde (Kişisel Verileri Koruma Kurulu) beschweren (KVKK Art. 14).</p>
     </section>
   </div>
 </div>

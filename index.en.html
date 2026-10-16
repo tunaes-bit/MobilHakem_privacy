@@ -63,7 +63,7 @@
   <h1>Who's Right?</h1>
   <p class="lede">An <strong>entertainment</strong> app that listens to an argument between two
   people and scores it live with AI. Results are not legal, medical or professional advice.</p>
-  <div class="updated"><span class="dot"></span> Last updated: 3 October 2026</div>
+  <div class="updated"><span class="dot"></span> Last updated: 16 October 2026</div>
   <p class="langlink"><a href="./">Türkçe</a> · <strong>English</strong> · <a href="./index.de.html">Deutsch</a> · <a href="./index.zh-Hans.html">简体中文</a> · <a href="./index.zh-Hant.html">繁體中文</a></p>
 
   <div class="card">
@@ -101,13 +101,14 @@
       identifier; clearing the app's data resets it (it can come back on an installation
       restored from a backup). If purchased time accumulated on this phone in an earlier
       version that you used without signing in, it is moved to your account at your first
-      sign-in. A similar non-personal, app-specific identifier is used for usage
-      statistics (section 5).</p>
+      sign-in. Usage statistics are collected with a random app-specific identifier and, on
+      Android, your phone's advertising identifier (section 5).</p>
       <p>You can <strong>sign out</strong> at any time from within the app. While signed out
       you cannot start a new debate; <strong>your time is not deleted</strong> — it stays on
       your account and comes back when you sign in again.</p>
-      <p><strong>You can delete your account from inside the app</strong>: tap the star badge,
-      then choose <em>Delete account</em> in the window that opens. Deletion cannot be undone
+      <p><strong>You can delete your account from inside the app</strong>: tap the menu icon at
+      the top left, open <em>My account</em> at the bottom of the drawer and choose <em>Delete
+      account</em> at the bottom of that page. Deletion cannot be undone
       and permanently removes everything attached to your account — including your remaining
       and purchased time and your entire debate history; afterwards you can no longer
       start a debate in the app. <strong>The only record tied to your identity that we keep
@@ -155,7 +156,7 @@
       person you are arguing with, and it marks which side was you in your history. This step is
       optional; the app works without it. <strong>The other person's voice is never
       enrolled</strong> — if more than one voice is heard during enrolment, nothing is saved. You
-      can delete it in one tap with <em>&ldquo;Forget my voice&rdquo;</em> under the profile icon, top left, and
+      can delete it in one tap with <em>&ldquo;Forget my voice&rdquo;</em> on the <em>My account</em> page, and
       uninstalling the app removes it from the phone.</p>
       <p><strong>Optional exception — Live Hearings (Court Before a Jury).</strong> Two
       people may choose to broadcast their debate live to other users; this happens only
@@ -199,8 +200,8 @@
         after it has been spoken.</li>
         <li><strong>Cloudflare</strong> — live hearings only: real-time delivery of
         video and audio to viewers. The broadcast is transmitted, never recorded.</li>
-        <li><strong>Google Analytics for Firebase</strong> — anonymous usage counters only
-        (see section 5).</li>
+        <li><strong>Google Analytics for Firebase</strong> — usage counters and, on Android,
+        measurement and install attribution with the advertising identifier (see section 5).</li>
         <li><strong>Google Play Billing</strong> — star-pack purchases on Android.</li>
         <li><strong>App Store (Apple)</strong> — star-pack purchases on iPhone. Apple's signed record
         of the purchase is verified on our server; so that the same purchase never writes stars
@@ -212,23 +213,38 @@
         server sees only the account identifier among these; when you delete your account the
         record is deleted in its entirety.</li>
         <li><strong>Google AdMob</strong> — ads, only on Android and only for accounts in the advertising
-        experiment (section 6). Nothing from your conversation is passed on.</li>
+        experiment (sections 6 and 12). The data goes from your phone directly to Google and may be
+        shared with Google's advertising partners (the ad buyers bidding for the ad space) so that an
+        ad can be chosen. Nothing from your conversation is passed on.</li>
         <li><strong>Firebase Cloud Messaging</strong> — Android only: delivering announcement notifications to
         your phone (section 7). Google creates the notification ID; we do not store it.</li>
       </ul>
       <p>This processing may take place on servers outside your country, including outside the
-      United States, and is disclosed on the consent screen inside the app.</p>
+      United States. The consent screen at the start of every debate says that speech and text
+      are processed by third-party services; it does not cover advertising or analytics. Data sent
+      to Google AdMob and Google Analytics is processed on Google's servers, which may be in
+      another country (sections 5, 6 and 12).</p>
     </section>
     <section>
       <h2><span class="num">5</span> Usage statistics</h2>
-      <p>We collect anonymous usage counters through Google Analytics for Firebase to answer one
+      <p>We collect usage counters through Google Analytics for Firebase to answer one
       question: at which step do people give up?</p>
       <p><strong>What is collected:</strong> which stage was reached (permission, voice
       enrolment, debate, result), how long those steps took, whether a purchase screen was
-      opened, whether a connection error occurred; plus device model, operating system
-      version, country and an app-specific random identifier.</p>
-      <p><strong>What is NOT collected:</strong> audio, transcripts, speaker names and scores
-      never appear in any analytics event. Your name, email address or identity never enters any
+      opened, whether a connection error occurred; which group of the advertising experiment you
+      are in, how many ads were shown and the revenue Google reports for each one (an amount and a
+      currency, nothing else), and your answer to the ad card in Turkey (section 12); plus device
+      model, operating system version, country and an app-specific random identifier.</p>
+      <p><strong>These statistics are not anonymous.</strong> On Android, Google Analytics also
+      collects your phone's <strong>advertising identifier</strong>, to measure how the app is used
+      and to see which of our Google Ads campaigns an installation came from (install attribution).
+      On Android, versions of the app after 1.51.2 switch Analytics' ad-personalisation signals off;
+      in those versions this data is not used to personalise the ads you see. No advertising
+      identifier is collected on iPhone. You can reset or delete your
+      advertising identifier in your phone's settings. The data is processed on Google's servers.</p>
+      <p><strong>What is NOT collected:</strong> audio, transcripts, speaker names, the debate's
+      topic and scores never appear in any analytics event; nothing from your conversation goes to
+      Google Analytics. Your name, email address or account identifier never enters any
       statistic. Your verdicts are saved to your account (section 2) — but those records are
       <strong>yours, and they do not enter these statistics</strong>.</p>
       <p>We have deliberately refused session-recording tools (such as screen replay), because
@@ -253,12 +269,28 @@
       <p><strong>Ads are served by Google AdMob.</strong> To show and measure ads and to prevent
       abuse, AdMob collects your device's advertising identifier, your IP address and the
       approximate location derived from it, your interactions with ads and diagnostic
-      information, and shares them with Google. Details: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
-      <p><strong>Personalisation and consent:</strong> in the European Economic Area, the United
-      Kingdom and Switzerland, Google's consent form is shown before the first ad and you can
-      change your choice later. In all other countries, including the United States, ads are
-      requested as non-personalised. You can reset or delete your advertising identifier in your
-      phone's settings.</p>
+      information. This data goes from your phone directly to Google, is processed on Google's
+      servers and may be shared with Google's advertising partners (ad buyers) so that an ad can be
+      chosen; it never reaches our servers. Details: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
+      <p><strong>Personalisation and consent</strong> — whether ads are chosen according to your
+      interests depends on the country:</p>
+      <ul>
+        <li><strong>European Economic Area, United Kingdom and Switzerland:</strong> Google's consent
+        form is shown before the first ad, and you can change your choice later with <em>Ad privacy
+        options</em> on the <em>My account</em> page.</li>
+        <li><strong>Turkey:</strong> ads are chosen according to your interests <strong>only with
+        your explicit consent</strong>. It is asked for by the app's own card, not by Google's form.
+        If you decline, or have not been asked, ads are still shown, just not chosen for you. You can
+        change your choice at any time with <em>Personalized ads</em> on the <em>My account</em>
+        page. "Turkey" here means the country of your Google Play account; the app does not use your
+        location or your phone's language for this. Full notice: <a href="#reklam-rizasi">section
+        12</a>.</li>
+        <li><strong>All other countries, including the United States:</strong> ads are requested as
+        non-personalised.</li>
+      </ul>
+      <p><strong>The banner at the top of the debate screen is requested as non-personalised in
+      every country</strong>, even if you have given consent. You can reset or delete your
+      advertising identifier in your phone's settings.</p>
       <p><strong>Stars from a rewarded ad:</strong> our server writes the star after Google's
       signed confirmation. Google receives a single-use, meaningless token instead of your
       account identifier. So that the same view is never rewarded twice, the token is kept for at
@@ -302,16 +334,23 @@
       and the verdict you delete is removed from our servers too; <strong>deleting your account
       deletes every record at once</strong>. You may still contact us at any time about anything
       else held about your account.</p>
+      <p>If your Google Play country is Turkey, <a href="#reklam-rizasi">section 12</a> describes
+      personalised ads, how to withdraw consent and your rights under Turkish law (KVKK). The record
+      of that consent is kept only on your phone and our server holds none; only the choice itself
+      goes to Google Analytics as a usage statistic (sections 5 and 12).</p>
       <p><strong>California residents (CCPA/CPRA).</strong> In the past 12 months we have
-      collected the categories described above: identifiers (a random device ID and, for accounts in the advertising group, the
-      advertising identifier), commercial
-      information (purchase records), internet activity (anonymous usage counters) and audio —
+      collected the categories described above: identifiers (a random device ID and, on Android,
+      the advertising identifier — collected by Google Analytics for measurement and install
+      attribution, and by AdMob for accounts in the advertising group), commercial
+      information (purchase records), internet activity (usage counters) and audio —
       the last of which is processed in real time and never retained. <strong>We do not sell
       your personal information, and we do not sell or share it for cross-context behavioural
       advertising.</strong> Advertising returned as an experiment in September 2026 (section 6): for accounts in the
       advertising group, Google AdMob receives the advertising identifier, IP address and ad
       interactions to deliver and measure ads. In the United States these ads are requested as
-      non-personalised, so your data is not used for cross-context behavioural advertising. You have the
+      non-personalised, so AdMob does not use your data for cross-context behavioural advertising.
+      On Android, versions of the app after 1.51.2 also switch Google Analytics' ad-personalisation
+      signals off, so in those versions analytics data is not used to personalise ads either. You have the
       right to know, delete and correct, and to not be discriminated
       against for exercising those rights. To exercise them, email the address in section 10.
       <strong>Making such a request needs no account</strong>: we will not ask you to install
@@ -329,6 +368,72 @@
     <section>
       <h2><span class="num">11</span> Changes</h2>
       <p>This policy may be updated; the current version is always published on this page.</p>
+    </section>
+    <section id="reklam-rizasi">
+      <h2><span class="num">12</span> Personalised ads in Turkey</h2>
+      <p>This is the notice that Turkey's Personal Data Protection Law No. 6698 (KVKK, Article 10)
+      requires for the consent you may give to ads being chosen according to your interests.
+      Consent is asked for separately, on a card in the app; reading this notice is not
+      consent.</p>
+      <p><strong>Who it applies to:</strong> accounts on Android that are in the advertising
+      experiment and whose Google Play country is Turkey. The app does not use your location or
+      your phone's language to decide this. There are no ads on iPhone.</p>
+      <p><strong>Data controller:</strong> Bizzy Mobil Uygulama Çözümleri Ltd. Şti. (contact
+      details in section 10).</p>
+      <p><strong>Data processed:</strong> your phone's advertising identifier and app set
+      identifier; device and app information (device model, operating system and diagnostics such
+      as app launch time and hang rate); your IP address and the approximate location derived from
+      it; and your interactions with ads (app launches, taps, video views).</p>
+      <p><strong>How it is collected:</strong> the Google Mobile Ads software in the app (Google
+      AdMob) collects this data automatically and sends it from your phone directly to Google; it
+      never reaches our servers. <strong>Nothing from your debates — topic, category, names,
+      transcript, audio — is added to it</strong>; ads are never chosen from your
+      conversation.</p>
+      <p><strong>Purpose:</strong> letting Google choose the ads you see according to your
+      interests (personalised advertising).</p>
+      <p><strong>Legal basis:</strong> your explicit consent (KVKK Article 5(1)). Consent is not a
+      condition of using the app: if you decline, the app works exactly the same and ads are still
+      shown, just not chosen for you. Even then, Google processes some of the data above to show
+      and measure ads and to prevent abuse (section 6).</p>
+      <p><strong>Recipients:</strong> Google and Google's advertising partners (the ad buyers
+      bidding for the ad space).</p>
+      <p><strong>Transfer abroad:</strong> the data is transferred to, and processed on, Google's
+      servers outside Turkey (KVKK Article 9).</p>
+      <p><strong>Retention:</strong> the record of your choice — the choice (allowed or not allowed),
+      when you made it and the version of the text you saw — is kept <strong>only on your
+      phone</strong>; it is never sent to our servers and is not linked to your account. It is erased
+      when you sign out or delete your account; your phone's own backup may carry it to a new phone
+      set up with the same Google account. <strong>The choice itself</strong> (allowed, not allowed or
+      not yet asked) also goes to Google Analytics as a usage statistic, so that we can measure how
+      many people allow it (section 5). That copy is held by Google and is linked not to your account
+      but to the app-specific random identifier and your phone's advertising identifier. Statistics
+      already sent to Google Analytics are not erased by signing out or deleting your account; they
+      are deleted when Google Analytics' retention period ends. If you close the card without answering, there is no choice, ads stay
+      non-personalised and the card may come back after 7 days at the earliest; declining is a
+      choice, and you are not asked again unless the card's text changes. Data collected by Google
+      is kept under Google's own rules:
+      <a href="https://policies.google.com/technologies/retention">policies.google.com/technologies/retention</a>.</p>
+      <p><strong>Withdrawing consent:</strong> tap <em>Personalized ads</em> on the <em>My
+      account</em> page to change your choice at any time — withdrawing is as easy as consenting.
+      From that moment any ad already waiting on the phone is discarded and later ads are requested
+      as non-personalised. You can also reset or delete your advertising identifier in your phone's
+      settings.</p>
+      <p><strong>Your rights (KVKK Article 11):</strong> to learn whether your personal data is
+      processed and, if so, to request information about it; to learn the purpose of the
+      processing and whether the data is used for that purpose; to know the third parties in Turkey
+      or abroad to whom it is transferred; to have incomplete or inaccurate data corrected; to have
+      it deleted or destroyed under the conditions of KVKK Article 7, and to have such corrections
+      and deletions notified to those third parties; to object to a result against you that arises
+      solely from automated analysis; and to claim compensation for damage caused by unlawful
+      processing.</p>
+      <p><strong>How to apply:</strong> write to the email address in section 10; your application
+      is answered free of charge within 30 days at the latest (KVKK Article 13). Because the record
+      of your choice is kept only on your phone and the statistic in Google Analytics is not linked
+      to your account, we cannot look your choice up from your account or change it for you — the
+      quickest way is the row on the <em>My account</em> page. For the data Google processes you can also contact
+      Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. If
+      your application is refused or not answered in time, you may complain to Turkey's Personal
+      Data Protection Board (KVKK Article 14).</p>
     </section>
   </div>
 
